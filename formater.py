@@ -27,7 +27,7 @@ dump.append(file_in.readline())
 for line in file_in:
 	if(not line in hashtable): # Checks for any duplicates
 		hashtable[line] = 1
-		string = "".join(line.split(" ")) # Deletes all blank characters
+		string = line.replace(" ", "") # Deletes all blank characters
 		L = string.split(",")
 		# Checks for loop edges
 		if((L[0][1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
@@ -39,8 +39,10 @@ file_in.close()
 # Saving the formated edges file	:										    #
 # ------------------------------------------------------------------------------#
 file_out = open(EDGES_CSV, "w")
+
 for l in dump:
 	file_out.write(l)
+
 file_out.close()
 
 #################################################################################
@@ -53,7 +55,7 @@ dump = [file_in.readline()]
 
 for line in file_in:
 	L = line.split(",")
-	L[0] = "_".join(L[0].split(" ")) # Replaces blank characters by underscores
+	L[0] = L[0].replace(" ", "_") # Replaces blank characters by underscores
 	dump.append(",".join(L))
 
 file_in.close()
