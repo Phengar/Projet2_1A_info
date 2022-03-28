@@ -1,5 +1,13 @@
-#include projet
+/*
+    Projet Algorithmique & Programmation 2
+    Analyse du syllabus du cycle ISMIN
+    --
+    DAVAL Quentin - HUBINET Benjamin
+    ISMIN 1A - EI21
 
-void main(){
-    return projet.solution
+*/
+#include <stdio.h>
+
+int main() {
+    return 0;
 }
