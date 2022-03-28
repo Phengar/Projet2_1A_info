@@ -1,5 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 /*
+
     Projet Algorithmique & Programmation 2
     Analyse du syllabus du cycle ISMIN
     --
@@ -12,9 +13,9 @@
 // Libraries includes
 #include <stdio.h>
 #include "format.h" // Data format definition
-#include "reader.h" // 
-#include "stat.h" //
-
+#include "reader.h" // Graph loader/ builder
+#include "stat.h"   // Miscellaneous data analysis functions
+ 
 
 /////////////////////////////////////////////////////////////////////////////////
 int main() {
