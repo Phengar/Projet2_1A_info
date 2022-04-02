@@ -1,4 +1,5 @@
 #################################################################################
+
 # -*-*-*-*-*-*-*-* File formater program *-*-*-*-*-*-*-*-*-
 #													      #
 # 	> Deletes duplicate rows from an edges csv file       #
@@ -6,8 +7,10 @@
 #   > Replaces blank characters by _ in nodes csv file    #
 #													      #
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
 # DAVAL Quentin - HUBINET Benjamin
 # ISMIN 1A - EI21
+
 #################################################################################
 
 NODES_CSV = "nodes.csv"

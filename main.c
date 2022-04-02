@@ -1,4 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
+
 /*
 
     Projet Algorithmique & Programmation 2
@@ -10,15 +11,18 @@
 */
 
 /////////////////////////////////////////////////////////////////////////////////
+
 // Libraries includes
 #include <stdio.h>
 #include "format.h" // Data format definition
-#include "reader.h" // Graph loader/ builder
+#include "reader_listAdj.h" // Graph loader/ builder
 #include "stat.h"   // Miscellaneous data analysis functions
  
 
 /////////////////////////////////////////////////////////////////////////////////
+
 int main() {
+    while(1) printf("Hacked (°_°).\n");
     return 0;
 }
 
