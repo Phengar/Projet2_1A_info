@@ -25,7 +25,7 @@ hashtable = {} # Hashtable to avoid duplicates
 # Formating the edges file :												 	#
 # ------------------------------------------------------------------------------#
 file_in = open(EDGES_CSV, "r")
-dump.append(file_in.readline())
+file_in.readline() # Avoiding first row
 
 for line in file_in:
 	if(not line in hashtable): # Checks for any duplicates
@@ -33,8 +33,12 @@ for line in file_in:
 		string = line.replace(" ", "") # Deletes all blank characters
 		L = string.split(",")
 		# Checks for loop edges
-		if((L[0][1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
-			dump.append(",".join(L))
+		if((line[1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
+			string = ",".join(L)
+			string = string.replace("[", "")
+			string = string.replace("]", "")
+			string = string.replace(",", " ")
+			dump.append(string)
 
 file_in.close()
 
@@ -54,12 +58,16 @@ file_out.close()
 # Formating the nodes file :									                #	
 # ------------------------------------------------------------------------------#
 file_in = open(NODES_CSV, "r")
-dump = [file_in.readline()]
+file_in.readline() # Avoiding first row
+dump = []
 
 for line in file_in:
-	L = line.split(",")
-	L[0] = L[0].replace(" ", "_") # Replaces blank characters by underscores
-	dump.append(",".join(L))
+	line = line.replace(" ", "_") # Replaces blank characters by underscores
+	line = line.replace("\"", "")
+	line = line.replace(", ", "")
+	line = line.replace(chr(0xA0), "")
+	line = line.replace(",", " ")
+	dump.append(line)
 
 file_in.close()
 
