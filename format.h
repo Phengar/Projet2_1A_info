@@ -19,12 +19,29 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 // UP linked-list structure
-typedef struct _UP {
-    char name[MAX_LENGTH];
-    int semestre;
+typedef struct _UP{
     int id;
-    struct _UP * next;
-} UP;
+    unsigned char name;
+    int x;
+    int y;
+}UP;
+typedef struct _node{
+    UP element;
+    int GP;
+    int index;
+    _node * next;
+}node;
+
+typedef struct{
+    UP ;
+
+}mat_adj
+
+typedef struct{
+    int nb_n; //nb of nodes
+    int nb_e; //nb of edges
+    UP ** g;
+}graph;
 
 void append_UP(UP ** ups, char * name, int semestre, int id);
 
