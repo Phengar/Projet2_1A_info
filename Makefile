@@ -4,24 +4,28 @@
 # 								ISMIN 1A - EI21                                 #
 #################################################################################
 
+
+
+#################################################################################
+
 main : main.o stat.o reader_listAdj.o format.o
-	gcc main.o stat.o reader_listAdj.o format.o -o main
+	gcc ./obj/main.o ./obj/stat.o ./obj/reader_listAdj.o ./obj/format.o -o main
 
 clean :
-	rm -rf *.o
+	rm -rf ./obj/*.o
 	
 #################################################################################
 
 main.o : main.c format.h reader_listAdj.h stat.h
-	gcc -c main.c -o main.o
+	gcc -c main.c -o ./obj/main.o
 
 stat.o : stat.c
-	gcc -c stat.c -o stat.o
+	gcc -c stat.c -o ./obj/stat.o
 
 reader_listAdj.o : reader_listAdj.c
-	gcc -c reader_listAdj.c -o reader_listAdj.o
+	gcc -c reader_listAdj.c -o ./obj/reader_listAdj.o
 
 format.o : format.c
-		gcc -c format.c -o format.o
+		gcc -c format.c -o ./obj/format.o
 
 #################################################################################
