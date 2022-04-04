@@ -60,6 +60,7 @@ file_out.close()
 file_in = open(NODES_CSV, "r")
 file_in.readline() # Avoiding first row
 dump = []
+i = 0
 
 for line in file_in:
 	line = line.replace(" ", "_") # Replaces blank characters by underscores
@@ -67,7 +68,8 @@ for line in file_in:
 	line = line.replace(", ", "")
 	line = line.replace(chr(0xA0), "")
 	line = line.replace(",", " ")
-	dump.append(line)
+	dump.append(str(i) + " " + line)
+	i += 1
 
 file_in.close()
 
