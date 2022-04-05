@@ -21,21 +21,23 @@
 // UP linked-list structure
 typedef struct _UP{
     int id;
-    unsigned char name;
+    unsigned char name[100];
     int x;
     int y;
+    struct _UP * next;
 }UP;
+
 typedef struct _node{
     UP element;
     int GP;
     int index;
-    _node * next;
+    struct _node * next;
 }node;
 
 typedef struct{
     UP ;
-
-}mat_adj
+    int * list;
+}mat_adj;
 
 typedef struct{
     int nb_n; //nb of nodes
@@ -52,11 +54,6 @@ void print_UP(UP ** ups);
 /////////////////////////////////////////////////////////////////////////////////
 
 // Graph structure : adjacency list
-typedef struct {
-    int nb_n; //nb of nodes
-    int nb_e; //nb of edges
-    UP ** g;
-} graph;
 
 /////////////////////////////////////////////////////////////////////////////////
 
