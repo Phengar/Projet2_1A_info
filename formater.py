@@ -24,33 +24,33 @@ hashtable = {} # Hashtable to avoid duplicates
 # ------------------------------------------------------------------------------#
 # Formating the edges file :												 	#
 # ------------------------------------------------------------------------------#
-file_in = open(EDGES_CSV, "r")
-file_in.readline() # Avoiding first row
-
-for line in file_in:
-	if(not line in hashtable): # Checks for any duplicates
-		hashtable[line] = 1
-		string = line.replace(" ", "") # Deletes all blank characters
-		L = string.split(",")
-		# Checks for loop edges
-		if((line[1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
-			string = ",".join(L)
-			string = string.replace("[", "")
-			string = string.replace("]", "")
-			string = string.replace(",", " ")
-			dump.append(string)
-
-file_in.close()
-
-# ------------------------------------------------------------------------------#
-# Saving the formated edges file	:										    #
-# ------------------------------------------------------------------------------#
-file_out = open(EDGES_CSV, "w")
-
-for l in dump:
-	file_out.write(l)
-
-file_out.close()
+#file_in = open(EDGES_CSV, "r")
+#file_in.readline() # Avoiding first row
+#
+#for line in file_in:
+#	if(not line in hashtable): # Checks for any duplicates
+#		hashtable[line] = 1
+#		string = line.replace(" ", "") # Deletes all blank characters
+#		L = string.split(",")
+#		# Checks for loop edges
+#		if((line[1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
+#			string = ",".join(L)
+#			string = string.replace("[", "")
+#			string = string.replace("]", "")
+#			string = string.replace(",", " ")
+#			dump.append(string)
+#
+#file_in.close()
+#
+## ------------------------------------------------------------------------------#
+## Saving the formated edges file	:										    #
+## ------------------------------------------------------------------------------#
+#file_out = open(EDGES_CSV, "w")
+#
+#for l in dump:
+#	file_out.write(l)
+#
+#file_out.close()
 
 #################################################################################
 
@@ -63,10 +63,10 @@ dump = []
 i = 0
 
 for line in file_in:
-	line = line.replace(" ", "_") # Replaces blank characters by underscores
 	line = line.replace("\"", "")
-	line = line.replace(", ", "")
-	line = line.replace(chr(0xA0), "")
+	line = line.replace(", ", "_")
+	line = line.replace(" ", "_") # Replaces blank characters by underscores
+	line = line.replace(chr(0xa0), "")
 	line = line.replace(",", " ")
 	dump.append(str(i) + " " + line)
 	i += 1

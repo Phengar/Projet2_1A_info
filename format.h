@@ -14,9 +14,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-#define MAX_LENGTH 50
+#define MAX_LENGTH 100
 
 /////////////////////////////////////////////////////////////////////////////////
+
 // UP data structure
 typedef struct _UP {
     int id; // Unique identifier that corresponds to its row number in nodes.csv
@@ -25,17 +26,20 @@ typedef struct _UP {
     int y; // UP identifier within the semester
 } UP;
 
-typedef struct _node {
+
+typedef struct _node{
     UP element;
     int GP;
     int index;
     struct _node * next;
 } node;
 
-/*typedef struct {
-    UP ;
 
-} mat_adj*/
+typedef struct {
+    UP ;
+    int * list;
+} mat_adj;
+
 
 // Graph structure : adjacency list
 typedef struct{
@@ -46,7 +50,7 @@ typedef struct{
 
 /////////////////////////////////////////////////////////////////////////////////
 /*
-
+    
     Vertices structure - (inherent to cluster structure) - Linked-list
 
 */
@@ -61,6 +65,7 @@ void append_vertices(vertices ** l_vert, int vertex);
 void pop_vertices(vertices ** l_vert);
 
 void print_vertices(vertices ** l_vert);
+
 
 /*
 
