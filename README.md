@@ -87,7 +87,7 @@ files. Namely :
  
 
 
-## Compilation & running the project
+## 🛠️ Compilation & running the project
 
 The overall project was written using both Python 3 and C.
 Actually, the only part that requires Python is the `.csv`
