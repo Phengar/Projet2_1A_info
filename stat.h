@@ -18,58 +18,77 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+// Returns number of nodes of graph g.
 int get_vertices(graph * g);
 
-int get_edges(graph * g);
+// Returns the number of edges connceted to node u.
+int get_degree_u(graph * g, int u);
 
+// Returns the max degree of graph g.
 int get_max_degree(graph * g);
 
+// Returns the min degree of graph g.
 int get_min_degree(graph * g);
 
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-//
+// Creates an array (degrees) containing the degree for each vertex of graph g.
+void get_degrees(graph * g, int * degrees);
 
-int visit_v_acy(graph * g, int * visited, int v);
+/////////////////////////////////////////////////////////////////////////////////
 
+
+// Sub-fonction of is_acyclic - It behaves like Depth-First Search.
+int visit_v_acy(graph * g, int * visited, int u);
+
+// Returns whether g is acyclic or not.
 int is_acyclic(graph * g);
 
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+// Sub-function of cluster_search that visites neighbors of node u.
+void visit_v(graph * g, int * visited, int u, vertices ** l_vert);
 
 /*
-	void cluster_search(graph * g, UP ** ups);
+	void cluster_search(graph * g, cluster ** clus);
 	--
 	Performs a Depth-First Search on g until
 	every vertices are visited. Then returns
-	each cluster (if exists) in ups
+	each cluster (if exists) in *clus.
 	(a linked-list of linked-list structure). 
 */
-
-// visit_v is a sub-fonction from cluster_search that visits v neighbors
-void visit_v(graph * g, int * visited, int v, vertices ** l_vert);
-
 void cluster_search(graph * g, cluster ** clus);
 
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
-// Returns the maximum of an array
-// *ind contains the index of one maximum
+/////////////////////////////////////////////////////////////////////////////////
+
+
+// Returns the max element in array. Its index is stored in *ind.
 int max_array(int * array, int length, int * ind);
 
-void distance_update(int * distance, int * v_path, queue ** q, int mode, int u, int us, int s);
+// Sub-function from longest_path_u - Computes the distance from u to v
+void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v);
 
 /*
-
-	Returns length of the longest path from v
-	path contains the path from v to the farthest vertex
+	Returns the length of the longest path from vertex u
+	and creates the path to the farthest vertex in path
+	linked-list. It relies on Breadth-First Search.
 	--
-	mode := 5-6 : semester, 1-3 : year mode or 0 : whole curriculum
-
+	You can choose to consider specific parts of the graph
+	either a specific year, even semester or the whole
+	curriculmum.
+	--
+	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
 */
+int longest_path_u(graph * g, int u, int mode, queue ** path);
 
-int longest_path_v(graph * g, int v, int mode, queue ** path);
 
-//------
-
-//void longest_path(graph * g, int v);
+/*
+	Returns a list of the longest path for each vertex of graph g.
+	--
+	Function must be called with path as NULL pointer.
+*/
+int longest_path(graph * g, queue ** path, int mode);
 
 /////////////////////////////////////////////////////////////////////////////////
 

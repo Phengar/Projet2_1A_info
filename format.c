@@ -1,4 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
+
 #include "format.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,45 +8,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 /*
 
-	UP structure
-
-*/
-
-
-void append_UP(UP ** ups, char * name, int semestre, int id) {
-	UP * tmp = (UP *) malloc(sizeof(UP));
-	if(tmp == NULL) {
-		printf("Cannot allocate enough memory to UP.\n");
-		return;
-	}
-	strcpy(tmp->name, name);
-	tmp->semestre = semestre;
-	tmp->id = id;
-	tmp->next = *ups;
-	*ups = tmp;
-}
-
-void pop_UP(UP ** ups) {
-	if(*ups != NULL) {
-		UP * tmp = *ups;
-		*ups = (*ups)->next;
-		free(tmp);
-	}
-}
-
-void print_UP(UP ** ups) {
-	UP * tmp = *ups;
-	while(tmp != NULL) {
-		printf("(name: %s, semester: %d, id: %d) ", tmp->name, tmp->semestre, tmp->id);
-		tmp = tmp->next;
-	}
-	printf("\n");
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-/*
-
-	vertices structure - (inherent to cluster structure)
+	Vertices structure - (inherent to cluster structure) - Linked-list
 
 */
 
@@ -53,7 +16,7 @@ void append_vertices(vertices ** l_vert, int vertex) {
     vertices * tmp = (vertices *) malloc(sizeof(vertices));
     if(tmp == NULL) {
         printf("Cannot allocate enough memory for vertices.\n");
-        return;
+        exit(1);
     }
     tmp->vertex = vertex;
     tmp->next = *l_vert;
@@ -80,7 +43,7 @@ void print_vertices(vertices ** l_vert) {
 /////////////////////////////////////////////////////////////////////////////////
 /*
 
-	cluster structure
+	Cluster structure - Linked-list of vertices
 
 */
 
@@ -89,7 +52,7 @@ void append_cluster(cluster ** clus, vertices ** l_vert) {
     cluster *  tmp = (cluster *) malloc(sizeof(cluster));
     if(tmp == NULL) {
         printf("Cannot allocate enough memory for cluster.\n");
-        return;
+        exit(1);
     }
     tmp->l_vert = l_vert;
     tmp->next = *clus;
@@ -117,12 +80,15 @@ void print_cluster(cluster ** clus) {
 }
 
 /////////////////////////////////////////////////////////////////////////////////
+/*
+	Queue structure
+*/
 
 void append_queue(queue ** q, int key) {
     queue * tmp = (queue *) malloc(sizeof(queue));
     if(tmp == NULL) {
     	printf("Cannot allocate enough memory for queue.\n");
-    	return;
+    	exit(1);
     }
     tmp->key = key;
     tmp->next = NULL;

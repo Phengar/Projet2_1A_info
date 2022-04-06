@@ -17,50 +17,40 @@
 #define MAX_LENGTH 50
 
 /////////////////////////////////////////////////////////////////////////////////
+// UP data structure
+typedef struct _UP {
+    int id; // Unique identifier that corresponds to its row number in nodes.csv
+    char name[MAX_LENGTH]; // UP name
+    int x; // UP occuring semester
+    int y; // UP identifier within the semester
+} UP;
 
-// UP linked-list structure
-typedef struct _UP{
-    int id;
-    unsigned char name;
-    int x;
-    int y;
-}UP;
-typedef struct _node{
+typedef struct _node {
     UP element;
     int GP;
     int index;
-    _node * next;
-}node;
+    struct _node * next;
+} node;
 
-typedef struct{
+/*typedef struct {
     UP ;
 
-}mat_adj
-
-typedef struct{
-    int nb_n; //nb of nodes
-    int nb_e; //nb of edges
-    UP ** g;
-}graph;
-
-void append_UP(UP ** ups, char * name, int semestre, int id);
-
-void pop_UP(UP ** ups);
-
-void print_UP(UP ** ups);
-
-/////////////////////////////////////////////////////////////////////////////////
+} mat_adj*/
 
 // Graph structure : adjacency list
-typedef struct {
+typedef struct{
     int nb_n; //nb of nodes
     int nb_e; //nb of edges
     UP ** g;
 } graph;
 
 /////////////////////////////////////////////////////////////////////////////////
+/*
 
-// Cluster structure : linked-list of linked-list of vertices
+    Vertices structure - (inherent to cluster structure) - Linked-list
+
+*/
+
 typedef struct _vert {
     int vertex;
     struct _vert * next;
@@ -72,7 +62,11 @@ void pop_vertices(vertices ** l_vert);
 
 void print_vertices(vertices ** l_vert);
 
-//----------------//
+/*
+
+    Cluster structure - Linked-list of vertices
+
+*/
 
 typedef struct _clus {
     vertices  ** l_vert;

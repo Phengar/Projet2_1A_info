@@ -12,7 +12,7 @@ graph read(){
     FILE * file;
     file = fopen("nodes.csv", "rb");
     if (file == NULL){
-        fprintf(stderr, "\nCouldn't  Open nodes.csv\n");
+        fprintf(stderr, "\nCouldn't open nodes.csv\n");
         exit(1);
     }
     fscanf(file, "%s %d %d", nom, &x, &y);
@@ -22,7 +22,7 @@ graph read(){
     FILE * file2;
     file2 = fopen("edges.csv", "rb");
     if (file == NULL){
-        fprintf(stderr, "\nCouldn't  Open edges.csv\n");
+        fprintf(stderr, "\nCouldn't open edges.csv\n");
         exit(1);
     }
     int x1,y1,x2,y2;
