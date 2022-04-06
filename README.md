@@ -1,5 +1,9 @@
 # Projet2_1A_info
 
+DAVAL Quentin - HUBINET Benjamin
+--
+ISMIN 1A - EI21
+
 ## TO-DO - Requirements list :
 
 Comment il faut exécuter le programme et structuration du ReadMe.txt :
@@ -45,16 +49,35 @@ Comment il faut exécuter le programme et structuration du ReadMe.txt :
 
 ## Introduction
 
+The incentive of this project was to lead
+an analysis of the ISMIN syllabus with
+graph theory's tools. Namely its algorithms
+such as graph traversal, shortest/ longest path
+algorithms. As well as its properties : acyclic graph,
+graph clusters and connected components. The analysis
+emphasizes on the topology of subjects in the ISMIN syllabus :
+How are they related to one another ? Which one are isolated and 
+which create a cluster ?
+
+The data processed by the analysis will serve to help the education
+assembly make decisions for the 2023 ISMIN syllabus reform.
 
 
 ## Modularity choices
 
-
+We chose to divide the specific features of the project in various
+files. Namely :
+  - reader_listAdj.h : Gathers the functions used to read both nodes.csv and edges.csv, and a create the graph structure out of it.
+  - stat.h : Gathers the analysis functions used on the ISMIN syllabus graph.
+  - format.h : Gathers the definition of every data-structure used, for either importing or analyzing datas.
+  - main.c : Core of the project, uses functions from modules to import and process datas.
+  
+  - formater.py : Formats both edges.csv and nodes.csv files : Duplicates, loop edges, replaces special characters, spaces and commas
 
 
 ## Statistics analysis
 
-
+* TO BE COMMENCÉ *
 
 
 ## Faced issues
