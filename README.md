@@ -68,12 +68,16 @@ assembly make decisions for the 2023 ISMIN syllabus reform.
 
 We chose to divide the specific features of the project in various
 files. Namely :
-  - ***reader_listAdj.h*** : Gathers the functions used to read both nodes.csv and edges.csv, and a create the graph structure out of it.
-  - ***stat.h*** : Gathers the analysis functions used on the ISMIN syllabus graph.
-  - ***format.h*** : Gathers the definition of every data-structure used, for either importing or analyzing datas.
-  - ***main.c*** : Core of the project, uses functions from modules to import and process datas.
-  
-  - formater.py : Formats both edges.csv and nodes.csv files : Duplicates, loop edges, replaces special characters, spaces and commas
+
+  | Header file | Purppose |
+  | ----------- | -------- |
+  | ***reader_listAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
+  | ***stat.h*** | Gathers the analysis functions used on the ISMIN syllabus graph. |
+  | ***format.h*** | Gathers the definition of every data-structure used, for either importing or analyzing data. |
+  | ***main.c*** | Core of the project, uses functions from modules to import and process data. |
+  | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles uplicates, loop edges, replaces special characters, spaces and commas |
+
+
 
 
 ## Statistics analysis
@@ -81,8 +85,10 @@ files. Namely :
 * TO BE COMMENCÉ *
 
 
+
+
 ## 🎯 Faced issues
-  While attempting to read .csv files, we ran into issues. Namely, each row of `nodes.csv` contains a string with spaces in it and two numbers, when we tried to parse the file using a `fscanf()`. * TO BE CONTINUED *
+  While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contains a string with spaces in it and two numbers, when we tried to parse the file using a `fscanf()`. * TO BE CONTINUED *
   
  
 
