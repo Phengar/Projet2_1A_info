@@ -40,7 +40,28 @@ Comment il faut exécuter le programme et structuration du ReadMe.txt :
 | ----------- |    ---------------    | 	-----------   |
 |  example.h  |   void function(void) | Function that ... |
 
+
+
+
 ## Introduction
+
+
+
+## Modularity choices
+
+
+
+
+## Statistics analysis
+
+
+
+
+## Faced issues
+  While attempting to read .csv files, we ran into issues. Namely, each row of `nodes.csv` contains a string with spaces in it and two numbers, when we tried to parse the file using a `fscanf()`. * TO BE CONTINUED *
+  
+  
+  
 
 ## Compilation & running the project
 
@@ -50,6 +71,7 @@ files formatting step. The rest of the of the implementation
 uses C only.
 
 #### :warning: Requirements
+
 As long as you have GCC compiler and GNU Make tool installed,
 the code should run flawlessly whether you use GNU Linux,
 Windows or MacOS. Having the Python 3 interpreter is not
@@ -79,7 +101,12 @@ stored in `./*.csv.bak` files.
       ```bash
       main.exe
       ```
+      
+      
+      
+      
 ## Project tree
+
 ```bash
 Projet2_1A_info
 ├── bin/
@@ -93,7 +120,10 @@ Projet2_1A_info
 ├── Makefile
 └── README.md
 ```
-
+ 
+ 
+ 
+ 
 ## Quick references
 
 | Header file |    Function header or structure    | 	Description   |
