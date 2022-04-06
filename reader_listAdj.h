@@ -5,6 +5,13 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+typedef struct _UPlect {
+    int id; // Unique identifier that corresponds to its row number in nodes.csv
+    char name[MAX_LENGTH]; // UP name
+    int x; // UP occuring semester
+    int y; // UP identifier within the semester
+    struct _UPlect * next;
+} UPL;
 /////////////////////////////////////////////////////////////////////////////////
 
 #endif
