@@ -18,7 +18,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// Returns number of nodes of graph g.
+// Returns number of nodes in graph g.
 int get_vertices(graph * g);
 
 // Returns the number of edges connceted to node u.
