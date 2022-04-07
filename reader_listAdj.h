@@ -16,7 +16,7 @@ typedef struct _UPlect {
 /////////////////////////////////////////////////////////////////////////////////
 
 // Loads the graph from nodes_file and edges_file
-void load_graph(char * nodes_file, char * edges_file, mat_adj * res);
+void load_graph(char * nodes_file, char * edges_file, mat_adj ** res);
 
 /////////////////////////////////////////////////////////////////////////////////
 

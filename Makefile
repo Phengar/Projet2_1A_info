@@ -9,7 +9,7 @@
 #################################################################################
 
 main : main.o stat.o reader_listAdj.o format.o
-	gcc main.o stat.o reader_listAdj.o format.o -o main.exe
+	gcc main.o stat.o reader_listAdj.o format.o -o main
 
 clean :
 	rm *.o && rm main.exe 
@@ -23,7 +23,7 @@ stat.o : stat.c
 	gcc -c stat.c -o stat.o
 
 reader_listAdj.o : reader_listAdj.c
-	gcc -c reader_listAdj.c -o reader_listAdj.o
+	gcc -W -c reader_listAdj.c -o reader_listAdj.o
 
 format.o : format.c
 		gcc -c format.c -o format.o

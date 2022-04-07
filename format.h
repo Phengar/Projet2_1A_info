@@ -42,7 +42,7 @@ typedef struct {
     int id;
     int x;
     int y;
-    char * name;
+    char name[MAX_LENGTH];
     int nb_child;
     int * list;
 } mat_adj;

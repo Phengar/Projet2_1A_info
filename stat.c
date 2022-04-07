@@ -8,7 +8,8 @@
 
 // Returns number of nodes in mat_adj g.
 int get_nodes(mat_adj * g) {
-	return g->nb_n;
+	printf("POURQUOI MOI ?\n");
+	return g[0].nb_n;
 }
 
 
@@ -132,7 +133,7 @@ void visit_v(mat_adj * g, int * visited, int u, vertices ** l_vert) {
 	Function must be called with clus as NULL pointer.
 */
 void cluster_search(mat_adj * g, cluster ** clus) {
-	int * visited = (int *) calloc(g->nb_n, sizeof(int)); // Inits the whole array to zero
+	int * visited = (int *) calloc(get_nodes(g), sizeof(int)); // Inits the whole array to zero
 	if(visited == NULL) {
 		printf("Cannot allocate enough memory for visited array.\n");
 		exit(1);
