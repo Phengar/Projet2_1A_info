@@ -16,7 +16,7 @@ int get_nodes(mat_adj * g) {
 int get_degree_u(mat_adj * g, int u) {
 	int nb_e  = 0;
 	for(int v = 0; v < get_nodes(g); v++) {
-		if(g[u]->list[v]) { // If v is a neighbor of u
+		if(g[u].list[v]) { // If v is a neighbor of u
 			nb_e++;
 		}
 	}
@@ -75,7 +75,7 @@ int visit_v_acy(mat_adj * g, int * visited, int u) {
 	if(!visited[u]) {
 		visited[u] = 1;
 		for(int v = 0; v < get_nodes(g); v++) {
-			if(g[u]->list[v]) {  // If v is one of u neighbors
+			if(g[u].list[v]) {  // If v is one of u neighbors
 				return visit_v_acy(g, visited, v);
 			}
 		}
@@ -115,7 +115,7 @@ void visit_v(mat_adj * g, int * visited, int u, vertices ** l_vert) {
 		visited[u] = 1;
 		append_vertices(l_vert, u); // if u is part of the current l_vert cluster
 		for(int v = 0; v < get_nodes(g); v++) { // Looping through u neighbors
-			if(g[u]->list[v]) visit_v(g, visited, v, l_vert);
+			if(g[u].list[v]) visit_v(g, visited, v, l_vert);
 		}
 	}
 }
@@ -192,7 +192,7 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 
 
 /*
--------------------------------------------------------------------------
+
 	Returns the length of the longest path from vertex u
 	and creates the path to the farthest vertex in path
 	linked-list. It relies on Breadth-First Search.
@@ -202,7 +202,7 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 	curriculmum.
 	--
 	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
--------------------------------------------------------------------------
+
 */
 int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 	// Distance from each node of mat_adj g to u
@@ -231,8 +231,8 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 	while(q != NULL) {
 		int u = pop_queue(&q);
 		for(int v = 0; v < get_nodes(g); v++) {
-			if(g[u]->list[v]) {  // If v is one of u neighbors
-				int v_s = g[u]->list[v].x; // v semester
+			if(g[u].list[v]) {  // If v is one of u neighbors
+				int v_s = g[v].x; // v semester
 				if(distance[v] == -1) { // if vertex u is not visited
 					distance_update(distance, u_path, &q, mode, v_s, u, v);
 				}
@@ -256,6 +256,8 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 	Returns a list of the longest path for each vertex of mat_adj g.
 	--
 	Function must be called with path as NULL pointer.
+	--
+	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
 */
 int longest_path(mat_adj * g, queue ** path, int mode) {
 	// Array of path from each node to its farthest neighbor
@@ -284,7 +286,7 @@ int longest_path(mat_adj * g, queue ** path, int mode) {
 		// If the considered vertex is not an already farthest vertex from a previously considered one
 		if(is_longest_path[u] == -1) {
 			int tmp = longest_path_u(g, u, mode, &(path[u]));
-			is_longest_path[path[u]->key] = u; // Vertex path[u]->key is the farthest from u
+			is_longest_path[path[u]->key] = u; // Vertex path[u].key is the farthest from u
 			if(tmp > max_path) {
 				max_path = tmp;
 			}

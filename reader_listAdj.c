@@ -7,7 +7,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-mat_adj * load_graph(char * nodes_file, char * edges_file) {
+void load_graph(char * nodes_file, char * edges_file, mat_adj * res) {
     int refTable[7][91];
     char nom[50];
     int i = 0;
@@ -19,7 +19,7 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
         exit(1);
     }
 
-    UPL *upi = (UPL *) malloc(sizeof(UP));
+    UPL *upi = (UPL *) malloc(sizeof(UPL));
     if(upi == NULL) {
         printf("Cannot allocate enough memory for UP list.\n");
         exit(1);
@@ -27,7 +27,7 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
     
     UPL * head = upi;
     while(fscanf(file, "%d %s %d %d", &upi->id, &upi->name, &upi->x, &upi->y)== 4) {
-        upi->next = (UPL *) malloc(sizeof(UP));
+        upi->next = (UPL *) malloc(sizeof(UPL));
         if(upi->next == NULL) {
             printf("Cannot allocate enough memory for an UP.\n");
             exit(1);
@@ -37,20 +37,27 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
         upi = upi->next;
         i += 1;
     }
-    printf("nb lignes: %d", i);
+    printf("nb lignes: %d\n", i);
 
-
+    printf("Coucou1.\n");
     //public mat_adj * pointer = (mat_adj *)malloc(sizeof(mat_adj)*i);
-    mat_adj res[i];
+    res = (mat_adj *) malloc(i * sizeof(mat_adj));
+    if(res == NULL) {
+        printf("Cannot allocate enough memory for adjacency matrix.\n");
+        exit(1);
+    }
+    printf("Coucou2.\n");
     upi = head;
     for(int j=0; j<i; j++) {
+        res[j].nb_n = i;
+
         res[j].list = (int *) calloc(i, sizeof(int));
         if(res[j].list == NULL) {
             printf("Cannot allocate enough memory for a new list.\n");
             exit(1);
         }
         res[j].id = upi->id;
-        strcpy(res[j].name, &upi->name);
+        strcpy(res[j].name, upi->name);
         res[j].x = upi->x;
         res[j].y = upi->y;
         upi = upi->next;
@@ -76,7 +83,6 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
 
     fclose(file);
     fclose(file2);
-    return res;
 }
 
 /////////////////////////////////////////////////////////////////////////////////

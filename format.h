@@ -38,9 +38,10 @@ typedef struct _node {
 
 // Graph structure : adjacency matrix
 typedef struct {
+    int nb_n;
     int id;
     int x;
-    int y
+    int y;
     char * name;
     int nb_child;
     int * list;

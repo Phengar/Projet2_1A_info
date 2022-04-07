@@ -19,7 +19,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 // Returns number of nodes in mat_adj g.
-int get_vertices(mat_adj * g);
+int get_nodes(mat_adj * g);
 
 // Returns the number of edges connceted to node u.
 int get_degree_u(mat_adj * g, int u);
