@@ -12,6 +12,12 @@ typedef struct _UPlect {
     int y; // UP identifier within the semester
     struct _UPlect * next;
 } UPL;
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// Loads the graph from nodes_file and edges_file
+mat_adj * load_graph(char * nodes_file, char * edges_file);
+
 /////////////////////////////////////////////////////////////////////////////////
 
 #endif

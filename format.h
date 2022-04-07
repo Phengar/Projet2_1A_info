@@ -18,6 +18,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+/*
 // UP data structure
 typedef struct _UP {
     int id; // Unique identifier that corresponds to its row number in nodes.csv
@@ -32,21 +33,17 @@ typedef struct _node {
     int GP;
     int index;
     struct _node * next;
-} node;
+} node;*/
 
 
+// Graph structure : adjacency matrix
 typedef struct {
-    UP;
+    int id;
+    int x;
+    int y
+    char * name;
     int * list;
 } mat_adj;
-
-
-// Graph structure : adjacency list
-typedef struct{
-    int nb_n; //nb of nodes
-    int nb_e; //nb of edges
-    UP ** g;
-} graph;
 
 /////////////////////////////////////////////////////////////////////////////////
 /*

@@ -6,17 +6,17 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// Returns number of nodes in graph g.
-int get_nodes(graph * g) {
+// Returns number of nodes in mat_adj g.
+int get_nodes(mat_adj * g) {
 	return g->nb_n;
 }
 
 
 // Returns the number of edges connceted to node u.
-int get_degree_u(graph * g, int u) {
+int get_degree_u(mat_adj * g, int u) {
 	int nb_e  = 0;
 	for(int v = 0; v < get_nodes(g); v++) {
-		if(g->g[u][v]) { // If v is a neighbor of u
+		if(g[u]->list[v]) { // If v is a neighbor of u
 			nb_e++;
 		}
 	}
@@ -24,8 +24,8 @@ int get_degree_u(graph * g, int u) {
 }
 
 
-// Returns the max degree of graph g.
-int get_max_degree(graph * g) {
+// Returns the max degree of mat_adj g.
+int get_max_degree(mat_adj * g) {
 	int tmp = 0;
 	for(int u = 0; u < get_nodes(g); u++) {
 		int nb_e = get_degree_u(g, u);
@@ -37,8 +37,8 @@ int get_max_degree(graph * g) {
 }
 
 
-// Returns the min degree of graph g.
-int get_min_degree(graph * g) {
+// Returns the min degree of mat_adj g.
+int get_min_degree(mat_adj * g) {
 	int tmp = get_max_degree(g);
 	for(int u = 0; u < get_nodes(g); u++) {
 		int nb_e = get_degree_u(g, u);
@@ -49,8 +49,8 @@ int get_min_degree(graph * g) {
 	return tmp;
 }
 
-// Creates an array (degrees) containing the degree for each vertex of graph g.
-void get_degrees(graph * g, int * degrees) {
+// Creates an array (degrees) containing the degree for each vertex of mat_adj g.
+void get_degrees(mat_adj * g, int * degrees) {
 	degrees = (int *) calloc(get_nodes(g), sizeof(int));
 	if(degrees ==  NULL) {
 		printf("Cannot allocate enough memory for degrees array.\n");
@@ -71,11 +71,11 @@ void get_degrees(graph * g, int * degrees) {
 
 
 // Sub-fonction of is_acyclic - It behaves like Depth-First Search.
-int visit_v_acy(graph * g, int * visited, int u) {
+int visit_v_acy(mat_adj * g, int * visited, int u) {
 	if(!visited[u]) {
 		visited[u] = 1;
 		for(int v = 0; v < get_nodes(g); v++) {
-			if(g->g[u][v]) {  // If v is one of u neighbors
+			if(g[u]->list[v]) {  // If v is one of u neighbors
 				return visit_v_acy(g, visited, v);
 			}
 		}
@@ -85,7 +85,7 @@ int visit_v_acy(graph * g, int * visited, int u) {
 
 
 // Returns whether g is acyclic or not.
-int is_acyclic(graph * g) {
+int is_acyclic(mat_adj * g) {
 	int * visited = (int *) calloc(get_nodes(g), sizeof(int));
 	if(visited == NULL) {
 		printf("Cannot allocate enough memory for visited array.\n");
@@ -110,19 +110,19 @@ int is_acyclic(graph * g) {
 
 
 // Sub-function of cluster_search that visites neighbors of node u.
-void visit_v(graph * g, int * visited, int u, vertices ** l_vert) {
+void visit_v(mat_adj * g, int * visited, int u, vertices ** l_vert) {
 	if(!visited[u]) {
 		visited[u] = 1;
 		append_vertices(l_vert, u); // if u is part of the current l_vert cluster
 		for(int v = 0; v < get_nodes(g); v++) { // Looping through u neighbors
-			if(g->g[u][v]) visit_v(g, visited, v, l_vert);
+			if(g[u]->list[v]) visit_v(g, visited, v, l_vert);
 		}
 	}
 }
 
 
 /*
-	void cluster_search(graph * g, cluster ** clus);
+	void cluster_search(mat_adj * g, cluster ** clus);
 	--
 	Performs a Depth-First Search on g until
 	every vertices are visited. Then returns
@@ -131,7 +131,7 @@ void visit_v(graph * g, int * visited, int u, vertices ** l_vert) {
 	--
 	Function must be called with clus as NULL pointer.
 */
-void cluster_search(graph * g, cluster ** clus) {
+void cluster_search(mat_adj * g, cluster ** clus) {
 	int * visited = (int *) calloc(g->nb_n, sizeof(int)); // Inits the whole array to zero
 	if(visited == NULL) {
 		printf("Cannot allocate enough memory for visited array.\n");
@@ -197,15 +197,15 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 	and creates the path to the farthest vertex in path
 	linked-list. It relies on Breadth-First Search.
 	--
-	You can choose to consider specific parts of the graph
+	You can choose to consider specific parts of the mat_adj
 	either a specific year, even semester or the whole
 	curriculmum.
 	--
 	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
 -------------------------------------------------------------------------
 */
-int longest_path_u(graph * g, int u, int mode, queue ** path) {
-	// Distance from each node of graph g to u
+int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
+	// Distance from each node of mat_adj g to u
 	int * distance = (int *) malloc(get_nodes(g) * sizeof(int));
 	if(distance == NULL) {
 		printf("Cannot allocate enough memory for distance array.\n");
@@ -231,8 +231,8 @@ int longest_path_u(graph * g, int u, int mode, queue ** path) {
 	while(q != NULL) {
 		int u = pop_queue(&q);
 		for(int v = 0; v < get_nodes(g); v++) {
-			if(g->g[u][v]) {  // If v is one of u neighbors
-				int v_s = g->g[u][v].x; // v semester
+			if(g[u]->list[v]) {  // If v is one of u neighbors
+				int v_s = g[u]->list[v].x; // v semester
 				if(distance[v] == -1) { // if vertex u is not visited
 					distance_update(distance, u_path, &q, mode, v_s, u, v);
 				}
@@ -253,11 +253,11 @@ int longest_path_u(graph * g, int u, int mode, queue ** path) {
 
 
 /*
-	Returns a list of the longest path for each vertex of graph g.
+	Returns a list of the longest path for each vertex of mat_adj g.
 	--
 	Function must be called with path as NULL pointer.
 */
-int longest_path(graph * g, queue ** path, int mode) {
+int longest_path(mat_adj * g, queue ** path, int mode) {
 	// Array of path from each node to its farthest neighbor
 	path = (queue **) malloc(get_nodes(g) * sizeof(queue *));
 	if(path == NULL) {

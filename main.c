@@ -22,7 +22,8 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 int main() {
-    while(1) printf("Hacked (°_°).\n");
+    mat_adj * graph = load_graph("nodes.csv", "edges.csv");
+    
     return 0;
 }
 
