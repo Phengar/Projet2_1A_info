@@ -24,7 +24,7 @@
 
 int main() {
     mat_adj * graph =  NULL;
-    load_graph("nodes.csv", "edges.csv", &graph);
+    load_graph("./csv/nodes.csv", "./csv/edges.csv", &graph);
     printf("%d\n", (graph == NULL));
     int nodes = get_nodes(graph);
 	printf("Number of nodes in the graph : %d\n", nodes);

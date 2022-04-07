@@ -73,10 +73,12 @@ void append_cluster_key(cluster ** clus, int key) {
         printf("Cannot allocate enough memory for a new cluster element.\n");
         return;
     }
+
     tmp->key = key;
-    tmp->list = (*clus)->list;
+    printf("%d\n", (*clus == NULL));
+    tmp->list = *clus;
     tmp->next = NULL;
-    (*clus)->list = tmp;
+    *clus = tmp;
 }
 
 // Pops from cluster main-list head
@@ -99,10 +101,10 @@ void print_cluster(cluster ** clus) {
             printf("%d ", cur->key);
             cur = cur->list;
         }
+        printf("\n");
 		tmp = tmp->next;
 		i++;
 	}
-	printf("\n");
 }
 
 /////////////////////////////////////////////////////////////////////////////////

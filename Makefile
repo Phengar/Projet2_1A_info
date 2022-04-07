@@ -4,15 +4,15 @@
 # 								ISMIN 1A - EI21                                 #
 #################################################################################
 
-
+#################################################################################
 
 #################################################################################
 
-main : main.o stat.o reader_listAdj.o format.o
-	gcc main.o stat.o reader_listAdj.o format.o -o main
+main : main.o stat.o format.o reader_listAdj.o
+	gcc main.o stat.o format.o reader_listAdj.o -o main
 
 clean :
-	rm *.o && rm main.exe 
+	rm *.o && rm main
 	
 #################################################################################
 

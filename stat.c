@@ -114,6 +114,7 @@ void visit_v(mat_adj * g, int * visited, int u, cluster ** list) {
 	if(!visited[u]) {
 		visited[u] = 1;
 		append_cluster_key(list, u); // if u is part of the current l_vert cluster
+		printf("Coucou7.\n");
 		for(int v = 0; v < get_nodes(g); v++) { // Looping through u neighbors
 			if(g[u].list[v]) visit_v(g, visited, v, list);
 		}
@@ -237,6 +238,7 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 
 	int maxi, i_maxi;
 	maxi = max_array(distance, get_nodes(g), &i_maxi);
+	if(maxi == -1) exit(1); // Error catching
 	while(i_maxi != u) { // Copying the max path to path
 		append_queue(path, i_maxi);
 		i_maxi = u_path[i_maxi];

@@ -13,10 +13,10 @@
 
 #################################################################################
 
-NODES_CSV_IN = "nodes.csv.bak"
-NODES_CSV_OUT = "nodes.csv"
-EDGES_CSV_IN = "edges.csv.bak"
-EDGES_CSV_OUT = "edges.csv"
+NODES_CSV_IN = "./csv/nodes.csv.bak"
+NODES_CSV_OUT = "./csv/nodes.csv"
+EDGES_CSV_IN = "./csv/edges.csv.bak"
+EDGES_CSV_OUT = "./csv/edges.csv"
 
 dump = [] # Dump list that contains the file content processed
 hashtable = {} # Hashtable to avoid duplicates
