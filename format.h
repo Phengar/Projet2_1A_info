@@ -42,6 +42,7 @@ typedef struct {
     int x;
     int y
     char * name;
+    int nb_child;
     int * list;
 } mat_adj;
 

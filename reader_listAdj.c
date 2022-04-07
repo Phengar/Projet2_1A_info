@@ -39,6 +39,8 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
     }
     printf("nb lignes: %d", i);
 
+
+    //public mat_adj * pointer = (mat_adj *)malloc(sizeof(mat_adj)*i);
     mat_adj res[i];
     upi = head;
     for(int j=0; j<i; j++) {
@@ -58,16 +60,18 @@ mat_adj * load_graph(char * nodes_file, char * edges_file) {
 
     FILE * file2;
     file2 = fopen("edges.csv", "rb");
-    if (file2 == NULL ){
-        fprintf(stderr, "Couldn't  Open edges.csv\n");
+    if (file2 == NULL){
+        fprintf(stderr, "\nCouldn't  Open edges.csv\n");
         exit(1);
     }
     int x1,y1,x2,y2,id1,id2;
-    while(fscanf(file2, "%d %d %d %d", &x1, &y1, &x2, &y2)==4) {
-        id1 = refTable[x1][y1];
-        id2 = refTable[x2][y2];
-        res[id1].list[id2] = 1;
-        res[id2].list[id1] = 1;
+    while (fscanf(file2, "%d %d %d %d", &x1, &y1, &x2, &y2)==4){
+        id1=refTable[x1][y1];
+        id2=refTable[x2][y2];
+        res[id1].list[id2]=1;
+        res[id1].nb_child++;
+        res[id2].list[id1]=1;
+        res[id2].nb_child++;
     }
 
     fclose(file);

@@ -30,7 +30,7 @@ file_in = open(EDGES_CSV_IN, "r")
 file_in.readline() # Avoiding first row
 
 for line in file_in:
-	if(not line in hashtable): # Checks for any duplicates
+	if(not line in hashtable and "[5, 18]"not in line): # Checks for any duplicates
 		hashtable[line] = 1
 		string = line.replace(" ", "") # Deletes all blank characters
 		L = string.split(",")
@@ -43,16 +43,6 @@ for line in file_in:
 			dump.append(string)
 
 file_in.close()
-
-## ------------------------------------------------------------------------------#
-## Saving the formated edges file	:										    #
-## ------------------------------------------------------------------------------#
-#file_out = open(EDGES_CSV, "w")
-#
-#for l in dump:
-#	file_out.write(l)
-#
-#file_out.close()
 
 # ------------------------------------------------------------------------------#
 # Saving the formated edges file	:										    #
