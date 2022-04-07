@@ -24,24 +24,24 @@ hashtable = {} # Hashtable to avoid duplicates
 # ------------------------------------------------------------------------------#
 # Formating the edges file :												 	#
 # ------------------------------------------------------------------------------#
-#file_in = open(EDGES_CSV, "r")
-#file_in.readline() # Avoiding first row
-#
-#for line in file_in:
-#	if(not line in hashtable): # Checks for any duplicates
-#		hashtable[line] = 1
-#		string = line.replace(" ", "") # Deletes all blank characters
-#		L = string.split(",")
-#		# Checks for loop edges
-#		if((line[1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
-#			string = ",".join(L)
-#			string = string.replace("[", "")
-#			string = string.replace("]", "")
-#			string = string.replace(",", " ")
-#			dump.append(string)
-#
-#file_in.close()
-#
+file_in = open(EDGES_CSV, "r")
+file_in.readline() # Avoiding first row
+
+for line in file_in:
+	if(not line in hashtable): # Checks for any duplicates
+		hashtable[line] = 1
+		string = line.replace(" ", "") # Deletes all blank characters
+		L = string.split(",")
+		# Checks for loop edges
+		if((line[1:] != L[2][1:]) or (L[1][:-1] != L[3][:-2])):
+			string = ",".join(L)
+			string = string.replace("[", "")
+			string = string.replace("]", "")
+			string = string.replace(",", " ")
+			dump.append(string)
+
+file_in.close()
+
 ## ------------------------------------------------------------------------------#
 ## Saving the formated edges file	:										    #
 ## ------------------------------------------------------------------------------#

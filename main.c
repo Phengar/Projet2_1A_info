@@ -14,9 +14,9 @@
 
 // Libraries includes
 #include <stdio.h>
-#include "format.h" // Data format definition
+#include "format.h" 		// Data format definition
 #include "reader_listAdj.h" // Graph loader/ builder
-#include "stat.h"   // Miscellaneous data analysis functions
+#include "stat.h"   		// Miscellaneous data analysis functions
  
 
 /////////////////////////////////////////////////////////////////////////////////

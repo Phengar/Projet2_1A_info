@@ -6,7 +6,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// Returns number of nodes of graph g.
+// Returns number of nodes in graph g.
 int get_nodes(graph * g) {
 	return g->nb_n;
 }

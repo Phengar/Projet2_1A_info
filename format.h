@@ -27,7 +27,7 @@ typedef struct _UP {
 } UP;
 
 
-typedef struct _node{
+typedef struct _node {
     UP element;
     int GP;
     int index;

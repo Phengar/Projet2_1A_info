@@ -9,10 +9,10 @@
 #################################################################################
 
 main : main.o stat.o reader_listAdj.o format.o
-	gcc ./obj/main.o ./obj/stat.o ./obj/reader_listAdj.o ./obj/format.o -o main
+	gcc ./obj/main.o ./obj/stat.o ./obj/reader_listAdj.o ./obj/format.o -o ./src/main
 
 clean :
-	rm -rf ./obj/*.o
+	rm ./obj/*.o && rm -f ./src/*
 	
 #################################################################################
 
