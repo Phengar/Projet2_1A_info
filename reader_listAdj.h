@@ -5,6 +5,11 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+/*
+    Adjacency list structure used to
+    load the graph from .csv files.
+
+*/
 typedef struct _UPlect {
     int id; // Unique identifier that corresponds to its row number in nodes.csv
     char name[MAX_LENGTH]; // UP name
@@ -15,7 +20,13 @@ typedef struct _UPlect {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// Loads the graph from nodes_file and edges_file
+/*
+
+    Loads the graph defined in nodes_files and
+    edges_file nto res an adjacency matrix structure.
+
+*/
+
 void load_graph(char * nodes_file, char * edges_file, mat_adj ** res);
 
 /////////////////////////////////////////////////////////////////////////////////

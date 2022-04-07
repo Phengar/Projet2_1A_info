@@ -161,7 +161,7 @@ Projet2_1A_info
 |  **Makefile**  |   `make` or `make main` | Compiles the project's C code |
 |  **Makefile**  |   `make clean` | Cleans `./obj` and `./bin` content |
 | ----------- |    ---------------    | 	-----------   |
-|  **stat.h**  |   ` int get_vertices(graph * g)` | Returns number of nodes in graph g |
+|  **stat.h**  |   `int get_nodes(graph * g)` | Returns number of nodes in graph g |
 |  **stat.h**  |   `int get_degree_u(graph * g, int u)` | Returns the number of edges connceted to node u |
 |  **stat.h**  |   `int get_max_degree(graph * g)` | Returns the max degree of graph g |
 |  **stat.h** |   `int get_min_degree(graph * g)` | Returns the min degree of graph g |
@@ -169,27 +169,23 @@ Projet2_1A_info
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
 |  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
-|  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, vertices ** l_vert)` | Sub-function of cluster_search that visites neighbors of node u |
+|  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, cluster ** list` | Sub-function of cluster_search that visits neighbors of node u |
 |  **stat.h**  |   `int longest_path_u(graph * g, int u, int mode, queue ** path)` | Returns the length of the longest path from vertex u the path is stored is \*path |
 |  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
 | **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-fct - Computes the distance from u to v |
 |  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
 | ----------- |    ---------------    | 	-----------   |
-| **reader_listAdj.h**  |   `void example(void)` | 💻 |
+| **reader_listAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Adjacency list structure used to load the graph from .csv files |
+| **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
+    edges_file nto res an adjacency matrix structure |
 | ----------- |    ---------------    | 	-----------   |
-| **format.h**  |   `struct UP : {int id, char name[MAX_LENGTH], int x, int y}` | UP data stucture |
-| **format.h**  |   `struct node : {UP element, int GP, int index, node * next}` | linked-list alike data stucture |
-| **format.h**  |   `struct mat_adj : {UP , int * list}` | graph as adjacency matrix |
-| **format.h**  |   `struct graph : {int nb_n, int nb_e, UP ** g}` | graph as adjacency list |
-| **format.h**  |   `struct vertices : {int vertex, vertices ** next}` | linked-list alike data structure |
-| **format.h**  |   `void append_vertices(vertices ** l_vert, int vertex)` | Appends vertex to vertices head |
-| **format.h**  |   `void pop_vertices(vertices ** l_vert)` | Pops from vertices head |
-| **format.h**  |   `void print_vertices(vertices ** l_vertx)` | Prints vertices elements |
-| **format.h**  |   `struct clus : {vertices ** l_vert, clus ** next}` | Linked-list of vertices |
-| **format.h**  |   `void append_cluster(cluster ** clus, vertices ** l_vert)` | Appends l_vert to cluster head |
-| **format.h**  |   `void pop_cluster(cluster ** clus)` | Pops from cluster head |
+| **format.h**  |   `struct mat_adj : {int nb_n, int id, int x, int y, char name[MAX_LENGTH], int nb_child , int * list}` | graph as adjacency matrix |
+| **format.h**  |   `struct cluster : {int key, cluster * list, cluster * next}` | Linked-list of linked-list of vertices - Each node n is a linked-list containing vertices forming the n-th cluster |
+| **format.h**  |   `void append_cluster_list(cluster ** clus)` | Appends a new cluster into the cluster main-list |
+| **format.h**  |   `void append_cluster_key(cluster ** clus, int key)` | Appends a key in the considered cluster list |
+| **format.h**  |   `void pop_cluster(cluster ** clus)` | Pops a cluster node from head |
 | **format.h**  |   `void print_cluster(cluster ** clus)` | Prints cluster elements |
 | **format.h**  |   `struct queue : {int key, queue ** next}` | Queue data structure |
 | **format.h**  |   `void append_queue(queue ** q, int key)` | Appends key to queue tail |
-| **format.h**  |   `void pop_queue(queue ** q)` | Pops from queue head |
+| **format.h**  |   `int pop_queue(queue ** q)` | Pops and returns from queue head |
 | **format.h**  |   `void print_queue(queue ** q)` | Prints queue elements |

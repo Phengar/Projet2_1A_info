@@ -23,9 +23,9 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 int main() {
-    mat_adj * graph = NULL;
+    mat_adj * graph =  NULL;
     load_graph("nodes.csv", "edges.csv", &graph);
-    printf("Coucou\n");
+    printf("%d\n", (graph == NULL));
     int nodes = get_nodes(graph);
 	printf("Number of nodes in the graph : %d\n", nodes);
     
@@ -34,10 +34,10 @@ int main() {
     get_degrees(graph, degrees);
     printf("Is the graph acyclic : %s\n", (is_acyclic(graph)) ? "oui" : "non");
     
-
+    printf("Coucou1.\n");
     cluster * clus = NULL;
     cluster_search(graph, &clus);
-    printf("Result fo cluster search\n");
+    printf("Result of the cluster search in the graph :\n");
     print_cluster(&clus);
 
 

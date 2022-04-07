@@ -47,7 +47,7 @@ int is_acyclic(mat_adj * g);
 
 
 // Sub-function of cluster_search that visites neighbors of node u.
-void visit_v(mat_adj * g, int * visited, int u, vertices ** l_vert);
+void visit_v(mat_adj * g, int * visited, int u, cluster ** list);
 
 /*
 	void cluster_search(mat_adj * g, cluster ** clus);

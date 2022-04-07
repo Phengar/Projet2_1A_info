@@ -8,7 +8,6 @@
 
 // Returns number of nodes in mat_adj g.
 int get_nodes(mat_adj * g) {
-	printf("POURQUOI MOI ?\n");
 	return g[0].nb_n;
 }
 
@@ -111,12 +110,12 @@ int is_acyclic(mat_adj * g) {
 
 
 // Sub-function of cluster_search that visites neighbors of node u.
-void visit_v(mat_adj * g, int * visited, int u, vertices ** l_vert) {
+void visit_v(mat_adj * g, int * visited, int u, cluster ** list) {
 	if(!visited[u]) {
 		visited[u] = 1;
-		append_vertices(l_vert, u); // if u is part of the current l_vert cluster
+		append_cluster_key(list, u); // if u is part of the current l_vert cluster
 		for(int v = 0; v < get_nodes(g); v++) { // Looping through u neighbors
-			if(g[u].list[v]) visit_v(g, visited, v, l_vert);
+			if(g[u].list[v]) visit_v(g, visited, v, list);
 		}
 	}
 }
@@ -139,14 +138,9 @@ void cluster_search(mat_adj * g, cluster ** clus) {
 		exit(1);
 	}
 
-	vertices * l_vert = NULL; // New cluster
-
 	for(int u = 0; u < get_nodes(g); u++) {
-		visit_v(g, visited, u, &l_vert);
-		if(l_vert != NULL) {
-			append_cluster(clus, &l_vert); // Adding the l_vert cluster to the cluster list
-			l_vert = NULL; //  New cluster
-		}
+		append_cluster_list(clus);
+		visit_v(g, visited, u, &((*clus)->list));
 	}
 }
 
@@ -181,12 +175,12 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 	if(!mode || mode == v_s) { // Whole curriculum mode := 0
 		distance[v] = distance[u] + 1;
 		u_path[v] = u;
-		append_queue(q, v);
+		append_queue(q, v); // Adds v to the visiting queue
 	} else if(mode <= 3) { // Year mode := 1, 2 or 3
 		if(v_s == 2*mode-1 || v_s == 2*mode) {
 			distance[v] = distance[u] + 1;
 			u_path[v] = u;
-			append_queue(q, v);
+			append_queue(q, v); // Adds v to the visiting queue
 		}
 	}
 }

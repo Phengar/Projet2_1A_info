@@ -30,7 +30,7 @@ file_in = open(EDGES_CSV_IN, "r")
 file_in.readline() # Avoiding first row
 
 for line in file_in:
-	if(not line in hashtable and "[5, 18]"not in line): # Checks for any duplicates
+	if(not line in hashtable and "[5, 18]" not in line): # Checks for any duplicates
 		hashtable[line] = 1
 		string = line.replace(" ", "") # Deletes all blank characters
 		L = string.split(",")

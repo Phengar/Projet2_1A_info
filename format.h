@@ -48,11 +48,11 @@ typedef struct {
 } mat_adj;
 
 /////////////////////////////////////////////////////////////////////////////////
-/*
+/*/*
     
     Vertices structure - (inherent to cluster structure) - Linked-list
 
-*/
+
 
 typedef struct _vert {
     int vertex;
@@ -63,30 +63,42 @@ void append_vertices(vertices ** l_vert, int vertex);
 
 void pop_vertices(vertices ** l_vert);
 
-void print_vertices(vertices ** l_vert);
+void print_vertices(vertices ** l_vert);*/
 
 
 /*
 
-    Cluster structure - Linked-list of vertices
+    Cluster structure
+    --
+    Linked-list of linked-list of vertices
+    --
+    Which you can also consider as a main-list
+    whose elements are list of vertices forming
+    a cluster.
 
 */
 
 typedef struct _clus {
-    vertices  ** l_vert;
+    int key;
+    struct _clus * list;
     struct _clus * next;
 } cluster ;
 
+// Adds a new cluster into the cluster main-list
+void append_cluster_list(cluster ** clus);
 
-void append_cluster(cluster ** clus, vertices ** l_vert);
+// Adds a key in the considered cluster list
+void append_cluster_key(cluster ** clus, int key);
 
+// Pops from cluster main-list head
 void pop_cluster(cluster ** clus);
 
+// Prints the cluster elements
 void print_cluster(cluster ** clus);
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// Queue structure
+// Queue data structure
 typedef struct _queue {
     struct _queue * next;
     int key;
@@ -94,9 +106,10 @@ typedef struct _queue {
 
 void append_queue(queue ** q, int key);
 
-// Pops and returns top queue key
+// Pops and returns from queue head
 int pop_queue(queue ** q);
 
+// Prints queue elements
 void print_queue(queue ** q);
 
 /////////////////////////////////////////////////////////////////////////////////

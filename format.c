@@ -6,11 +6,11 @@
 #include <string.h>
 
 /////////////////////////////////////////////////////////////////////////////////
-/*
+/*/*
 
 	Vertices structure - (inherent to cluster structure) - Linked-list
 
-*/
+
 
 void append_vertices(vertices ** l_vert, int vertex) {
     vertices * tmp = (vertices *) malloc(sizeof(vertices));
@@ -38,27 +38,48 @@ void print_vertices(vertices ** l_vert) {
         tmp = tmp->next;
     }
     printf("\n");
-}
+}*/
 
 /////////////////////////////////////////////////////////////////////////////////
 /*
 
-	Cluster structure - Linked-list of vertices
+	Cluster structure
+    --
+    Linked-list of linked-list of vertices
+    --
+    Which you can also consider as a main-list
+    whose elements are list of vertices forming
+    a cluster.
 
 */
 
-
-void append_cluster(cluster ** clus, vertices ** l_vert) {
+// Adds a new cluster into the cluster main-list
+void append_cluster_list(cluster ** clus) {
     cluster *  tmp = (cluster *) malloc(sizeof(cluster));
     if(tmp == NULL) {
-        printf("Cannot allocate enough memory for cluster.\n");
+        printf("Cannot allocate enough memory for a new cluster.\n");
         exit(1);
     }
-    tmp->l_vert = l_vert;
+    tmp->key = -1;
+    tmp->list = NULL;
     tmp->next = *clus;
     *clus = tmp;
 }
 
+// Adds a key in the considered cluster list
+void append_cluster_key(cluster ** clus, int key) {
+    cluster * tmp = (cluster *) malloc(sizeof(cluster));
+    if(tmp == NULL) {
+        printf("Cannot allocate enough memory for a new cluster element.\n");
+        return;
+    }
+    tmp->key = key;
+    tmp->list = (*clus)->list;
+    tmp->next = NULL;
+    (*clus)->list = tmp;
+}
+
+// Pops from cluster main-list head
 void pop_cluster(cluster ** clus) {
     if(*clus != NULL) {
     	cluster * tmp = *clus;
@@ -67,12 +88,17 @@ void pop_cluster(cluster ** clus) {
     }
 }
 
+// Prints the cluster elements
 void print_cluster(cluster ** clus) {
 	cluster * tmp = *clus;
 	int i = 0;
 	while(tmp != NULL) {
 		printf("%d  ->  ", i);
-		print_vertices(tmp->l_vert);
+		cluster * cur = tmp->list;
+        while(cur != NULL) {
+            printf("%d ", cur->key);
+            cur = cur->list;
+        }
 		tmp = tmp->next;
 		i++;
 	}
@@ -81,9 +107,10 @@ void print_cluster(cluster ** clus) {
 
 /////////////////////////////////////////////////////////////////////////////////
 /*
-	Queue structure
+    Queue data structure
 */
 
+// Appends key to queue tail
 void append_queue(queue ** q, int key) {
     queue * tmp = (queue *) malloc(sizeof(queue));
     if(tmp == NULL) {
@@ -107,6 +134,7 @@ void append_queue(queue ** q, int key) {
     }
 }
 
+// Pops from queue head
 int pop_queue(queue ** q) {
 	if(*q != NULL) {
 		queue * tmp = *q;
@@ -117,6 +145,7 @@ int pop_queue(queue ** q) {
 	}
 }
 
+// Prints queue elements
 void print_queue(queue ** q) {
 	queue * tmp = *q;
 	while(tmp != NULL) {

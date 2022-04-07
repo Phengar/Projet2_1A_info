@@ -7,11 +7,18 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// According empirical datas :)
+// According empirical data :)
 #define MAX_SEMESTER 10
 #define MAX_UP 100
 
 /////////////////////////////////////////////////////////////////////////////////
+
+/*
+
+    Loads the graph defined in nodes_files and
+    edges_file nto res an adjacency matrix structure.
+
+*/
 
 void load_graph(char * nodes_file, char * edges_file, mat_adj ** res) {
     int refTable[MAX_SEMESTER][MAX_UP];
