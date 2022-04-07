@@ -77,12 +77,15 @@ mat_adj * main(){
     }
     printf("nb lignes: %d", i);
 
+
+    //public mat_adj * pointer = (mat_adj *)malloc(sizeof(mat_adj)*i);
     mat_adj res[i];
     upi=head;
     for(int j=0; j<i; j++){
         res[j].list = (int *)calloc(i,sizeof(int));
         res[j].id=upi->id;
-        strcpy(res[j].name, &upi->name)   ;
+        res[j].nb_child=0;
+        strcpy(res[j].name, &upi->name);
         res[j].x=upi->x;
         res[j].y=upi->y;
 
@@ -93,7 +96,7 @@ mat_adj * main(){
 
     FILE * file2;
     file2 = fopen("edges.csv", "rb");
-    if (file == NULL){
+    if (file2 == NULL){
         fprintf(stderr, "\nCouldn't  Open edges.csv\n");
         exit(1);
     }
@@ -102,7 +105,9 @@ mat_adj * main(){
         id1=refTable[x1][y1];
         id2=refTable[x2][y2];
         res[id1].list[id2]=1;
+        res[id1].nb_child++;
         res[id2].list[id1]=1;
+        res[id2].nb_child++;
     }
 
     fclose(file);

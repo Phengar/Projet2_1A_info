@@ -37,6 +37,7 @@ typedef struct _node{
 
 typedef struct {
     UP;
+    int nb_child;
     int * list;
 } mat_adj;
 
