@@ -53,6 +53,8 @@ int get_min_degree(mat_adj * g, int * id_min);
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees);
 
+/////////////////////////////////////////////////////////////////////////////////
+
 // Prints an array of integer of length length.
 void print_array(int * array, int length);
 
@@ -109,7 +111,7 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path);
 /*
 	Returns a list of the longest path for each vertex of mat_adj g.
 	--
-	Function must be called with path as NULL pointer.
+	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
 */
 int longest_path(mat_adj * g, queue ** path, int mode);
 

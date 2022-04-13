@@ -174,6 +174,16 @@ Projet2_1A_info
 |  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
 | **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-fct - Computes the distance from u to v |
 |  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
+|  **stat.h**  |   `int get_UP(mat_adj * g)` | Returns the number of UP in mat_adj g |
+|  **stat.h**  |   `int get_UP_semester(mat_adj * g, int semester)` | Returns the number of UP in a given semester |
+|  **stat.h**  |   `int get_UP_year(mat_adj * g, int year)` | Returns the number of UP in a given semester |
+|  **stat.h**  |   `int get_GP(mat_adj * g)` | Returns the number of GP in mat_adj g |
+|  **stat.h**  |   `int get_GP_semester(mat_adj * g, int semester)` | Returns the number of GP in a given semester |
+|  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
+|  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
+|  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
+|  **stat.h**  |   `void print_array(int * array, int length)` | Prints an array of integer of length length |
+
 | ----------- |    ---------------    | 	-----------   |
 | **reader_listAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Adjacency list structure used to load the graph from .csv files |
 | **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and

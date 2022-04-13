@@ -47,8 +47,8 @@ int main() {
     printf("Minimum degree node : %s - %d.\n", graph[id_min_degree].name, min_degree);
     printf("Maximum degree node : %s - %d.\n", graph[id_max_degree].name, max_degree);
     printf("================================\n");
-    
-    
+
+
     int * degrees = (int *) calloc(get_nodes(graph), sizeof(int));
     if(degrees ==  NULL) {
         printf("Cannot allocate enough memory for degrees array.\n");
@@ -70,10 +70,17 @@ int main() {
     printf("================================\n");
 
 
-    queue * q = NULL;
+    queue ** q = (queue **) malloc(get_nodes(graph) * sizeof(queue *));
+    if(q == NULL) {
+        printf("Cannot allocate enough memory.\n");
+        exit(1);
+    }
+    for(int u = 0; u < get_nodes(graph); u++) {
+        q[u] = NULL;
+    }
     int mode = 0;
-    int lpath = longest_path(graph, &q, mode);
-    printf("Longest path in the graph : %d.\n", lpath);
+    //int lpath = longest_path(graph, q, mode);
+    //printf("Longest path in the graph : %d.\n", lpath);
     return 0;
 }
 

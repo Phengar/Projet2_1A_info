@@ -103,12 +103,19 @@ int get_min_degree(mat_adj * g, int * id_min) {
 	return tmp;
 }
 
+
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees) {
 	for(int u = 0; u < get_nodes(g); u++) {
 		degrees[u] = get_degree_u(g, u);
 	}
 }
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
 
 // Prints an array of integer of length length.
 void print_array(int * array, int length) {
@@ -211,19 +218,15 @@ void cluster_search(mat_adj * g, cluster ** clus) {
 
 // Returns the max element in array. Its index is stored in *ind.
 int max_array(int * array, int length, int * ind) {
-	if(length == 0) {
-		int m = array[0];
-		*ind = 0;
-		for(int i = 1; i < length; i++) {
-			if(m < array[i]) {
-				m = array[i];
-				*ind = i;
-			}
+	int m = array[0];
+	*ind = 0;
+	for(int i = 1; i < length; i++) {
+		if(m < array[i]) {
+			m = array[i];
+			*ind = i;
 		}
-		return m;
 	}
-	printf("Array is empty.\n");
-	return -1;
+	return m;
 }
 
 
@@ -234,7 +237,7 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 		u_path[v] = u;
 		append_queue(q, v); // Adds v to the visiting queue
 	} else if(mode <= 3) { // Year mode := 1, 2 or 3
-		if(v_s == 2*mode-1 || v_s == 2*mode) {
+		if(v_s == 2*mode+3 || v_s == 2*mode+4) {
 			distance[v] = distance[u] + 1;
 			u_path[v] = u;
 			append_queue(q, v); // Adds v to the visiting queue
@@ -259,40 +262,42 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 	// Distance from each node of mat_adj g to u
 	int * distance = (int *) malloc(get_nodes(g) * sizeof(int));
-	if(distance == NULL) {
-		printf("Cannot allocate enough memory for distance array.\n");
-		return -1;
-	}
-
 	// Predecessor of each node considering it starts from vertex u
 	int * u_path = (int *) malloc(get_nodes(g) * sizeof(int));
-	if(u_path == NULL) {
-		printf("Cannot allocate enough memory.\n");
+	if(distance == NULL || u_path == NULL) {
+		printf("Cannot allocate enough memory for either distance array or u_path array.\n");
 		return -1;
 	}
 
 	for(int v = 0; v < get_nodes(g); v++) {
-		distance[v] = (u == v) ? 0 : -1;
-		u_path[v] = (u == v) ? u : 0;
+		distance[v] = -1;
+		u_path[v] = -1;
 	}
+
+	distance[u] = 0;
+	u_path[u] = u;
 
 	queue * q = NULL;
 	append_queue(&q, u);
 
 	// Computes all shortest path from v
 	while(q != NULL) {
-		int u = pop_queue(&q);
+		//int u = pop_queue(&q);
+		//int unv = g[u].nb_child;
 		for(int v = 0; v < get_nodes(g); v++) {
+			//printf("u : %d - unv : %d.\n", u, unv);
 			if(g[u].list[v]) {  // If v is one of u neighbors
-				int v_s = g[v].x; // v semester
-				if(distance[v] == -1) { // if vertex u is not visited
+				int v_s = g[v].x; // v semester number
+				if(distance[v] == -1) { // if vertex v is not visited
 					distance_update(distance, u_path, &q, mode, v_s, u, v);
+					//unv--;
 				}
 			}
 		}
 	}
 
-	int maxi, i_maxi;
+	int maxi;
+	int i_maxi = 0;
 	maxi = max_array(distance, get_nodes(g), &i_maxi);
 	if(maxi == -1) exit(1); // Error catching
 	while(i_maxi != u) { // Copying the max path to path
@@ -308,43 +313,14 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 /*
 	Returns a list of the longest path for each vertex of mat_adj g.
 	--
-	Function must be called with path as NULL pointer.
-	--
 	mode :=  {0 : whole curriculum, 1-3 : year mode or 5-10 : semester}.
 */
 int longest_path(mat_adj * g, queue ** path, int mode) {
-	// Array of path from each node to its farthest neighbor
-	path = (queue **) malloc(get_nodes(g) * sizeof(queue *));
-	if(path == NULL) {
-		printf("Cannot allocate enough memory for path linked-list.\n");
-		exit(1);
-	}
-	
-	// Used to check whether or not a vertex is already the farthest path from a node
-	int * is_longest_path = (int *) malloc(get_nodes(g) * sizeof(int));
-	if(is_longest_path == NULL) {
-		printf("Cannot allocate enough memory.\n");
-		exit(1);
-	}
-
-	for(int u = 0; u < get_nodes(g); u++) {
-		path[u] = NULL;
-		is_longest_path[u] = -1;
-	}
-
-
 	int max_path = 0; // Max-path length
-
 	for(int u = 0; u < get_nodes(g); u++) {
-		// If the considered vertex is not an already farthest vertex from a previously considered one
-		if(is_longest_path[u] == -1) {
-			int tmp = longest_path_u(g, u, mode, &(path[u]));
-			is_longest_path[path[u]->key] = u; // Vertex path[u].key is the farthest from u
-			if(tmp > max_path) {
-				max_path = tmp;
-			}
-		} else {
-			path[u] = path[is_longest_path[u]];
+		int tmp = longest_path_u(g, u, mode, &(path[u]));
+		if(tmp > max_path) {
+			max_path = tmp;
 		}
 	}
 	return max_path;
