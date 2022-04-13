@@ -6,6 +6,7 @@
 #include <string.h>
 
 /////////////////////////////////////////////////////////////////////////////////
+
 /*/*
 
 	Vertices structure - (inherent to cluster structure) - Linked-list
@@ -75,7 +76,6 @@ void append_cluster_key(cluster ** clus, int key) {
     }
 
     tmp->key = key;
-    printf("%d\n", (*clus == NULL));
     tmp->list = *clus;
     tmp->next = NULL;
     *clus = tmp;
@@ -91,14 +91,14 @@ void pop_cluster(cluster ** clus) {
 }
 
 // Prints the cluster elements
-void print_cluster(cluster ** clus) {
+void print_cluster(mat_adj * g, cluster ** clus) {
 	cluster * tmp = *clus;
 	int i = 0;
 	while(tmp != NULL) {
 		printf("%d  ->  ", i);
 		cluster * cur = tmp->list;
         while(cur != NULL) {
-            printf("%d ", cur->key);
+            printf("%s, ", g[cur->key].name);
             cur = cur->list;
         }
         printf("\n");

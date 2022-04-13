@@ -21,17 +21,40 @@
 // Returns number of nodes in mat_adj g.
 int get_nodes(mat_adj * g);
 
+// Returns the number of UP in mat_adj g.
+int get_UP(mat_adj * g);
+
+// Returns the number of UP in a given semester.
+int get_UP_semester(mat_adj * g, int semester);
+
+// Returns the number of UP in a given year.
+int get_UP_year(mat_adj * g, int year);
+
+// Returns the number of GP in mat_adj g.
+int get_GP(mat_adj * g);
+
+// Returns the number of GP in a given semester.
+int get_GP_semester(mat_adj * g, int semester);
+
+// Returns the number of GP in a given year.
+int get_GP_year(mat_adj * g, int year);
+
 // Returns the number of edges connceted to node u.
 int get_degree_u(mat_adj * g, int u);
 
-// Returns the max degree of mat_adj g.
-int get_max_degree(mat_adj * g);
+// Returns the max degree of mat_adj g
+// and puts its index at ind_max.
+int get_max_degree(mat_adj * g, int * id_max);
 
-// Returns the min degree of mat_adj g.
-int get_min_degree(mat_adj * g);
+// Returns the min degree of mat_adj g
+// and puts its index at ind_min.
+int get_min_degree(mat_adj * g, int * id_min);
 
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees);
+
+// Prints an array of integer of length length.
+void print_array(int * array, int length);
 
 /////////////////////////////////////////////////////////////////////////////////
 

@@ -47,6 +47,7 @@ typedef struct {
     int * list;
 } mat_adj;
 
+
 /////////////////////////////////////////////////////////////////////////////////
 /*/*
     
@@ -94,7 +95,7 @@ void append_cluster_key(cluster ** clus, int key);
 void pop_cluster(cluster ** clus);
 
 // Prints the cluster elements
-void print_cluster(cluster ** clus);
+void print_cluster(mat_adj * g, cluster ** clus);
 
 /////////////////////////////////////////////////////////////////////////////////
 

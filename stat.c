@@ -12,38 +12,92 @@ int get_nodes(mat_adj * g) {
 }
 
 
-// Returns the number of edges connceted to node u.
-int get_degree_u(mat_adj * g, int u) {
-	int nb_e  = 0;
-	for(int v = 0; v < get_nodes(g); v++) {
-		if(g[u].list[v]) { // If v is a neighbor of u
-			nb_e++;
-		}
+// Returns the number of UP in mat_adj g.
+int get_UP(mat_adj * g) {
+	int nb_UP = 0;
+	for(int u = 0; u < get_nodes(g); u++) {
+		// If name[1] belongs to ASCII(a-z).
+		if(g[u].name[1] >= 97) nb_UP++;
 	}
-	return nb_e;
+	return nb_UP;
 }
 
 
-// Returns the max degree of mat_adj g.
-int get_max_degree(mat_adj * g) {
+// Returns the number of UP in a given semester.
+int get_UP_semester(mat_adj * g, int semester) {
+	int nb_UP = 0;
+	for(int u = 0; u < get_nodes(g); u++) {
+		if(g[u].name[1] >= 97 && g[u].x == semester-4) nb_UP++;
+	}
+	return nb_UP;
+}
+
+
+// Returns the number of UP in a given year.
+int get_UP_year(mat_adj * g, int year) {
+	return get_UP_semester(g, 2*year+3) + get_UP_semester(g, 2*year+4);
+}
+
+
+// Returns the number of GP in mat_adj g.
+int get_GP(mat_adj * g) {
+	return get_nodes(g)  - get_UP(g);
+}
+
+
+// Returns the number of GP in a given semester.
+int get_GP_semester(mat_adj * g, int semester) {
+	int nb_GP = 0;
+	for(int u = 0; u < get_nodes(g); u++) {
+		// If g[u].name[1] belongs to ASCII(A-Z).
+		if(g[u].name[1] <= 90 && g[u].x == semester-4) nb_GP++;
+	}
+	return nb_GP;
+}
+
+
+// Returns the number of GP in a given year.
+int get_GP_year(mat_adj * g, int year) {
+	return get_GP_semester(g, 2*year+3) + get_GP_semester(g, 2*year+4);
+}
+
+
+// Returns the number of edges connceted to node u.
+int get_degree_u(mat_adj * g, int u) {
+	int nb_child  = 0;
+	for(int v = 0; v < get_nodes(g); v++) {
+		if(g[u].list[v]) { // If v is a neighbor of u
+			nb_child++;
+		}
+	}
+	return nb_child;
+}
+
+
+// Returns the max degree of mat_adj g
+// and puts its index at ind_max.
+int get_max_degree(mat_adj * g, int * id_max) {
 	int tmp = 0;
 	for(int u = 0; u < get_nodes(g); u++) {
-		int nb_e = get_degree_u(g, u);
-		if(tmp < nb_e) {
-			tmp = nb_e;
+		int nb_child = get_degree_u(g, u);
+		if(tmp < nb_child) {
+			tmp = nb_child;
+			*id_max = u;
 		}
 	}
 	return tmp;
 }
 
 
-// Returns the min degree of mat_adj g.
-int get_min_degree(mat_adj * g) {
-	int tmp = get_max_degree(g);
+// Returns the min degree of mat_adj g
+// and puts its index at ind_min.
+int get_min_degree(mat_adj * g, int * id_min) {
+	int tmp = get_max_degree(g, id_min);
 	for(int u = 0; u < get_nodes(g); u++) {
-		int nb_e = get_degree_u(g, u);
-		if(tmp > nb_e) {
-			tmp = nb_e;
+		int nb_child = get_degree_u(g, u);
+		if(tmp > nb_child) {
+			tmp = nb_child;
+			*id_min = u;
 		}
 	}
 	return tmp;
@@ -51,15 +105,17 @@ int get_min_degree(mat_adj * g) {
 
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees) {
-	degrees = (int *) calloc(get_nodes(g), sizeof(int));
-	if(degrees ==  NULL) {
-		printf("Cannot allocate enough memory for degrees array.\n");
-		exit(1);
-	}
-
 	for(int u = 0; u < get_nodes(g); u++) {
 		degrees[u] = get_degree_u(g, u);
 	}
+}
+
+// Prints an array of integer of length length.
+void print_array(int * array, int length) {
+	for(int i = 0; i < length; i++) {
+		printf("%d ", array[i]);
+	}
+	printf("\n");
 }
 
 
@@ -114,7 +170,6 @@ void visit_v(mat_adj * g, int * visited, int u, cluster ** list) {
 	if(!visited[u]) {
 		visited[u] = 1;
 		append_cluster_key(list, u); // if u is part of the current l_vert cluster
-		printf("Coucou7.\n");
 		for(int v = 0; v < get_nodes(g); v++) { // Looping through u neighbors
 			if(g[u].list[v]) visit_v(g, visited, v, list);
 		}
@@ -142,6 +197,7 @@ void cluster_search(mat_adj * g, cluster ** clus) {
 	for(int u = 0; u < get_nodes(g); u++) {
 		append_cluster_list(clus);
 		visit_v(g, visited, u, &((*clus)->list));
+		if((*clus)->list == NULL) pop_cluster(clus);
 	}
 }
 
