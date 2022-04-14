@@ -15,6 +15,8 @@ Comment il faut exécuter le programme et structuration du ReadMe.txt :
 
 - Pourquoi favoriser un certain algorithme
 
+- Analyse complexité temporelle et en mémoire
+
 ## Idées pour le rapport :
 
 - Avant-propos : Raisons/ finalité de ce projet
@@ -172,9 +174,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_GP(mat_adj * g)` | Returns the number of GP in mat_adj g |
 |  **stat.h**  |   `int get_GP_semester(mat_adj * g, int semester)` | Returns the number of GP in a given semester |
 |  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
-
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
-
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
 |  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
 |  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, cluster ** list` | Sub-function of cluster_search that visits neighbors of node u |
@@ -182,18 +182,12 @@ Projet2_1A_info
 |  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
 | **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-function - Computes the distance from u to v |
 |  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
-
 |  **stat.h**  |   `void print_array(int * array, int length)` | Prints an array of integer of length length |
-
 | ----------- |    ---------------    | 	-----------   |
-
 | **reader_listAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Adjacency list structure used to load the graph from .csv files |
-| **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
-    edges_file nto res an adjacency matrix structure |
+| **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and edges_file nto res an adjacency matrix structure |
 | ----------- |    ---------------    | 	-----------   |
-
 | **format.h**  |   `struct mat_adj : {int nb_n, int id, int x, int y, char name[MAX_LENGTH], int nb_child , int * list}` | graph as adjacency matrix |
-
 | **format.h**  |   `struct cluster : {int key, cluster * list, cluster * next}` | Linked-list of linked-list of vertices - Each node n is a linked-list containing vertices forming the n-th cluster |
 | **format.h**  |   `void append_cluster_list(cluster ** clus)` | Appends a new cluster into the cluster main-list |
 | **format.h**  |   `void append_cluster_key(cluster ** clus, int key)` | Appends a key in the considered cluster list |
@@ -206,5 +200,4 @@ Projet2_1A_info
 | ----------- |    ---------------    |   -----------   |
 | **sort.h**  | `void swap(int * arr, int i, int j)` | Swaps values at i and j in array arr |
 | **sort.h**  | `int pivot(int * arr1, int * arr2, int i, int j)` | Decreasing quick sort sub-function  |
-
 | **sort.h**  | `void quick_sort(int * arr1, int * arr2, int length)` | Decreasing quick sort function |
