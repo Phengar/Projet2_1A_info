@@ -63,15 +63,61 @@ int get_GP_year(mat_adj * g, int year) {
 }
 
 
+// Returns the GP array (its length is *length).
+int * get_GP_array(mat_adj * g, int * length) {
+	*length = get_GP(g);
+	int * gp_arr = (int *) malloc((*length) * sizeof(int));
+	if(gp_arr == NULL) {
+		printf("Cannot allocate enough memory for GP array.\n");
+		exit(1);
+	}
+	int cur = 0;
+	for(int u = 0; u < get_nodes(g); u++) {
+		// If u is a GP
+		if(g[u].name[1] <= 90) {
+			gp_arr[cur] = u;
+			cur++;
+		}
+	}
+	return gp_arr;
+}
+
+// Creates the sorted array(degrees) of degree for each GP in gp_arr.
+void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees) {
+	for(int i = 0; i < length; i++) {
+		for(int u = 0; u < get_nodes(g); u++) {
+			// If u is oneof gp_arr[i] neighbors and u is a GP
+			if(g[gp_arr[i]].list[u] && g[u].name[1] <= 90) {
+				degrees[i]++;
+			}
+		}
+	}
+	quick_sort(degrees, gp_arr, length);
+}
+
+
+// Prints the top n GP of g with the highest GP degree.
+void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n) {
+	if(n > length) {
+		return;
+	}
+	printf("Top %d GP with the higest GP degree :\n", n);
+	for(int i = 0; i < n; i++) {
+		printf("%d : %s - degree : %d\n", i+1, g[gp_arr[i]].name, degrees[i]);
+	}
+}
+
+
 // Returns the number of edges connceted to node u.
 int get_degree_u(mat_adj * g, int u) {
-	int nb_child  = 0;
+	/*int nb_child  = 0;
 	for(int v = 0; v < get_nodes(g); v++) {
 		if(g[u].list[v]) { // If v is a neighbor of u
 			nb_child++;
 		}
 	}
-	return nb_child;
+	return nb_child;*/
+	return g[u].nb_child;
 }
 
 
@@ -123,13 +169,13 @@ void print_top_degrees(int * degrees, mat_adj * g, int n) {
 		printf("Cannot allocate enough memory.\n");
 		exit(1);
 	}
-	for(int i = 0; i < get_nodes(g); i++) {
-		index[i] = i;
+	for(int u = 0; u < get_nodes(g); u++) {
+		index[u] = u;
 	}
 	quick_sort(degrees, index, get_nodes(g));
 	printf("Top %d vertices with the highest degree :\n", n);
 	for(int i = 0; i < n; i++) {
-		printf("%s - degree : %d.\n", g[index[i]].name, degrees[i]);
+		printf("%d : %s - degree : %d.\n", i+1, g[index[i]].name, degrees[i]);
 	}
 	free(index);
 }
@@ -147,8 +193,6 @@ void print_array(int * array, int length) {
 	}
 	printf("\n");
 }
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////////

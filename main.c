@@ -12,6 +12,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 
+
 // Libraries includes
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,6 +22,7 @@
  
 
 /////////////////////////////////////////////////////////////////////////////////
+
 
 int main() {
     mat_adj * graph =  NULL;
@@ -34,12 +36,14 @@ int main() {
     printf("Number of GP in the ISMIN syllabus : %d.\n", get_GP(graph));
     printf("================================\n");
 
+
     int semester = 5, year = 1;
     printf("Number of UP in the %d-th semester : %d.\n", semester, get_UP_semester(graph, semester));
     printf("Number of UP in the year %d : %d.\n", year, get_UP_year(graph, year));
     printf("Number of GP in the %d-th semester : %d.\n", semester, get_GP_semester(graph, semester));
     printf("Number of GP in the year %d : %d.\n", year, get_GP_year(graph, year));
     printf("================================\n");
+
 
     int id_max_degree, id_min_degree;
     int min_degree = get_min_degree(graph, &id_min_degree);
@@ -60,11 +64,24 @@ int main() {
     printf("================================\n");
 
 
-    print_top_degrees(degrees, graph, 5);
+    print_top_degrees(degrees, graph, 10);
+    printf("================================\n");
+
+
+    int length;
+    int * gp_array = get_GP_array(graph, &length);
+    int * degrees_GP = (int *) calloc(length, sizeof(int));
+    if(degrees_GP == NULL) {
+        printf("Cannot allocate enough memory.\n");
+        exit(1);
+    }
+    get_degrees_GP(graph, gp_array, length, degrees_GP);
+    print_top_degrees_GP(graph, gp_array, degrees_GP, length, 5);
     printf("================================\n");
 
     printf("Is the graph acyclic : %s\n", (is_acyclic(graph)) ? "oui" : "non");
     printf("================================\n");
+
 
     cluster * clus = NULL;
     cluster_search(graph, &clus);
@@ -84,8 +101,12 @@ int main() {
     int mode = 0;
     int lpath = longest_path(graph, q, mode);
     printf("Longest path in the graph : %d.\n", lpath);*/
+
+    
     free(degrees);
+    free(degrees_GP);
     return 0;
 }
+
 
 /////////////////////////////////////////////////////////////////////////////////

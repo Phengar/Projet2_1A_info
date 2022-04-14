@@ -39,10 +39,23 @@ int get_GP_semester(mat_adj * g, int semester);
 // Returns the number of GP in a given year.
 int get_GP_year(mat_adj * g, int year);
 
+////////////////////////////////////////////////////////////////////////
+
+// Returns the GP array (its length is *length).
+int * get_GP_array(mat_adj * g, int * length);
+
+// Creates the sorted array(degrees) of degree for each GP in gp_arr.
+void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees);
+
+// Prints the top n GP of g with the highest GP degree.
+void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n);
+
+////////////////////////////////////////////////////////////////////////
+
 // Returns the number of edges connceted to node u.
 int get_degree_u(mat_adj * g, int u);
 
-// Returns the max degree of mat_adj g
+// Returns the max degree of mat_adj g.
 // and puts its index at ind_max.
 int get_max_degree(mat_adj * g, int * id_max);
 
