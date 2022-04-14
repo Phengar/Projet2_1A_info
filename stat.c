@@ -114,8 +114,24 @@ void get_degrees(mat_adj * g, int * degrees) {
 
 
 // Prints the top n nodes with the highest degrees.
-void print_top_degrees(int * degrees, int nb_n, int n) {
-
+void print_top_degrees(int * degrees, mat_adj * g, int n) {
+	if(n > get_nodes(g)) {
+		return;
+	}
+	int * index = (int *) malloc(get_nodes(g) * sizeof(int));
+	if(index == NULL) {
+		printf("Cannot allocate enough memory.\n");
+		exit(1);
+	}
+	for(int i = 0; i < get_nodes(g); i++) {
+		index[i] = i;
+	}
+	quick_sort(degrees, index, get_nodes(g));
+	printf("Top %d vertices with the highest degree :\n", n);
+	for(int i = 0; i < n; i++) {
+		printf("%s - degree : %d.\n", g[index[i]].name, degrees[i]);
+	}
+	free(index);
 }
 
 
@@ -166,6 +182,7 @@ int is_acyclic(mat_adj * g) {
 			return 0;
 		}
 	}
+	free(visited);
 	return 1;
 }
 
@@ -213,6 +230,7 @@ void cluster_search(mat_adj * g, cluster ** clus) {
 		visit_v(g, visited, u, &((*clus)->list));
 		if((*clus)->list == NULL) pop_cluster(clus);
 	}
+	free(visited);
 }
 
 
@@ -329,7 +347,8 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 		i_maxi = u_path[i_maxi];
 	}
 	append_queue(path, u);
-
+	free(distance);
+	free(u_path);
 	return maxi;
 }
 

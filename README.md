@@ -165,7 +165,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
 |  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
 |  **stat.h**  |   `void get_degrees(graph * g, int * degrees)` | Creates an array (degrees) containing the degree for each vertex of graph g |
-|  **stat.h**  |   `void print_top_degrees(int * degrees, int nb_n, int n)` | Prints the top n nodes with the highest degrees |
+|  **stat.h**  |   `void print_top_degrees(int * degrees, mat_adj * g, int n)` | Prints the top n nodes with the highest degrees |
 |  **stat.h**  |   `int get_UP(mat_adj * g)` | Returns the number of UP in mat_adj g |
 |  **stat.h**  |   `int get_UP_semester(mat_adj * g, int semester)` | Returns the number of UP in a given semester |
 |  **stat.h**  |   `int get_UP_year(mat_adj * g, int year)` | Returns the number of UP in a given semester |
@@ -204,11 +204,7 @@ Projet2_1A_info
 | **format.h**  |   `int pop_queue(queue ** q)` | Pops and returns from queue head |
 | **format.h**  |   `void print_queue(queue ** q)` | Prints queue elements |
 | ----------- |    ---------------    |   -----------   |
-| **sort.h**  | `void copy_array(int * arr1, int * arr2, int i1, int i2, int length)` | Copies arr1 starting at i1 to arr2 starting at i2 on length length |
-| **sort.h**  | `void copy_array(int * arr1, int * arr2, int i1, int i2, int length)` | Sorts array arr1 in a decreasing order using merge sort algorithm, arr2 contains the place of each arr1 index after the sort |
+| **sort.h**  | `void swap(int * arr, int i, int j)` | Swaps values at i and j in array arr |
+| **sort.h**  | `int pivot(int * arr1, int * arr2, int i, int j)` | Decreasing quick sort sub-function  |
 
-| **sort.h**  | `void merge_sort(int * arr1, int * arr2, int length)` | Sorts array arr1 in a decreasing order using merge sort algorithm, arr2 contains the place of each arr1 index after the sort |
-
-| **sort.h**  | `void merge(int * arr1, int * arr2, int size, int i, int j, int * copy1, int * copy2)` | Decreasing merge sort sub-function : Merges elements of arr1 between i and j, does the same for arr2 |
-
-| **sort.h**  | `void print_array(int * arr, int length)` | Prints an array of integers of length length |
+| **sort.h**  | `void quick_sort(int * arr1, int * arr2, int length)` | Decreasing quick sort function |

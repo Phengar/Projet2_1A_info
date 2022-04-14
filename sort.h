@@ -14,23 +14,20 @@
 
 //////////////////////////////////////////////////////////////////////////
 
-// Copies arr1 starting at i1 to arr2 starting at i2 on length length
-void copy_array(int * arr1, int * arr2, int i1, int i2, int length);
+// Swaps values at i and j in array arr
+void swap(int * arr, int i, int j);
 
 /*
 	Sorts array arr1 in a decreasing order 
-	using merge sort algorithm, arr2 contains
+	using quick sort algorithm, arr2 contains
 	the place of each arr1 index after the sort.
 */
 
-// Decreasing merge sort sub-function 
-void merge(int * arr1, int * arr2, int size, int i, int j, int * copy1, int * copy2);
+// Decreasing quick sort sub-function 
+int pivot(int * arr1, int * arr2, int i, int j);
 
-// Decreasing merge sort function
-void merge_sort(int * arr1, int * arr2, int length);
-
-// Prints an array of integers of length length
-void print_array(int * arr, int length);
+// Decreasing quick sort function
+void quick_sort(int * arr1, int * arr2, int length);
 
 //////////////////////////////////////////////////////////////////////////
 

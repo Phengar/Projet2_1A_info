@@ -54,7 +54,8 @@ int get_min_degree(mat_adj * g, int * id_min);
 void get_degrees(mat_adj * g, int * degrees);
 
 // Prints the top n nodes with the highest degrees.
-void print_top_degrees(int * degrees, int nb_n, int n);
+// nb_n is the number of nodes in the graph
+void print_top_degrees(int * degrees, mat_adj * g, int n);
 
 /////////////////////////////////////////////////////////////////////////////////
 

@@ -60,6 +60,9 @@ int main() {
     printf("================================\n");
 
 
+    print_top_degrees(degrees, graph, 5);
+    printf("================================\n");
+
     printf("Is the graph acyclic : %s\n", (is_acyclic(graph)) ? "oui" : "non");
     printf("================================\n");
 
@@ -70,7 +73,7 @@ int main() {
     printf("================================\n");
 
 
-    queue ** q = (queue **) malloc(get_nodes(graph) * sizeof(queue *));
+    /*queue ** q = (queue **) malloc(get_nodes(graph) * sizeof(queue *));
     if(q == NULL) {
         printf("Cannot allocate enough memory.\n");
         exit(1);
@@ -80,7 +83,8 @@ int main() {
     }
     int mode = 0;
     int lpath = longest_path(graph, q, mode);
-    printf("Longest path in the graph : %d.\n", lpath);
+    printf("Longest path in the graph : %d.\n", lpath);*/
+    free(degrees);
     return 0;
 }
 
