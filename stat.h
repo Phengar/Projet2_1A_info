@@ -53,6 +53,9 @@ int get_min_degree(mat_adj * g, int * id_min);
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees);
 
+// Prints the top n nodes with the highest degrees.
+void print_top_degrees(int * degrees, int nb_n, int n);
+
 /////////////////////////////////////////////////////////////////////////////////
 
 // Prints an array of integer of length length.

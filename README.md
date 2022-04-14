@@ -103,11 +103,10 @@ uses C only.
 #### :warning: Requirements
 
 As long as you have GCC compiler and GNU Make tool installed,
-the code should run flawlessly whether you use GNU Linux,
-Windows or MacOS. Having the Python 3 interpreter is not
-mandatory as `.csv` files are yet formatted. Nonetheless
-you can still try this script out on un-formatted data
-stored in `./*.csv.bak` files.
+the code should run flawlessly on Linux systems. Having the
+Python 3 interpreter is not mandatory as `.csv` files are
+yet formatted. Nonetheless you can still try this script out
+on un-formatted data stored in `./*.csv.bak` files.
 
 + **Installing gcc and make** :
   - *Debian systems* :
@@ -163,33 +162,38 @@ Projet2_1A_info
 | ----------- |    ---------------    | 	-----------   |
 |  **stat.h**  |   `int get_nodes(graph * g)` | Returns number of nodes in graph g |
 |  **stat.h**  |   `int get_degree_u(graph * g, int u)` | Returns the number of edges connceted to node u |
-|  **stat.h**  |   `int get_max_degree(graph * g)` | Returns the max degree of graph g |
-|  **stat.h** |   `int get_min_degree(graph * g)` | Returns the min degree of graph g |
+|  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
+|  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
 |  **stat.h**  |   `void get_degrees(graph * g, int * degrees)` | Creates an array (degrees) containing the degree for each vertex of graph g |
-|  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
-|  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
-|  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
-|  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, cluster ** list` | Sub-function of cluster_search that visits neighbors of node u |
-|  **stat.h**  |   `int longest_path_u(graph * g, int u, int mode, queue ** path)` | Returns the length of the longest path from vertex u the path is stored is \*path |
-|  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
-| **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-fct - Computes the distance from u to v |
-|  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
+|  **stat.h**  |   `void print_top_degrees(int * degrees, int nb_n, int n)` | Prints the top n nodes with the highest degrees |
 |  **stat.h**  |   `int get_UP(mat_adj * g)` | Returns the number of UP in mat_adj g |
 |  **stat.h**  |   `int get_UP_semester(mat_adj * g, int semester)` | Returns the number of UP in a given semester |
 |  **stat.h**  |   `int get_UP_year(mat_adj * g, int year)` | Returns the number of UP in a given semester |
 |  **stat.h**  |   `int get_GP(mat_adj * g)` | Returns the number of GP in mat_adj g |
 |  **stat.h**  |   `int get_GP_semester(mat_adj * g, int semester)` | Returns the number of GP in a given semester |
 |  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
-|  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
-|  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
+
+|  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
+
+|  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
+|  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
+|  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, cluster ** list` | Sub-function of cluster_search that visits neighbors of node u |
+|  **stat.h**  |   `int longest_path_u(graph * g, int u, int mode, queue ** path)` | Returns the length of the longest path from vertex u the path is stored is \*path |
+|  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
+| **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-function - Computes the distance from u to v |
+|  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
+
 |  **stat.h**  |   `void print_array(int * array, int length)` | Prints an array of integer of length length |
 
 | ----------- |    ---------------    | 	-----------   |
+
 | **reader_listAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Adjacency list structure used to load the graph from .csv files |
 | **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
     edges_file nto res an adjacency matrix structure |
 | ----------- |    ---------------    | 	-----------   |
+
 | **format.h**  |   `struct mat_adj : {int nb_n, int id, int x, int y, char name[MAX_LENGTH], int nb_child , int * list}` | graph as adjacency matrix |
+
 | **format.h**  |   `struct cluster : {int key, cluster * list, cluster * next}` | Linked-list of linked-list of vertices - Each node n is a linked-list containing vertices forming the n-th cluster |
 | **format.h**  |   `void append_cluster_list(cluster ** clus)` | Appends a new cluster into the cluster main-list |
 | **format.h**  |   `void append_cluster_key(cluster ** clus, int key)` | Appends a key in the considered cluster list |
@@ -199,3 +203,12 @@ Projet2_1A_info
 | **format.h**  |   `void append_queue(queue ** q, int key)` | Appends key to queue tail |
 | **format.h**  |   `int pop_queue(queue ** q)` | Pops and returns from queue head |
 | **format.h**  |   `void print_queue(queue ** q)` | Prints queue elements |
+| ----------- |    ---------------    |   -----------   |
+| **sort.h**  | `void copy_array(int * arr1, int * arr2, int i1, int i2, int length)` | Copies arr1 starting at i1 to arr2 starting at i2 on length length |
+| **sort.h**  | `void copy_array(int * arr1, int * arr2, int i1, int i2, int length)` | Sorts array arr1 in a decreasing order using merge sort algorithm, arr2 contains the place of each arr1 index after the sort |
+
+| **sort.h**  | `void merge_sort(int * arr1, int * arr2, int length)` | Sorts array arr1 in a decreasing order using merge sort algorithm, arr2 contains the place of each arr1 index after the sort |
+
+| **sort.h**  | `void merge(int * arr1, int * arr2, int size, int i, int j, int * copy1, int * copy2)` | Decreasing merge sort sub-function : Merges elements of arr1 between i and j, does the same for arr2 |
+
+| **sort.h**  | `void print_array(int * arr, int length)` | Prints an array of integers of length length |

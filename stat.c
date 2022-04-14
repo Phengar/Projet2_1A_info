@@ -3,6 +3,7 @@
 #include "stat.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "sort.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -109,6 +110,12 @@ void get_degrees(mat_adj * g, int * degrees) {
 	for(int u = 0; u < get_nodes(g); u++) {
 		degrees[u] = get_degree_u(g, u);
 	}
+}
+
+
+// Prints the top n nodes with the highest degrees.
+void print_top_degrees(int * degrees, int nb_n, int n) {
+
 }
 
 
@@ -236,7 +243,7 @@ void distance_update(int * distance, int * u_path, queue ** q, int mode, int v_s
 		distance[v] = distance[u] + 1;
 		u_path[v] = u;
 		append_queue(q, v); // Adds v to the visiting queue
-	} else if(mode <= 3) { // Year mode := 1, 2 or 3
+	} else if(0 < mode && mode <= 3) { // Year mode := 1, 2 or 3
 		if(v_s == 2*mode+3 || v_s == 2*mode+4) {
 			distance[v] = distance[u] + 1;
 			u_path[v] = u;
@@ -279,19 +286,36 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 
 	queue * q = NULL;
 	append_queue(&q, u);
+	int size = 1;
 
 	// Computes all shortest path from v
 	while(q != NULL) {
-		//int u = pop_queue(&q);
-		//int unv = g[u].nb_child;
+		int v_s; // Semester number of node v
+		int u = pop_queue(&q);
+		int unv = g[u].nb_child;
 		for(int v = 0; v < get_nodes(g); v++) {
-			//printf("u : %d - unv : %d.\n", u, unv);
-			if(g[u].list[v]) {  // If v is one of u neighbors
-				int v_s = g[v].x; // v semester number
-				if(distance[v] == -1) { // if vertex v is not visited
-					distance_update(distance, u_path, &q, mode, v_s, u, v);
-					//unv--;
+			printf("u : %d - unv : %d - v : %d.\n", u, unv, v);
+			// If v is one of u neighbors and vertex v is not visited
+			if(g[u].list[v] && distance[v] == -1) {
+				printf("v : %d - v_s : %d.\n", v, g[v].x);
+				v_s = g[v].x; // v semester number
+				// Either curriculum mode := 0, or semester mode
+				if(!mode || mode == v_s) {
+					distance[v] = distance[u] + 1;
+					u_path[v] = u;
+					append_queue(&q, v); // Adds v to the visiting queue
+					size++;
+				// Year mode := 1, 2 or 3
+				} else if(1 <= mode && mode <= 3) {
+					if(v_s == 2*mode+3 || v_s == 2*mode+4) {
+						distance[v] = distance[u] + 1;
+						u_path[v] = u;
+						append_queue(&q, v); // Adds v to the visiting queue
+						size++;
+					}
 				}
+				printf("Queue length : %d.\n", size);
+				unv--;
 			}
 		}
 	}

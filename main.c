@@ -79,8 +79,8 @@ int main() {
         q[u] = NULL;
     }
     int mode = 0;
-    //int lpath = longest_path(graph, q, mode);
-    //printf("Longest path in the graph : %d.\n", lpath);
+    int lpath = longest_path(graph, q, mode);
+    printf("Longest path in the graph : %d.\n", lpath);
     return 0;
 }
 
