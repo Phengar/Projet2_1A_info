@@ -76,8 +76,10 @@ files. Namely :
   | ***reader_listAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
   | ***stat.h*** | Gathers the analysis functions used on the ISMIN syllabus graph. |
   | ***format.h*** | Gathers the definition of every data-structure used, for either importing or analyzing data. |
+  | ***sort.h*** | Implements a decreasing order quick sort |
   | ***main.c*** | Core of the project, uses functions from modules to import and process data. |
   | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles uplicates, loop edges, replaces special characters, spaces and commas |
+  
 
 
 
