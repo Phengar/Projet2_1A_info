@@ -15,6 +15,8 @@ Comment il faut exécuter le programme et structuration du ReadMe.txt :
 
 - Pourquoi favoriser un certain algorithme
 
+- Analyse complexité temporelle et en mémoire
+
 ## Idées pour le rapport :
 
 - Avant-propos : Raisons/ finalité de ce projet
@@ -76,8 +78,10 @@ files. Namely :
   | ***reader_matAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
   | ***stat.h*** | Gathers the analysis functions used on the ISMIN syllabus graph. |
   | ***format.h*** | Gathers the definition of every data-structure used, for either importing or analyzing data. |
+  | ***sort.h*** | Implements a decreasing order quick sort. |
   | ***main.c*** | Core of the project, uses functions from modules to import and process data. |
   | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles uplicates, loop edges, replaces special characters, spaces and commas |
+  
 
 
 
@@ -206,7 +210,6 @@ Projet2_1A_info
 |  **stat.h**  |   `void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees)` | Creates the sorted array(degrees) of degree for each GP in gp_arr |
 |  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n)` | Prints the top n GP of g with the highest GP degree |
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
-
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
 |  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
 |  **stat.h**  |   `void visit_v(graph * g, int * visited, int u, cluster ** list` | Sub-function of cluster_search that visits neighbors of node u |
@@ -214,18 +217,14 @@ Projet2_1A_info
 |  **stat.h**  |   `int longest_path(graph * g, queue ** path, int mode)` | Returns a list of the longest path for each vertex of graph g |
 | **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-function - Computes the distance from u to v |
 |  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
-
 |  **stat.h**  |   `void print_array(int * array, int length)` | Prints an array of integer of length length |
-
 | ----------- |    ---------------    | 	-----------   |
 
 | **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
 | **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
     edges_file nto res an adjacency matrix structure |
 | ----------- |    ---------------    | 	-----------   |
-
 | **format.h**  |   `struct mat_adj : {int nb_n, int id, int x, int y, char name[MAX_LENGTH], int nb_child , int * list}` | graph as adjacency matrix |
-
 | **format.h**  |   `struct cluster : {int key, cluster * list, cluster * next}` | Linked-list of linked-list of vertices - Each node n is a linked-list containing vertices forming the n-th cluster |
 | **format.h**  |   `void append_cluster_list(cluster ** clus)` | Appends a new cluster into the cluster main-list |
 | **format.h**  |   `void append_cluster_key(cluster ** clus, int key)` | Appends a key in the considered cluster list |
@@ -238,5 +237,4 @@ Projet2_1A_info
 | ----------- |    ---------------    |   -----------   |
 | **sort.h**  | `void swap(int * arr, int i, int j)` | Swaps values at i and j in array arr |
 | **sort.h**  | `int pivot(int * arr1, int * arr2, int i, int j)` | Decreasing quick sort sub-function  |
-
 | **sort.h**  | `void quick_sort(int * arr1, int * arr2, int length)` | Decreasing quick sort function |
