@@ -64,18 +64,45 @@ The data processed by the analysis will serve to help the education
 assembly make decisions for the 2023 ISMIN syllabus reform.
 
 
+
+
 ## :floppy_disk: Modularity choices
 
 We chose to divide the specific features of the project in various
 files. Namely :
 
-  | Header file | Purppose |
+  | Header file | Purpose |
   | ----------- | -------- |
-  | ***reader_listAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
+  | ***reader_matAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
   | ***stat.h*** | Gathers the analysis functions used on the ISMIN syllabus graph. |
   | ***format.h*** | Gathers the definition of every data-structure used, for either importing or analyzing data. |
   | ***main.c*** | Core of the project, uses functions from modules to import and process data. |
   | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles uplicates, loop edges, replaces special characters, spaces and commas |
+
+
+
+
+## Algorithm choices
+
+This overall project revolved around graph algorithm, the graph considered in this project is an oriented graph that is represented by two files, namely : *nodes.csv* and *edges.csv*. Each node of this graph are identified by two number \(x, y)\. First of, a loading function uses a linked-list to load the graph of yet \"unknown\" size in memory. The graph is then converted into an adjacency matrix structure for simplicity complexity sake. Each \(x, y)\ identifier of the graph is mapped to a unique number identifier (the row number of the node in *nodes.csv*) through a matrix of (Xmax * Ymax) dimension. Acyclism checking function revolves on a depth-first search algorithm, if the graph tries to visit an already visited node, it means that the graph is cyclic. In order to find
+clusters in the graph, we used a cluster search function that runs a depth-first search on the whole graph, starting from node zero and then on other nodes until the graph is completely visited. When also built functions that sorts nodes in a decreasing order(either UP or GP) depending on their degree value. Thus, a quick sort is used due to its average O(nlog(n)) time complexity given a list of size n as an input, it is also memory friendly compared to merge sort.
+The longest path algorithm revolves on breadth-first search as there is no need to select a specific edge at each step of the algorithm, compared to Dijkstra algorithm or Bellman-Ford algorithm, as each edge as a weight of one. In the Python CSV formater script, we used a hashing table in order to efficiently check if an edge already exists in the *edges.csv* file. The CSV formater program was written in Python as it was quick to implement and as we were allowed to.
+
+
+
+
+## Time and spatial complexity
+Let G = (V, E) an oriented graph, where V is its nodes set and E its edges set.
+Let L be a list of N integers.
+- Python CSV formater :
+  + Formating *edges.csv* : Time complexity : **O(|E|)**, spatial complexity : **O(|E|)**
+      - Append to hashtable and checking if elements already exists : **O(1)**
+      - Parsing each line : **O(1)**
+  + Formating *nodes.csv* : Time complexity : **O(|V|)**, spatial complexity : **O(1)**
+- Quick sort : Time complexity : **O(N)**, spatial complexity : **O(1)**
+- Depth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
+- Breadth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **(|V|)**
+- Longest path building function : Time complexity : **(|V|² + |V|x|E|)**, spatial complexity : **O(|V|²)** 
 
 
 
@@ -88,9 +115,10 @@ files. Namely :
 
 
 ## 🎯 Faced issues
-  While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contains a string with spaces in it and two numbers, when we tried to parse the file using a `fscanf()`. * TO BE CONTINUED *
+While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contains a string with spaces in it and two numbers. When we tried to parse the file using a `fscanf()` without formating the file, `fscanf()` considered spaces as new lines which raised issues. To face this problem, we wrote a Python script `formater.py` that formats *.csv* files beforehand. Precisely, it deletes looping edges, deletes duplicates rows, it also deletes **\[5, 18\]**unexisting node and replaces comma seprators by spaces in *`edges.csv`*. Furthermore, it replaces blank characters within strings by underscore, replaces comma seperator by spaces and deletes ASCII character with code 0xA0 in *`nodes.csv`*.
   
  
+
 
 
 ## 🛠️ Compilation & running the project
@@ -130,8 +158,10 @@ on un-formatted data stored in `./*.csv.bak` files.
       ```bash
       main.exe
       ```
-      
-      
+  - *Running the Python csv formater script* ***(Not mandatory)***
+      ```bash
+      python3 formater.py
+      ```
       
       
 ## 🌳 Project tree
@@ -172,7 +202,9 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_GP(mat_adj * g)` | Returns the number of GP in mat_adj g |
 |  **stat.h**  |   `int get_GP_semester(mat_adj * g, int semester)` | Returns the number of GP in a given semester |
 |  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
-
+|  **stat.h**  |   `int * get_GP_array(mat_adj * g, int * length)` | Returns the GP array (its length is \*length) |
+|  **stat.h**  |   `void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees)` | Creates the sorted array(degrees) of degree for each GP in gp_arr |
+|  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n)` | Prints the top n GP of g with the highest GP degree |
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
 
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
@@ -187,8 +219,8 @@ Projet2_1A_info
 
 | ----------- |    ---------------    | 	-----------   |
 
-| **reader_listAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Adjacency list structure used to load the graph from .csv files |
-| **reader_listAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
+| **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
+| **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and
     edges_file nto res an adjacency matrix structure |
 | ----------- |    ---------------    | 	-----------   |
 

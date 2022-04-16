@@ -39,8 +39,6 @@ int get_GP_semester(mat_adj * g, int semester);
 // Returns the number of GP in a given year.
 int get_GP_year(mat_adj * g, int year);
 
-////////////////////////////////////////////////////////////////////////
-
 // Returns the GP array (its length is *length).
 int * get_GP_array(mat_adj * g, int * length);
 
@@ -75,8 +73,10 @@ void print_top_degrees(int * degrees, mat_adj * g, int n);
 // Prints an array of integer of length length.
 void print_array(int * array, int length);
 
-/////////////////////////////////////////////////////////////////////////////////
+// Returns the max element in array. Its index is stored in *ind.
+int max_array(int * array, int length, int * ind);
 
+/////////////////////////////////////////////////////////////////////////////////
 
 // Sub-fonction of is_acyclic - It behaves like Depth-First Search.
 int visit_v_acy(mat_adj * g, int * visited, int u);
@@ -84,9 +84,7 @@ int visit_v_acy(mat_adj * g, int * visited, int u);
 // Returns whether g is acyclic or not.
 int is_acyclic(mat_adj * g);
 
-
 /////////////////////////////////////////////////////////////////////////////////
-
 
 // Sub-function of cluster_search that visites neighbors of node u.
 void visit_v(mat_adj * g, int * visited, int u, cluster ** list);
@@ -101,12 +99,7 @@ void visit_v(mat_adj * g, int * visited, int u, cluster ** list);
 */
 void cluster_search(mat_adj * g, cluster ** clus);
 
-
 /////////////////////////////////////////////////////////////////////////////////
-
-
-// Returns the max element in array. Its index is stored in *ind.
-int max_array(int * array, int length, int * ind);
 
 // Sub-function from longest_path_u - Computes the distance from u to v
 void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v);

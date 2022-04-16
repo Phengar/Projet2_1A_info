@@ -6,7 +6,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 /*
-    Adjacency list structure used to
+    Linked-list structure used to
     load the graph from .csv files.
 
 */

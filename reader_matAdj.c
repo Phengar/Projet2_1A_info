@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "format.h"
-#include "reader_listAdj.h"
+#include "reader_matAdj.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 

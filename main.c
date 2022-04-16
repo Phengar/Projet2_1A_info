@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "format.h" 		// Data format definition
-#include "reader_listAdj.h" // Graph loader/ builder
+#include "reader_matAdj.h" // Graph loader/ builder
 #include "stat.h"   		// Miscellaneous data analysis functions
  
 
