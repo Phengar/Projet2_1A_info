@@ -211,6 +211,7 @@ Projet2_1A_info
 | ----------- |    ---------------    | 	-----------  |
 | **format.h**  |   `struct mat_adj : {int nb_n, int id, int x, int y, char name[MAX_LENGTH], int nb_child , int * list}` | graph as adjacency matrix |
 | **format.h**  |   `struct cluster : {int key, cluster * list, cluster * next}` | Linked-list of linked-list of vertices - Each node n is a linked-list containing vertices forming the n-th cluster |
+| **format.h**  |   `void adj_to_pre(mat_adj * g, mat_adj * gp)` | Transforms the graph g represented as an adjacency matrix into a graph de précédence |
 | **format.h**  |   `void append_cluster_list(cluster ** clus)` | Appends a new cluster into the cluster main-list |
 | **format.h**  |   `void append_cluster_key(cluster ** clus, int key)` | Appends a key in the considered cluster list |
 | **format.h**  |   `void pop_cluster(cluster ** clus)` | Pops a cluster node from head |
