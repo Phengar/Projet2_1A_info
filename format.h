@@ -47,6 +47,9 @@ typedef struct {
     int * list;
 } mat_adj;
 
+// Transforms the graph g represented as an
+// adjacency matrix into a graph de précédence
+void adj_to_pre(mat_adj * g, mat_adj ** gp);
 
 /////////////////////////////////////////////////////////////////////////////////
 /*/*

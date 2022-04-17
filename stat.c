@@ -345,39 +345,34 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 
 	distance[u] = 0;
 	u_path[u] = u;
-
+	
 	queue * q = NULL;
 	append_queue(&q, u);
-	int size = 1;
+	
+	int uu; // Considered node
+	int v_s; // Semester number of node v
+
 
 	// Computes all shortest path from v
 	while(q != NULL) {
-		int v_s; // Semester number of node v
-		int u = pop_queue(&q);
-		int unv = g[u].nb_child;
+		uu = pop_queue(&q);
 		for(int v = 0; v < get_nodes(g); v++) {
-			printf("u : %d - unv : %d - v : %d.\n", u, unv, v);
 			// If v is one of u neighbors and vertex v is not visited
-			if(g[u].list[v] && distance[v] == -1) {
-				printf("v : %d - v_s : %d.\n", v, g[v].x);
+			if(g[uu].list[v] && distance[v] == -1) {
 				v_s = g[v].x; // v semester number
 				// Either curriculum mode := 0, or semester mode
 				if(!mode || mode == v_s) {
-					distance[v] = distance[u] + 1;
-					u_path[v] = u;
+					distance[v] = distance[uu] + 1;
+					u_path[v] = uu;
 					append_queue(&q, v); // Adds v to the visiting queue
-					size++;
 				// Year mode := 1, 2 or 3
 				} else if(1 <= mode && mode <= 3) {
 					if(v_s == 2*mode+3 || v_s == 2*mode+4) {
-						distance[v] = distance[u] + 1;
-						u_path[v] = u;
+						distance[v] = distance[uu] + 1;
+						u_path[v] = uu;
 						append_queue(&q, v); // Adds v to the visiting queue
-						size++;
 					}
 				}
-				printf("Queue length : %d.\n", size);
-				unv--;
 			}
 		}
 	}
@@ -404,8 +399,9 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path) {
 */
 int longest_path(mat_adj * g, queue ** path, int mode) {
 	int max_path = 0; // Max-path length
+	int tmp; // Partial longest path
 	for(int u = 0; u < get_nodes(g); u++) {
-		int tmp = longest_path_u(g, u, mode, &(path[u]));
+		tmp = longest_path_u(g, u, mode, &(path[u]));
 		if(tmp > max_path) {
 			max_path = tmp;
 		}

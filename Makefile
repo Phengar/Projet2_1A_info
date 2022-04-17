@@ -8,27 +8,27 @@
 
 #################################################################################
 
-main : main.o stat.o format.o reader_matAdj.o sort.o
-	gcc main.o stat.o format.o reader_matAdj.o sort.o -o main
+main : ./obj/main.o ./obj/stat.o ./obj/format.o ./obj/reader_matAdj.o ./obj/sort.o
+	gcc ./obj/main.o ./obj/stat.o ./obj/format.o ./obj/reader_matAdj.o ./obj/sort.o -o main
 
 clean :
-	rm *.o && rm main
+	rm ./obj/*.o && rm main
 	
 #################################################################################
 
-main.o : main.c format.h reader_matAdj.h stat.h
-	gcc -c main.c
+./obj/main.o : main.c format.h reader_matAdj.h stat.h
+	gcc -c main.c -o ./obj/main.o
 
-stat.o : stat.c stat.h format.h sort.h
-	gcc -c stat.c
+./obj/stat.o : stat.c stat.h format.h sort.h
+	gcc -c stat.c -o ./obj/stat.o
 
-reader_matAdj.o : reader_matAdj.c reader_matAdj.h
-	gcc -c reader_matAdj.c
+./obj/reader_matAdj.o : reader_matAdj.c reader_matAdj.h
+	gcc -c reader_matAdj.c -o ./obj/reader_matAdj.o
 
-format.o : format.c format.h
-		gcc -c format.c
+./obj/format.o : format.c format.h
+		gcc -c format.c -o ./obj/format.o
 
-sort.o : sort.c sort.h
-	gcc -c sort.c
+./obj/sort.o : sort.c sort.h
+	gcc -c sort.c -o ./obj/sort.o
 
 #################################################################################

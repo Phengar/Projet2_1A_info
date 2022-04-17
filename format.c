@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #include "format.h"
+#include "stat.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -40,6 +41,44 @@ void print_vertices(vertices ** l_vert) {
     }
     printf("\n");
 }*/
+
+// Transforms the graph g represented as an
+// adjacency matrix into a graph de précédence
+void adj_to_pre(mat_adj * g, mat_adj ** gp) {
+    *gp = (mat_adj *) malloc(get_nodes(g) * sizeof(mat_adj));
+    if(gp == NULL) {
+        printf("Cannot allocate enough memory.\n");
+        exit(1);
+    }
+    for(int u = 0; u < get_nodes(g); u++) {
+        (*gp)[u].nb_n = g[u].nb_n;
+        (*gp)[u].id = g[u].id;
+        (*gp)[u].x = g[u].x;
+        (*gp)[u].y = g[u].y;
+        strcpy((*gp)[u].name, g[u].name);
+        (*gp)[u].nb_child = 0;
+        (*gp)[u].list = (int *) calloc(get_nodes(g), sizeof(int));
+        if((*gp)[u].list == NULL) {
+            printf("Cannot allocate enough memory.\n");
+            exit(1);
+        }
+    }
+
+    for(int u = 0; u < get_nodes(g); u++) {
+        for(int v = 0; v < get_nodes(g); v++) {
+            // Only if v is a neighbor of u and xu != xv
+            if(g[u].list[v] && g[u].x != g[v].x) {
+                if(g[u].x < g[v].x) {
+                    (*gp)[u].list[v] = 1;
+                    (*gp)[u].nb_child++;
+                } else {
+                    (*gp)[v].list[u] = 1;
+                    (*gp)[v].nb_child++;
+                }
+            }
+        }
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////////////
 /*
@@ -131,6 +170,7 @@ void append_queue(queue ** q, int key) {
     while(cur != NULL) {
     	if(cur->next == NULL) {
     		cur->next = tmp;
+            return;
     	}
     	cur = cur->next;
     }

@@ -90,19 +90,46 @@ int main() {
     printf("================================\n");
 
 
-    /*queue ** q = (queue **) malloc(get_nodes(graph) * sizeof(queue *));
+    // Creates the graph de précédence from the syllabus graph
+    mat_adj * precedence_graph = NULL;
+    adj_to_pre(graph, &precedence_graph);
+
+
+    queue ** q = (queue **) malloc(get_nodes(precedence_graph) * sizeof(queue *));
     if(q == NULL) {
         printf("Cannot allocate enough memory.\n");
         exit(1);
     }
-    for(int u = 0; u < get_nodes(graph); u++) {
+    for(int u = 0; u < get_nodes(precedence_graph); u++) {
         q[u] = NULL;
     }
     int mode = 0;
-    int lpath = longest_path(graph, q, mode);
-    printf("Longest path in the graph : %d.\n", lpath);*/
+    int lpath = longest_path(precedence_graph, q, mode);
+    printf("Longest path in the graph : %d.\n", lpath);
+    printf("================================\n");
 
-    
+
+    queue * tmp = NULL;
+    for(int u = 0; u < get_nodes(precedence_graph); u++) {
+        tmp = q[u];
+        printf("%s(%d) -> ", precedence_graph[u].name, u);
+        while(tmp != NULL) {
+            printf("%s(%d), ", precedence_graph[tmp->key].name, tmp->key);
+            tmp = tmp->next;
+        }
+        printf("\n");
+    }
+
+    // Cleaning the heap memory
+
+    for(int u = 0; u < get_nodes(graph); u++) {
+        free(graph[u].list);
+        free(precedence_graph[u].list);
+        while(q[u] != NULL) pop_queue(&(q[u]));
+    }
+    free(q);
+    free(graph);
+    free(precedence_graph);
     free(degrees);
     free(degrees_GP);
     return 0;
