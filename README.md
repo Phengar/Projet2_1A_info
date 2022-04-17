@@ -75,12 +75,12 @@ files. Namely :
 
   | Header file | Purpose |
   | ----------- | -------- |
-  | ***reader_matAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then a create the graph structure out of it. |
+  | ***reader_matAdj.h*** | Gathers the functions used to read both *nodes.csv* and *edges.csv*, and then creates the graph structure out of it. |
   | ***stat.h*** | Gathers the analysis functions used on the ISMIN syllabus graph. |
   | ***format.h*** | Gathers the definition of every data-structure used, for either importing or analyzing data. |
   | ***sort.h*** | Implements a decreasing order quick sort. |
   | ***main.c*** | Core of the project, uses functions from modules to import and process data. |
-  | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles uplicates, loop edges, replaces special characters, spaces and commas |
+  | ***formater.py*** | Formats both *edges.csv* and *nodes.csv* files : Handles duplicates, loop edges, replaces special characters, spaces and commas |
   
 
 
@@ -88,9 +88,9 @@ files. Namely :
 
 ## Algorithm choices
 
-This overall project revolved around graph algorithm, the graph considered in this project is an oriented graph that is represented by two files, namely : *nodes.csv* and *edges.csv*. Each node of this graph are identified by two number \(x, y)\. First of, a loading function uses a linked-list to load the graph of yet \"unknown\" size in memory. The graph is then converted into an adjacency matrix structure for simplicity complexity sake. Each (x, y) identifier of the graph is mapped to a unique number identifier (the row number of the node in *nodes.csv*) through a matrix of (Xmax * Ymax) dimension. Acyclism checking function revolves on a depth-first search algorithm, if the graph tries to visit an already visited node, it means that the graph is cyclic. In order to find
-clusters in the graph, we used a cluster search function that runs a depth-first search on the whole graph, starting from node zero and then on other nodes until the graph is completely visited. When also built functions that sorts nodes in a decreasing order(either UP or GP) depending on their degree value. Thus, a quick sort is used due to its average O(nlog(n)) time complexity given a list of size n as an input, it is also memory friendly compared to merge sort.
-The longest path algorithm revolves on breadth-first search as there is no need to select a specific edge at each step of the algorithm, compared to Dijkstra algorithm or Bellman-Ford algorithm, as each edge as a weight of one. In the Python CSV formater script, we used a hashing table in order to efficiently check if an edge already exists in the *edges.csv* file. The CSV formater program was written in Python as it was quick to implement and as we were allowed to.
+This overall project revolved around graph algorithm, the graph considered in this project is an oriented graph that is represented by two files, namely : *nodes.csv* and *edges.csv*. Each node of this graph are identified by two number \(x, y)\. First of, a loading function uses a linked-list to load the graph of yet \"unknown\" size in memory. The graph is then converted into an adjacency matrix structure for both simplicity and complexity sake. Each (x, y) identifier of the graph is mapped to a unique number identifier (the row number of the node in *nodes.csv*) through a matrix of (Xmax * Ymax) dimension. Acyclism checking function revolves on a depth-first search algorithm, if the graph tries to visit an already visited node, it means that the graph is cyclic. In order to find
+clusters in the graph, we used a cluster search function that runs a depth-first search on the whole graph, starting from node zero and then on other nodes until the graph is completely visited. We also built functions that sorts nodes in a decreasing order (either UP or GP) depending on their degree value. Thus, a quick sort is used due to its average O(nlog(n)) time complexity given a list of size n as an input. In addition, it is memory friendly compared to merge sort.
+The longest path algorithm revolves on breadth-first search as there is no need to select a specific edge at each step of the algorithm, compared to Dijkstra algorithm or Bellman-Ford algorithm, as each edge has a weight of one. In the Python CSV formater script, we used a hashing table in order to efficiently check if an edge already exists in the *edges.csv* file. The CSV formater program was written in Python as it was quick to implement and as we were allowed to.
 
 
 
@@ -103,7 +103,7 @@ Let L be a list of N integers.
       - Append to hashtable and checking if elements already exists : **O(1)**
       - Parsing each line : **O(1)**
   + Formating *nodes.csv* : Time complexity : **O(|V|)**, spatial complexity : **O(1)**
-- Quick sort : Time complexity : **O(N)**, spatial complexity : **O(1)**
+- Quick sort : Time complexity : **O(N\*log(N))**, spatial complexity : **O(1)**
 - Depth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
 - Breadth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **(|V|)**
 - Longest path building function : Time complexity : **(|V|² + |V|x|E|)**, spatial complexity : **O(|V|²)** 
@@ -119,7 +119,7 @@ Let L be a list of N integers.
 
 
 ## 🎯 Faced issues
-While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contains a string with spaces in it and two numbers. When we tried to parse the file using a `fscanf()` without formating the file, `fscanf()` considered spaces as new lines which raised issues. To face this problem, we wrote a Python script `formater.py` that formats *.csv* files beforehand. Precisely, it deletes looping edges, deletes duplicates rows, it also deletes **[5, 18]** unexisting node and replaces comma seprators by spaces in *edges.csv*. Furthermore, it replaces blank characters within strings by underscore, replaces comma seperator by spaces and deletes ASCII character with code 0xA0 in *nodes.csv*.
+While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contained a string with spaces in it. When we tried to parse the file using a `fscanf()` without formating the file, `fscanf()` considered spaces as a line skip character which raised issues. To face this problem, we wrote a Python script `formater.py` that formats *.csv* files beforehand. Precisely, it deletes looping edges, deletes duplicates rows, it also deletes **[5, 18]** unexisting node and replaces comma seprators by spaces in *edges.csv*. Furthermore, it replaces blank characters within strings by underscore, replaces comma seperator by spaces and deletes ASCII character with code 0xA0 in *nodes.csv*.
   
  
 
@@ -140,15 +140,6 @@ Python 3 interpreter is not mandatory as `.csv` files are
 yet formatted. Nonetheless you can still try this script out
 on un-formatted data stored in `./*.csv.bak` files.
 
-+ **Installing gcc and make** :
-  - *Debian systems* :
-      > Installing both gcc & make
-      ``` bash
-      sudo apt install build-essential
-      ```
-  - *Windows OS* :
-      > MinGW provides you with both a gcc compiler and make tool.
-
 + 🛠️ **Compiling** :
       `make`
 
@@ -157,11 +148,7 @@ on un-formatted data stored in `./*.csv.bak` files.
       ```bash
       ./main
       ```
-  
-  - *Windows*
-      ```bash
-      main.exe
-      ```
+
   - *Running the Python csv formater script* ***(Not mandatory)***
       ```bash
       python3 formater.py
