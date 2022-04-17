@@ -132,9 +132,9 @@ void pop_cluster(cluster ** clus) {
 // Prints the cluster elements
 void print_cluster(mat_adj * g, cluster ** clus) {
 	cluster * tmp = *clus;
-	int i = 0;
+	int i = 1;
 	while(tmp != NULL) {
-		printf("%d  ->  ", i);
+		printf("(Cluster %d) -> ", i);
 		cluster * cur = tmp->list;
         while(cur != NULL) {
             printf("%s, ", g[cur->key].name);

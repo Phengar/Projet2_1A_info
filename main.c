@@ -113,7 +113,7 @@ int main() {
     queue * tmp = NULL;
     for(int u = 0; u < get_nodes(precedence_graph); u++) {
         tmp = q[u];
-        printf("(%d) -> ", u);
+        printf("(Node %d) -> ", u);
         while(tmp != NULL) {
             printf("%s(%d), ", precedence_graph[tmp->key].name, tmp->key);
             tmp = tmp->next;
