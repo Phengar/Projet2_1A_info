@@ -125,6 +125,27 @@ int longest_path_u(mat_adj * g, int u, int mode, queue ** path);
 */
 int longest_path(mat_adj * g, queue ** path, int mode);
 
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+
+// Sub function of Quickest time (semester) to begin node u related subject.
+int ealiest_to_u_compute(mat_adj * g, int u, int * lookup);
+
+/*
+	Quickest time (semester) to begin node u related subject.
+*/
+int earliest_to_u(mat_adj * g, int u);
+
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+
+// Sub function of Latest time to take a specific subject u.
+int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup);
+
+/*
+	Latest semester to take a subject without disturbing the duration
+	of the curriculum.
+*/
+int latest_to_u(mat_adj * g, int u, int duration);
+
 /////////////////////////////////////////////////////////////////////////////////
 
 #endif

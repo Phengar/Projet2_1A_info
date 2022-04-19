@@ -409,4 +409,86 @@ int longest_path(mat_adj * g, queue ** path, int mode) {
 	return max_path;
 }
 
+
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+
+
+// Sub function of Quickest time (semester) to begin node u related subject.
+int earliest_to_u_compute(mat_adj * g, int u, int * lookup) {
+	int tmp_quick = 0;
+	for(int v = 0; v < get_nodes(g); v++) {
+		// If (v, u) edge exists in g
+		if(g[v].list[u]) {
+			if(lookup[v] == -1) {
+				earliest_to_u_compute(g, v, lookup);
+			}
+			if(lookup[v] + g[v].list[u] > tmp_quick) {
+				tmp_quick = lookup[v] + g[v].list[u];
+			}
+		}
+	}
+	lookup[u] = tmp_quick;
+	return tmp_quick;
+}
+
+
+/*
+	Quickest time (semester) to begin node u related subject.
+*/
+int earliest_to_u(mat_adj * g, int u) {
+	int * lookup = (int *) malloc(get_nodes(g) * sizeof(int));
+	if(lookup == NULL) {
+		printf("Cannot allocate enough memory.\n");
+		exit(1);
+	}
+	for(int v = 0; v < get_nodes(g); v++) {
+		lookup[v] = -1;
+	}
+	int res = earliest_to_u_compute(g, u, lookup);
+	free(lookup);
+	return res;
+}
+
+
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
+
+
+// Sub function of Latest time to take a specific subject u.
+int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup) {
+	int tmp_latest = duration;
+	for(int v = 0; v < get_nodes(g); v++) {
+		// If (u, v) edge exists
+		if(g[u].list[v]) {
+			if(lookup[v] == -1) {
+				latest_to_u_compute(g, v, duration, lookup);
+			}
+			if(lookup[v] - g[u].list[v] < tmp_latest) {
+				tmp_latest = lookup[v] - g[u].list[v];
+			}
+		}
+	}
+	lookup[u] = tmp_latest;
+	return tmp_latest;
+}
+
+
+/*
+	Latest semester to take a subject without disturbing the duration
+	of the curriculum.
+*/
+int latest_to_u(mat_adj * g, int u, int duration) {
+	int * lookup = (int *) malloc(get_nodes(g) * sizeof(int));
+	if(lookup == NULL) {
+		printf("Cannot allocate enough memory.\n");
+		exit(1);
+	}
+	for(int v = 0; v < get_nodes(g); v++) {
+		lookup[v] = -1;
+	}
+	int res = latest_to_u_compute(g, u, duration, lookup);
+	free(lookup);
+	return res;
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////

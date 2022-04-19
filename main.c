@@ -120,6 +120,34 @@ int main() {
         }
         printf("\n");
     }
+    printf("\n================================\n\n");
+
+
+    int t[4][4] = {
+        {0, 1, 0, 1},
+        {0, 0, 1, 1},
+        {0, 0, 0, 0},
+        {0, 0, 0, 0},
+    };
+
+    mat_adj g[4];
+    for(int i = 0; i < 4; i++) {
+        g[i].nb_n = 4;
+        g[i].id = i;
+        g[i].x = -1;
+        g[i].y = -1;
+        g[i].nb_child = -1;
+        g[i].list = t[i];
+    }
+
+
+    int duration = 6;
+    for(int u = 0; u < get_nodes(precedence_graph); u++) {
+        printf("(Node %d) : %s\n", u, precedence_graph[u].name);
+        printf("               - earliest start semester : %d\n", 5+earliest_to_u(precedence_graph, u));
+        printf("               - latest start semester : %d\n", 4+latest_to_u(precedence_graph, u, duration));
+    }
+    printf("\n================================\n\n");
 
     // Cleaning the heap memory
 
