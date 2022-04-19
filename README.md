@@ -197,14 +197,11 @@ on un-formatted data stored in `./*.csv.bak` files.
 
 ```bash
 Projet2_1A_info
-├── bin/
-│   └── main or main.exe
 ├── obj/
 │   └── object files
 ├── pdf/
 │   └── pdf files
-├── src/
-│   └── src files : *.c, *.h and *.py
+├── src files : *.c, *.h and *.py
 ├── Makefile
 └── README.md
 ```
@@ -246,8 +243,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int earliest_to_u_compute(mat_adj * g, int u, int * lookup)` | Sub function of Quickest time (semester) to begin node u related subject |
 |  **stat.h**  |   `int earliest_to_u(mat_adj * g, int u)` | Quickest time (semester) to begin node u related subject |
 |  **stat.h**  |   `int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup)` | Sub function of Latest time to take a specific subject u |
-|  **stat.h**  |   `int latest_to_u(mat_adj * g, int u, int duration)` | Latest semester to take a subject without disturbing the duration
-	of the curriculum |
+|  **stat.h**  |   `int latest_to_u(mat_adj * g, int u, int duration)` | Latest semester to take a subject without disturbing the duration of the curriculum |
 | ----------- |    ---------------    | 	-----------  |
 | **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
 | **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and edges file nto res an adjacency matrix structure |
