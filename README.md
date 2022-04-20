@@ -221,7 +221,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
 |  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
 |  **stat.h**  |   `void get_degrees(graph * g, int * degrees)` | Creates an array (degrees) containing the degree for each vertex of graph g |
-|  **stat.h**  |   `void print_top_degrees(int * degrees, mat_adj * g, int n)` | Prints the top n nodes with the highest degrees |
+|  **stat.h**  |   `void print_top_degrees(int * degrees, mat_adj * g, int n, FILE * f)` | Prints the top n nodes with the highest degrees and saves them to f (if exists) |
 |  **stat.h**  |   `int get_UP(mat_adj * g)` | Returns the number of UP in mat_adj g |
 |  **stat.h**  |   `int get_UP_semester(mat_adj * g, int semester)` | Returns the number of UP in a given semester |
 |  **stat.h**  |   `int get_UP_year(mat_adj * g, int year)` | Returns the number of UP in a given semester |
@@ -230,7 +230,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
 |  **stat.h**  |   `int * get_GP_array(mat_adj * g, int * length)` | Returns the GP array (its length is \*length) |
 |  **stat.h**  |   `void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees)` | Creates the sorted array(degrees) of degree for each GP in gp_arr |
-|  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n)` | Prints the top n GP of g with the highest GP degree |
+|  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n, FILE * f)` | Prints the top n GP of g with the highest GP degree and saves them to f (if exists) |
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
 |  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
