@@ -503,7 +503,7 @@ int latest_to_u(mat_adj * g, int u, int duration) {
 /////////////////////////////////////////////////////////////////////////////////
 
 
-// Saves various statistics computed in main.c to files in /stats directory
+// Saves various statistics computed in main.c to files in /stats directory.
 void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP) {
 	FILE * gen_stats = fopen(general_stats, "w");
     FILE * nod_stats = fopen(nodes_stats, "w");
