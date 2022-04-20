@@ -201,7 +201,7 @@ Projet2_1A_info
 │   └── object files
 ├── pdf/
 │   └── pdf files
-├── src files : *.c, *.h and *.py
+├── source files : *.c, *.h and *.py
 ├── Makefile
 └── README.md
 ```
