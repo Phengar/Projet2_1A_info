@@ -96,6 +96,7 @@ The longest path algorithm revolves on breadth-first search as there is no need 
 
 
 ## Time and spatial complexity
+
 Let G = (V, E) an oriented graph, where V is its nodes set and E its edges set.
 Let L be a list of N integers.
 - Python CSV formater :
@@ -103,10 +104,33 @@ Let L be a list of N integers.
       - Append to hashtable and checking if elements already exists : **O(1)**
       - Parsing each line : **O(1)**
   + Formating *nodes.csv* : Time complexity : **O(|V|)**, spatial complexity : **O(1)**
-- Quick sort : Time complexity : **O(N\*log(N))**, spatial complexity : **O(1)**
+- Adjacency matrix implementation : spatial complexity : **O(|V|²)**
+  + Looping through node u neighbors : Time complexity : **O(|V|)**
+  + Accessing one of node u neighbors : Time complexity : **O(1)**
+  + Checking if a node is one of u neighbors : Time complexity : **O(1)**
+- Quick sort : Time complexity : Time complexity : **O(N\*log(N))**, spatial complexity : **O(1)**
 - Depth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
 - Breadth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **(|V|)**
-- Longest path building function : Time complexity : **(|V|² + |V|x|E|)**, spatial complexity : **O(|V|²)** 
+- Longest path building function : Time complexity : **O(|V|² + |V|x|E|)**, spatial complexity : **O(|V|²)**
+- Earliest semester to begin a specific subject : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
+- Latest semester to begin a subject without disturbing the ISMIN curriculum duration : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
+
+
+
+
+## Project features
+
+This project allows you to determine :
+  - ***The number of nodes in the graph, the number of children/ successors of each node,***
+  - ***The node with either maximum or the minimum degree in the graph,***
+  - ***The number of UP, GP in either a specific semester or specific year,***
+  - ***N nodes (UP or GP) sorted by their degree in a decreasing order,***
+  - ***Whether the graph is acyclic or not,***
+  - ***Each cluster of nodes in the graph***
+  - ***The length of the longest path in the (oriented and acyclic) graph***
+  - ***The length and longest path from a node u***
+  - ***The earliest semester from which a specific subject can be taken***
+  - ***The latest semester a subject can be taken without disturbing the ISMIN curriculum duration***
 
 
 
@@ -119,9 +143,23 @@ Let L be a list of N integers.
 
 
 ## 🎯 Faced issues
+
 While attempting to read *.csv* files, we ran into issues. Namely, each row of *nodes.csv* contained a string with spaces in it. When we tried to parse the file using a `fscanf()` without formating the file, `fscanf()` considered spaces as a line skip character which raised issues. To face this problem, we wrote a Python script `formater.py` that formats *.csv* files beforehand. Precisely, it deletes looping edges, deletes duplicates rows, it also deletes **[5, 18]** unexisting node and replaces comma seprators by spaces in *edges.csv*. Furthermore, it replaces blank characters within strings by underscore, replaces comma seperator by spaces and deletes ASCII character with code 0xA0 in *nodes.csv*.
-  
- 
+
+
+
+
+## Limitations
+
+* TO BE COMMENCÉ AS WELL *
+
+
+
+
+## Conclusion
+
+* TO BE COMMENCÉ AS WELL *
+
 
 
 
@@ -159,14 +197,11 @@ on un-formatted data stored in `./*.csv.bak` files.
 
 ```bash
 Projet2_1A_info
-├── bin/
-│   └── main or main.exe
 ├── obj/
 │   └── object files
 ├── pdf/
 │   └── pdf files
-├── src/
-│   └── src files : *.c, *.h and *.py
+├── source files : *.c, *.h and *.py
 ├── Makefile
 └── README.md
 ```
@@ -186,7 +221,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_max_degree(mat_adj * g, int * id_max)` | Returns the max degree of mat_adj g and puts its index at ind_max |
 |  **stat.h**  |   `int get_min_degree(mat_adj * g, int * id_min)` | Returns the min degree of mat_adj g and puts its index at ind_min |
 |  **stat.h**  |   `void get_degrees(graph * g, int * degrees)` | Creates an array (degrees) containing the degree for each vertex of graph g |
-|  **stat.h**  |   `void print_top_degrees(int * degrees, mat_adj * g, int n)` | Prints the top n nodes with the highest degrees |
+|  **stat.h**  |   `void print_top_degrees(int * degrees, mat_adj * g, int n, FILE * f)` | Prints the top n nodes with the highest degrees and saves them to f (if exists) |
 |  **stat.h**  |   `int get_UP(mat_adj * g)` | Returns the number of UP in mat_adj g |
 |  **stat.h**  |   `int get_UP_semester(mat_adj * g, int semester)` | Returns the number of UP in a given semester |
 |  **stat.h**  |   `int get_UP_year(mat_adj * g, int year)` | Returns the number of UP in a given semester |
@@ -195,7 +230,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int get_GP_year(mat_adj * g, int year)` | Returns the number of GP in a given year |
 |  **stat.h**  |   `int * get_GP_array(mat_adj * g, int * length)` | Returns the GP array (its length is \*length) |
 |  **stat.h**  |   `void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees)` | Creates the sorted array(degrees) of degree for each GP in gp_arr |
-|  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n)` | Prints the top n GP of g with the highest GP degree |
+|  **stat.h**  |   `void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n, FILE * f)` | Prints the top n GP of g with the highest GP degree and saves them to f (if exists) |
 |  **stat.h**  |   `int is_acyclic(graph * g)` | Returns whether g is acyclic or not |
 |  **stat.h**  |   `int visit_v_acy(graph * g, int * visited, int u)` | Sub-fonction of is_acyclic - It behaves like Depth-First Search |
 |  **stat.h**  |   `void cluster_search(graph * g, cluster ** clus)` | Performs a Depth-First Search on g until every vertices are visited |
@@ -205,6 +240,10 @@ Projet2_1A_info
 | **stat.h**  |   `void distance_update(int * distance, int * v_path, queue ** q, int mode, int v_s, int u, int v)` | Sub-function - Computes the distance from u to v |
 |  **stat.h**  |   `int max_array(int * array, int length, int * ind)` | Returns the max element in array. Its index is stored in \*ind |
 |  **stat.h**  |   `void print_array(int * array, int length)` | Prints an array of integer of length length |
+|  **stat.h**  |   `int earliest_to_u_compute(mat_adj * g, int u, int * lookup)` | Sub function of Quickest time (semester) to begin node u related subject |
+|  **stat.h**  |   `int earliest_to_u(mat_adj * g, int u)` | Quickest time (semester) to begin node u related subject |
+|  **stat.h**  |   `int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup)` | Sub function of Latest time to take a specific subject u |
+|  **stat.h**  |   `int latest_to_u(mat_adj * g, int u, int duration)` | Latest semester to take a subject without disturbing the duration of the curriculum |
 | ----------- |    ---------------    | 	-----------  |
 | **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
 | **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and edges file nto res an adjacency matrix structure |
