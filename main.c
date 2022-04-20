@@ -73,7 +73,7 @@ int main() {
     printf("\n================================\n\n");
 
 
-    print_top_degrees(degrees, graph, 10, NULL);
+    print_top_degrees(degrees, graph, 5, NULL);
     printf("\n================================\n\n");
 
 
