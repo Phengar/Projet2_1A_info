@@ -1,7 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #include "stat.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
 
@@ -97,13 +96,16 @@ void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees) {
 
 
 // Prints the top n GP of g with the highest GP degree.
-void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n) {
+void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n, FILE * f) {
 	if(n > length) {
 		return;
 	}
 	printf("Top %d GP with the higest GP degree :\n", n);
 	for(int i = 0; i < n; i++) {
 		printf("%d : %s - degree : %d\n", i+1, g[gp_arr[i]].name, degrees[i]);
+		if(f != NULL) {
+			fprintf(f, "%d : %s (sem. %d) - degree : %d\n", i+1, g[gp_arr[i]].name, 4+g[gp_arr[i]].x, degrees[i]);
+		}
 	}
 }
 
@@ -160,7 +162,7 @@ void get_degrees(mat_adj * g, int * degrees) {
 
 
 // Prints the top n nodes with the highest degrees.
-void print_top_degrees(int * degrees, mat_adj * g, int n) {
+void print_top_degrees(int * degrees, mat_adj * g, int n, FILE * f) {
 	if(n > get_nodes(g)) {
 		return;
 	}
@@ -176,6 +178,9 @@ void print_top_degrees(int * degrees, mat_adj * g, int n) {
 	printf("Top %d vertices with the highest degree :\n", n);
 	for(int i = 0; i < n; i++) {
 		printf("%d : %s - degree : %d.\n", i+1, g[index[i]].name, degrees[i]);
+		if(f != NULL) {
+			fprintf(f, "%d : %s (sem. %d) - degree : %d.\n", i+1, g[index[i]].name, 4+g[index[i]].x, degrees[i]);
+		}
 	}
 	free(index);
 }
@@ -224,6 +229,10 @@ int is_acyclic(mat_adj * g) {
 	for(int u = 0; u < get_nodes(g); u++) {
 		if(!visit_v_acy(g, visited, u)) {
 			return 0;
+		}
+		// Reseting visited array
+		for(int v = 0; v < get_nodes(g); v++) {
+			visited[v] = 0;
 		}
 	}
 	free(visited);
@@ -413,7 +422,7 @@ int longest_path(mat_adj * g, queue ** path, int mode) {
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
 
-// Sub function of Quickest time (semester) to begin node u related subject.
+// Sub function of earliest semester to begin node u related subject.
 int earliest_to_u_compute(mat_adj * g, int u, int * lookup) {
 	int tmp_quick = 0;
 	for(int v = 0; v < get_nodes(g); v++) {
@@ -433,7 +442,7 @@ int earliest_to_u_compute(mat_adj * g, int u, int * lookup) {
 
 
 /*
-	Quickest time (semester) to begin node u related subject.
+	Earlies semester to begin node u related subject.
 */
 int earliest_to_u(mat_adj * g, int u) {
 	int * lookup = (int *) malloc(get_nodes(g) * sizeof(int));
@@ -453,7 +462,7 @@ int earliest_to_u(mat_adj * g, int u) {
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
 
-// Sub function of Latest time to take a specific subject u.
+// Sub function of latest time to take a specific subject u.
 int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup) {
 	int tmp_latest = duration;
 	for(int v = 0; v < get_nodes(g); v++) {
@@ -488,6 +497,90 @@ int latest_to_u(mat_adj * g, int u, int duration) {
 	int res = latest_to_u_compute(g, u, duration, lookup);
 	free(lookup);
 	return res;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+// Saves various statistics computed in main.c to files in /stats directory
+void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP) {
+	FILE * gen_stats = fopen(general_stats, "w");
+    FILE * nod_stats = fopen(nodes_stats, "w");
+    FILE * clu_stats = fopen(cluster_stats, "w");
+    FILE * pre_stats = fopen(precedence_stats, "w");
+    if(gen_stats == NULL || nod_stats == NULL || clu_stats == NULL || pre_stats == NULL) {
+        printf("Cannot open at least one of the statistics file.\n");
+        exit(1);
+    }
+    int nodes = get_nodes(graph);
+    int is_acy = is_acyclic(graph);
+    int id_max_degree, id_min_degree;
+    int min_degree = get_min_degree(graph, &id_min_degree);
+    int max_degree = get_max_degree(graph, &id_max_degree);
+    int duration = 6; // semester
+    fprintf(gen_stats, "> The graph is %s.\n", (is_acy) ? "acyclic" : "cyclic");
+    fprintf(gen_stats, "> Number of UP and GP : %d.\n", nodes);
+    fprintf(gen_stats, "    Number of UP in the syllabus : %d.\n", get_UP(graph));
+    fprintf(gen_stats, "    Number of GP in the syllabus : %d.\n", get_GP(graph));
+    fprintf(gen_stats, "UP with the lowest degree (%d) : %s - semester : %d.\n", min_degree, graph[id_min_degree].name, 4+graph[id_min_degree].x);
+    fprintf(gen_stats, "UP with the highest degree (%d) : %s - semester : %d.\n", max_degree, graph[id_max_degree].name, 4+graph[id_max_degree].x);
+    fprintf(gen_stats, "================================================================\n");
+    int semester;
+    for(int year = 1; year <= 3; year++) {
+        semester = 2 * year + 3;// First semester of the year year.
+        fprintf(gen_stats, "> Year %d :\n", year);
+        fprintf(gen_stats, "    Number of UP : %d.\n", get_UP_year(graph, year));
+        fprintf(gen_stats, "    Number of GP : %d.\n", get_GP_year(graph, year));
+        for(semester = 2*year+3; semester <= 2*year+4; semester++) {
+            fprintf(gen_stats, "    > Semester %d :\n", semester);
+            fprintf(gen_stats, "        Number of UP : %d.\n", get_UP_semester(graph, semester));
+            fprintf(gen_stats, "        Number of GP : %d.\n", get_GP_semester(graph, semester));
+        }
+        fprintf(gen_stats, "================================================================\n");
+    }
+    fprintf(gen_stats, "TOP 10 UP with the highest degree :\n");
+    get_degrees(graph, degrees);
+    print_top_degrees(degrees, graph, 10, gen_stats);
+    printf("\n================================\n\n");
+    fprintf(gen_stats, "================================================================\n");
+    fprintf(gen_stats, "TOP 10 GP with the highest GP to GP degree :\n");
+    print_top_degrees_GP(graph, gp_array, degrees_GP, length, 10, gen_stats);
+    printf("\n================================\n\n");
+    fclose(gen_stats);
+    get_degrees(graph, degrees);
+    for(int u = 0; u < get_nodes(precedence_graph); u++) {
+        fprintf(nod_stats, "> %s - semester %d.\n", precedence_graph[u].name, 4+precedence_graph[u].x);
+        fprintf(nod_stats, "    Degree/ Number of node child : %d.\n", degrees[u]);
+        fprintf(nod_stats, "    Earliest start semester : %d.\n", 5+earliest_to_u(precedence_graph, u));
+        fprintf(nod_stats, "    Latest start semester : %d.\n", 4+latest_to_u(precedence_graph, u, duration));
+    }
+    fclose(nod_stats);
+    int i = 1;
+    cluster * ccur = clus, *cur = NULL;
+    while(ccur != NULL) {
+        cur = ccur->list;
+        fprintf(clu_stats, "(Cluster %d) -> ", i);
+        while(cur != NULL) {
+            fprintf(clu_stats, "%s (sem. %d), ", graph[cur->key].name, 4+graph[cur->key].x);
+            cur = cur->list;
+        }
+        fprintf(clu_stats, "\n");
+        ccur = ccur->next;
+        i++;
+    }
+    fclose(clu_stats);
+    queue * tmp = NULL;
+    for(int u = 0; u < get_nodes(precedence_graph); u++) {
+        tmp = q[u];
+        fprintf(pre_stats, "%s - (sem. %d) :\n   ", precedence_graph[u].name, 4+precedence_graph[u].x);
+        while(tmp != NULL) {
+            fprintf(pre_stats, "%s (sem. %d), ", precedence_graph[tmp->key].name, 4+precedence_graph[tmp->key].x);
+            tmp = tmp->next;
+        }
+        fprintf(pre_stats, "\n");
+    }
+    fclose(pre_stats);
 }
 
 

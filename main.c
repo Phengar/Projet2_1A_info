@@ -16,10 +16,18 @@
 // Libraries includes
 #include <stdio.h>
 #include <stdlib.h>
-#include "format.h" 		// Data format definition
+#include "format.h" 	   // Data format definition
 #include "reader_matAdj.h" // Graph loader/ builder
-#include "stat.h"   		// Miscellaneous data analysis functions
+#include "stat.h"   	   // Miscellaneous data analysis functions
  
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// Statistics file name
+#define GENERAL_STATS "./stats/General_stats.txt"
+#define NODES_STATS "./stats/Nodes_stats.txt"
+#define CLUSTER_STATS "./stats/Cluster_stats.txt"
+#define PRECEDENCE_STATS "./stats/Precedence_stats.txt"
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +73,7 @@ int main() {
     printf("\n================================\n\n");
 
 
-    print_top_degrees(degrees, graph, 10);
+    print_top_degrees(degrees, graph, 10, NULL);
     printf("\n================================\n\n");
 
 
@@ -77,10 +85,11 @@ int main() {
         exit(1);
     }
     get_degrees_GP(graph, gp_array, length, degrees_GP);
-    print_top_degrees_GP(graph, gp_array, degrees_GP, length, 5);
+    print_top_degrees_GP(graph, gp_array, degrees_GP, length, 5, NULL);
     printf("\n================================\n\n");
 
-    printf("Is the graph acyclic : %s\n", (is_acyclic(graph)) ? "oui" : "non");
+    int is_acy = is_acyclic(graph);
+    printf("Is the graph acyclic : %s\n", (is_acy) ? "oui" : "non");
     printf("\n================================\n\n");
 
 
@@ -123,24 +132,6 @@ int main() {
     printf("\n================================\n\n");
 
 
-    int t[4][4] = {
-        {0, 1, 0, 1},
-        {0, 0, 1, 1},
-        {0, 0, 0, 0},
-        {0, 0, 0, 0},
-    };
-
-    mat_adj g[4];
-    for(int i = 0; i < 4; i++) {
-        g[i].nb_n = 4;
-        g[i].id = i;
-        g[i].x = -1;
-        g[i].y = -1;
-        g[i].nb_child = -1;
-        g[i].list = t[i];
-    }
-
-
     int duration = 6;
     for(int u = 0; u < get_nodes(precedence_graph); u++) {
         printf("(Node %d) : %s\n", u, precedence_graph[u].name);
@@ -148,6 +139,12 @@ int main() {
         printf("               - latest start semester : %d\n", 4+latest_to_u(precedence_graph, u, duration));
     }
     printf("\n================================\n\n");
+
+
+    // Saving the statistics in files
+
+    save_statistics(GENERAL_STATS, NODES_STATS, CLUSTER_STATS, PRECEDENCE_STATS, clus, q, graph, precedence_graph, degrees, length, gp_array, degrees_GP);
+    
 
     // Cleaning the heap memory
 
@@ -160,6 +157,7 @@ int main() {
     free(graph);
     free(precedence_graph);
     free(degrees);
+    free(gp_array);
     free(degrees_GP);
     return 0;
 }

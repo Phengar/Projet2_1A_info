@@ -1,0 +1,908 @@
+> Culture_de_l'Entreprise_et_Modes_Managériaux - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Visions_et_Stratégie_d’Entreprise - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> COMPOSANTES_DE_L'ENTREPRISE - semester 5.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> Electronique_Analogique - semester 5.
+    Degree/ Number of node child : 10.
+    Earliest start semester : 5.
+    Latest start semester : 5.
+> Electronique_Numérique - semester 5.
+    Degree/ Number of node child : 13.
+    Earliest start semester : 5.
+    Latest start semester : 5.
+> CONCEPTS_ET_OUTILS_DE_L’ELECTRONIQUE - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Algorithmique_et_Programmation - semester 5.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 5.
+    Latest start semester : 5.
+> Systèmes_à_Microcontrôleurs - semester 5.
+    Degree/ Number of node child : 8.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> CONCEPTS_ET_OUTILS_DE_L'INFORMATIQUE - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Développement_Relationnel - semester 5.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> Stage_Connaissance_de_l'Entreprise - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> DÉCOUVERTE_DE_L'ENTREPRISE - semester 5.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> Anglais - semester 5.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> Allemand - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Chinois - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Espagnol - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Japonais - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Portugais - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LANGUES_S5 - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Projet_Matlab_-_Introduction_à_la_Robotique - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> Mathématiques_et_Traitement_du_Signal - semester 5.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 5.
+> Probabilités - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> OUTILS_MATHÉMATIQUES_DE_L'INGÉNIEUR - semester 5.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Projet_Robot - semester 5.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 6.
+> Automatique_linéaire - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> PROJET_ROBOT_S5 - semester 5.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 5.
+> Découverte_des_Enjeux_Technologiques - semester 6.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> DÉCOUVERTE_DES_ENJEUX_TECHNOLOGIQUES - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Algorithmique_et_Programmation - semester 6.
+    Degree/ Number of node child : 13.
+    Earliest start semester : 6.
+    Latest start semester : 6.
+> Graphes_et_Optimisation - semester 6.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Programmation_Système - semester 6.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> Challenge_Optimisation - semester 6.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Réseaux_TCP/IP - semester 6.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> INFORMATIQUE - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Projet_ISA - semester 6.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 6.
+    Latest start semester : 7.
+> Retour_d'expérience - semester 6.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 6.
+    Latest start semester : 7.
+> INTELLIGENCE_COLLECTIVE - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Anglais - semester 6.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 6.
+    Latest start semester : 7.
+> Allemand - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Chinois - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Espagnol - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Japonais - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Portugais - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Divers_Langues - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LV2 - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LANGUES_S6 - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> International - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Métiers - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Secteurs - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> MÉTIERS_DE_L'INGÉNIEUR - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Interface_Design - semester 6.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 6.
+    Latest start semester : 7.
+> System_Design - semester 6.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 6.
+    Latest start semester : 7.
+> PROJET_ROBOT_S6 - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Expérimentations_en_Labo - semester 6.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Physique_Appliquée - semester 6.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> Propriétés_des_Matériaux - semester 6.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Sciences_du_Vivant - semester 6.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> SCIENCES_DES_MATÉRIAUX_ET_DU_VIVANT - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Electronique_Analogique - semester 6.
+    Degree/ Number of node child : 12.
+    Earliest start semester : 6.
+    Latest start semester : 6.
+> Electronique_Fondamentale - semester 6.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> SYSTÈMES_ELECTRONIQUES_S6 - semester 6.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Anglais - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 8.
+> Allemand - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Chinois - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Espagnol - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Français - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Japonais - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Portugais - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LANGUES_S7 - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Gestion_de_Production_et_Logistique - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Finance_et_Stratégie - semester 7.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 7.
+> Gestion_de_Projet - semester 7.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 7.
+    Latest start semester : 8.
+> MANAGEMENT_DE_L'ACTIVITÉ_DE_L'ENTREPRISE - semester 7.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Recherche_d'Information_et_de_Documentation - semester 7.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Communication - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 8.
+> Contrat_de_prestations - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Propriété_intellectuelle - semester 7.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> PROJET_INDUSTRIEL_-_AVANT_PROJET - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Systèmes_à_Microcontrôleurs - semester 7.
+    Degree/ Number of node child : 14.
+    Earliest start semester : 7.
+    Latest start semester : 7.
+> Méthode_MCSE - semester 7.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> Automatique_et_asservissements - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Projet_Robot - semester 7.
+    Degree/ Number of node child : 12.
+    Earliest start semester : 7.
+    Latest start semester : 8.
+> PROJET_ROBOT_S7 - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Architecture_des_Processeurs - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Conception_d'un_Système_Numérique - semester 7.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Introduction_à_la_Cryptographie - semester 7.
+    Degree/ Number of node child : 11.
+    Earliest start semester : 7.
+    Latest start semester : 9.
+> SYSTÈMES_ELECTRONIQUES_S7 - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Programmation_Orientée_Objet - semester 7.
+    Degree/ Number of node child : 14.
+    Earliest start semester : 7.
+    Latest start semester : 9.
+> Bases_de_Données - semester 7.
+    Degree/ Number of node child : 10.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> Machine_Learning - semester 7.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Réseaux_locaux_d'entreprise - semester 7.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Modélisation_UML - semester 7.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> SYSTÈMES_INFORMATIQUES - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Transmission_Electromagnétique - semester 7.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 7.
+> Gestion_d'Energie - semester 7.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Capteurs_et_Actionneurs - semester 7.
+    Degree/ Number of node child : 8.
+    Earliest start semester : 7.
+    Latest start semester : 7.
+> Transmission_Sans_Fils - semester 7.
+    Degree/ Number of node child : 12.
+    Earliest start semester : 7.
+    Latest start semester : 9.
+> TRANSMISSION_CAPTEURS_ENERGIE - semester 7.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Droit_Industriel - semester 8.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> Gestion_de_Projet - semester 8.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 8.
+    Latest start semester : 8.
+> Gestion_d'Equipe - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> GESTION_DE_PROJETS - semester 8.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 8.
+    Latest start semester : 9.
+> Anglais - semester 8.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 8.
+    Latest start semester : 9.
+> Allemand - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Chinois - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Espagnol - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Français - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Japonais - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Portugais - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Divers_Langues - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LV2 - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LANGUES_S8 - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Conception_détaillée - semester 8.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 8.
+> PROJET_INDUSTRIEL_-_CONCEPTION_DÉTAILLÉE - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Conception_détaillée - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Projet_Industriel - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Rapport - semester 8.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Recette - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Soutenance - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Suivi_Technique - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> PROJET_INDUSTRIEL_-_RÉALISATION - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Eléments_Finis - semester 8.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 8.
+    Latest start semester : 8.
+> Projet_Prototypage - semester 8.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 8.
+    Latest start semester : 9.
+> SIMULATION_EXPÉRIMENTATION_PROTOTYPAGE - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Stage - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Fiche_Synthétique - semester 8.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> STAGE_INTERNATIONAL - semester 8.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> Visa_Entrepreunariat - semester 8.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 8.
+    Latest start semester : 9.
+> VISA_ENTREPREUNARIAT - semester 8.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Enterprise_Information_Systems - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Mobile_Telecom - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Discrete_Simulation_&_Optimisation - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Advanced_Java - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Database_Applications - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Database_Design - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Design_of_Mobile_Applications - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> COMPUTER_SCIENCE - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Embedded_RTOS_Applications - semester 9.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Embedded_Linux - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Multiplexing_Bus_Standards_&_Practice - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> IoT_Platform_Design - semester 9.
+    Degree/ Number of node child : 9.
+    Earliest start semester : 9.
+    Latest start semester : 10.
+> Embedded_IA - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> FPGA_Codesign_Prototyping - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> VHDL_Modeling_and_Synthesis - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> EMBEDDED_SYSTEMS - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Advanced_Analog_Circuit_Design - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Application_Specific_Circuit_Design - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Co-Design_&_Prototyping - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Processor_Architecture - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> VHDL_Modeling_&_Synthesis - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Analog_Circuit_Design_Introduction - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Digital_Circuit_Design - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Manufacturing_Processes_&_Characterisation_Methods - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Modeling_&_Characterization_for_Semiconductor_Devices - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Semiconductor_Devices - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Semiconductor_Physics - semester 9.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> MICROELECTRONICS_DESIGN - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Business_Forum - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> e-Recruitment - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Human_Capital - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Practice_of_Employment_Contract - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Recruitment_Workshop - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Negotiation - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Professions_overview - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Méthodologie_de_l'Intervention_en_Entreprise - semester 9.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 9.
+    Latest start semester : 10.
+> ENGINEERING_METHODS - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 9.
+> English - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Chinese - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> French - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> German - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Japanese - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Portuguese - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Spanish - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> LANGUAGES - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Applications_des_Neurosciences - semester 9.
+    Degree/ Number of node child : 6.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Bio_Diagnostic - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Biomécanique - semester 9.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Cadre_juridique_des_dispositifs_médicaux - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Conception_de_dispositifs_médicaux_électroniques - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Imagerie_Médicale - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Introduction_à_la_Biologie - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Le_marché_du_diagnostic_médical - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Recherche_en_Bioélectronique - semester 9.
+    Degree/ Number of node child : 5.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Rencontre_avec_les_entreprises - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> BIO-MEDICAL_DEVICES_(BMD) - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 9.
+    Latest start semester : 10.
+> Récoltes_d'Energie_et_Sources_Continues - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 9.
+    Latest start semester : 9.
+> Alimentation_d'Objets_Autonomes - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 9.
+    Latest start semester : 10.
+> Energies_Renouvelables - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 9.
+    Latest start semester : 9.
+> Antennes_et_Communications_Basse_Consommation - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 6.
+    Latest start semester : 9.
+> Visites_et_séminaires - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> ELECTRONICS_AND_ENERGY_(E&E) - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Optimisation_pour_l'aide_à_la_Décision - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> e-Business_et_Bases_de_Données - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> Planification_de_la_Supply_Chain - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Communication_à_courte_portée - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Management_de_la_Supply_Chain - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Visites_et_Séminaires - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> INFORMATION_TECHNOLOGIES_AND_SUPPLY_CHAIN_(ITS) - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Attaques_par_injection_de_fautes_des_circuits_sécurisés - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Biométrie - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Cryptographie - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Sécurité_logicielle - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Sécurité_matérielle_appliquée_aux_algos_PK - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Tags_RFID - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Sécurité_Web_et_Réseaux - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Algorithmie_pour_la_Cryptographie - semester 9.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Cybersécurité_de_Windows - semester 9.
+    Degree/ Number of node child : 1.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Réseaux - semester 9.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 7.
+    Latest start semester : 10.
+> Attaques_matérielles_contre_un_AES - semester 9.
+    Degree/ Number of node child : 7.
+    Earliest start semester : 8.
+    Latest start semester : 10.
+> Droit_sur_la_sécurité_/_Certification - semester 9.
+    Degree/ Number of node child : 2.
+    Earliest start semester : 6.
+    Latest start semester : 10.
+> MOBILITY_AND_SECURITY_(M&S) - semester 9.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Electronics_and_Energy_-_Project - semester 10.
+    Degree/ Number of node child : 3.
+    Earliest start semester : 10.
+    Latest start semester : 10.
+> Bio-Medical_Devices_-_Project - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Information_Technologies_and_Supply_Chain_-_Project - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Mobility_and_Security_-_Project - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> PROJECT - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Innov'Action - semester 10.
+    Degree/ Number of node child : 4.
+    Earliest start semester : 9.
+    Latest start semester : 10.
+> INNOV'ACTION - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Analog_ST - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Cryptomonnaies_et_Blockchain - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Deep_learning_for_people_in_a_hurry - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Etude_de_TLS_1.3 - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Le_design_au_service_de_la_conception_des_services_numériques - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> Workshop:_Tools_for_dectection_and_treatment_of_cancer - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> WORKSHOP - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> End_of_Program_Internship - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.
+> END_OF_PROGRAM_INTERNSHIP - semester 10.
+    Degree/ Number of node child : 0.
+    Earliest start semester : 5.
+    Latest start semester : 10.

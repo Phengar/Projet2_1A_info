@@ -1,0 +1,60 @@
+> The graph is cyclic.
+> Number of UP and GP : 227.
+    Number of UP in the syllabus : 166.
+    Number of GP in the syllabus : 61.
+UP with the lowest degree (0) : Culture_de_l'Entreprise_et_Modes_Managériaux - semester : 5.
+UP with the highest degree (14) : Systèmes_à_Microcontrôleurs - semester : 7.
+================================================================
+> Year 1 :
+    Number of UP : 41.
+    Number of GP : 20.
+    > Semester 5 :
+        Number of UP : 18.
+        Number of GP : 8.
+    > Semester 6 :
+        Number of UP : 23.
+        Number of GP : 12.
+================================================================
+> Year 2 :
+    Number of UP : 51.
+    Number of GP : 17.
+    > Semester 7 :
+        Number of UP : 28.
+        Number of GP : 9.
+    > Semester 8 :
+        Number of UP : 23.
+        Number of GP : 8.
+================================================================
+> Year 3 :
+    Number of UP : 74.
+    Number of GP : 24.
+    > Semester 9 :
+        Number of UP : 62.
+        Number of GP : 20.
+    > Semester 10 :
+        Number of UP : 12.
+        Number of GP : 4.
+================================================================
+TOP 10 UP with the highest degree :
+1 : Programmation_Orientée_Objet (sem. 7) - degree : 14.
+2 : Systèmes_à_Microcontrôleurs (sem. 7) - degree : 14.
+3 : Electronique_Numérique (sem. 5) - degree : 13.
+4 : Algorithmique_et_Programmation (sem. 6) - degree : 13.
+5 : Electronique_Analogique (sem. 6) - degree : 12.
+6 : Transmission_Sans_Fils (sem. 7) - degree : 12.
+7 : Projet_Robot (sem. 7) - degree : 12.
+8 : Introduction_à_la_Cryptographie (sem. 7) - degree : 11.
+9 : Electronique_Analogique (sem. 5) - degree : 10.
+10 : Bases_de_Données (sem. 7) - degree : 10.
+================================================================
+TOP 10 GP with the highest GP to GP degree :
+1 : Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) - degree : 4
+2 : COMPOSANTES_DE_L'ENTREPRISE (sem. 5) - degree : 3
+3 : Réseaux (sem. 9) - degree : 3
+4 : Réseaux_locaux_d'entreprise (sem. 7) - degree : 3
+5 : Sécurité_Web_et_Réseaux (sem. 9) - degree : 2
+6 : MANAGEMENT_DE_L'ACTIVITÉ_DE_L'ENTREPRISE (sem. 7) - degree : 2
+7 : Développement_Relationnel (sem. 5) - degree : 1
+8 : Réseaux_TCP/IP (sem. 6) - degree : 1
+9 : Sécurité_logicielle (sem. 9) - degree : 1
+10 : BIO-MEDICAL_DEVICES_(BMD) (sem. 9) - degree : 1

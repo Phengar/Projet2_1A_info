@@ -15,6 +15,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #include "format.h"
+#include <stdio.h>
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -45,8 +46,8 @@ int * get_GP_array(mat_adj * g, int * length);
 // Creates the sorted array(degrees) of degree for each GP in gp_arr.
 void get_degrees_GP(mat_adj * g, int * gp_arr, int length, int * degrees);
 
-// Prints the top n GP of g with the highest GP degree.
-void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n);
+// Prints the top n GP of g with the highest GP degree and saves them to f (if exists).
+void print_top_degrees_GP(mat_adj * g, int * gp_arr, int * degrees, int length, int n, FILE * f);
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -64,9 +65,9 @@ int get_min_degree(mat_adj * g, int * id_min);
 // Creates an array (degrees) containing the degree for each vertex of mat_adj g.
 void get_degrees(mat_adj * g, int * degrees);
 
-// Prints the top n nodes with the highest degrees.
+// Prints the top n nodes with the highest degrees and saves them to f (if exists).
 // nb_n is the number of nodes in the graph
-void print_top_degrees(int * degrees, mat_adj * g, int n);
+void print_top_degrees(int * degrees, mat_adj * g, int n, FILE * f);
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -127,11 +128,11 @@ int longest_path(mat_adj * g, queue ** path, int mode);
 
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*//
 
-// Sub function of Quickest time (semester) to begin node u related subject.
+// Sub function of earliest semester to begin node u related subject.
 int ealiest_to_u_compute(mat_adj * g, int u, int * lookup);
 
 /*
-	Quickest time (semester) to begin node u related subject.
+	Earliest semester to begin node u related subject.
 */
 int earliest_to_u(mat_adj * g, int u);
 
@@ -145,6 +146,11 @@ int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup);
 	of the curriculum.
 */
 int latest_to_u(mat_adj * g, int u, int duration);
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// Saves various statistics computed in main.c to files in /stats directory
+void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP);
 
 /////////////////////////////////////////////////////////////////////////////////
 
