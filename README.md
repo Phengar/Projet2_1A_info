@@ -108,6 +108,7 @@ Let L be a list of N integers.
   + Looping through node u neighbors : Time complexity : **O(|V|)**
   + Accessing one of node u neighbors : Time complexity : **O(1)**
   + Checking if a node is one of u neighbors : Time complexity : **O(1)**
+  + Searching for one node in the graph : Time complexity : **O(|V|)**
 - Quick sort : Time complexity : Time complexity : **O(N\*log(N))**, spatial complexity : **O(1)**
 - Depth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **O(|V|)**
 - Breadth-first search : Time complexity : **O(|V| + |E|)**, spatial complexity : **(|V|)**
@@ -126,11 +127,12 @@ This project allows you to determine :
   - ***The number of UP, GP in either a specific semester or specific year,***
   - ***N nodes (UP or GP) sorted by their degree in a decreasing order,***
   - ***Whether the graph is acyclic or not,***
-  - ***Each cluster of nodes in the graph***
-  - ***The length of the longest path in the (oriented and acyclic) graph***
-  - ***The length and longest path from a node u***
-  - ***The earliest semester from which a specific subject can be taken***
-  - ***The latest semester a subject can be taken without disturbing the ISMIN curriculum duration***
+  - ***Each cluster of nodes in the graph,***
+  - ***The length of the longest path in the (oriented and acyclic) graph,***
+  - ***The length and longest path from a node u,***
+  - ***The earliest semester from which a specific subject can be taken,***
+  - ***The latest semester a subject can be taken without disturbing the ISMIN curriculum duration,***
+  - ***Save the previously computed statistics in various files of ./stats directory.***
 
 
 
@@ -151,14 +153,15 @@ While attempting to read *.csv* files, we ran into issues. Namely, each row of *
 
 ## Limitations
 
-* TO BE COMMENCÉ AS WELL *
+The main limitation of this project is that the statistics retrieved specific and serve a precise incentive, that is the analysis of the ISMIN curriculum. Despite trying to be modular (splitting the whole project in various functions and files), the statistics printed in either the file or the Terminal console are very specific.
 
 
 
 
 ## Conclusion
 
-* TO BE COMMENCÉ AS WELL *
+This project was the occasion to enhance both our programming and algorithmic skills by putting into practice algorithmic concepts, precisely graph theory concepts we studied in class. Furthermore, this project was the opportunity to get an in-depth overview of the ISMIN syllabus, namely the relations between school subjects (either GP or UP).
+
 
 
 
@@ -201,6 +204,11 @@ Projet2_1A_info
 │   └── object files
 ├── pdf/
 │   └── pdf files
+├── stats/
+│   ├── General_stats.txt : General statistics on the ISMIN syllabus curriculum graph
+│   ├── Nodes_stats.txt   : Statistics on nodes of the syllabus and precedence graph
+│   ├── Cluster_stats.txt : Statistics on clusters in the syllabus graph
+│   └── Precedence.txt    : Statistics on the longest path within the precedence graph
 ├── source files : *.c, *.h and *.py
 ├── Makefile
 └── README.md
@@ -244,6 +252,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int earliest_to_u(mat_adj * g, int u)` | Quickest time (semester) to begin node u related subject |
 |  **stat.h**  |   `int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup)` | Sub function of Latest time to take a specific subject u |
 |  **stat.h**  |   `int latest_to_u(mat_adj * g, int u, int duration)` | Latest semester to take a subject without disturbing the duration of the curriculum |
+|  **stat.h**  |   `void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP)` | Saves various statistics computed in main.c to files in /stats directory |
 | ----------- |    ---------------    | 	-----------  |
 | **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
 | **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and edges file nto res an adjacency matrix structure |
