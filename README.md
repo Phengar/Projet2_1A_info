@@ -244,6 +244,7 @@ Projet2_1A_info
 |  **stat.h**  |   `int earliest_to_u(mat_adj * g, int u)` | Quickest time (semester) to begin node u related subject |
 |  **stat.h**  |   `int latest_to_u_compute(mat_adj * g, int u, int duration, int * lookup)` | Sub function of Latest time to take a specific subject u |
 |  **stat.h**  |   `int latest_to_u(mat_adj * g, int u, int duration)` | Latest semester to take a subject without disturbing the duration of the curriculum |
+|  **stat.h**  |   `void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP)` | Saves various statistics computed in main.c to files in /stats directory |
 | ----------- |    ---------------    | 	-----------  |
 | **reader_matAdj.h**  |   `struct UPL : {int id, char name[MAX_LENGTH], int x, int y, UPL * next}` | Linked-list structure used to load the graph from .csv files |
 | **reader_matAdj.h**  |   `void load_graph(char * nodes_file, char * edges_file, mat_adj ** res)` | Loads the graph defined in nodes_files and edges file nto res an adjacency matrix structure |
