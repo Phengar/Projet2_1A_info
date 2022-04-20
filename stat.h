@@ -150,6 +150,7 @@ int latest_to_u(mat_adj * g, int u, int duration);
 /////////////////////////////////////////////////////////////////////////////////
 
 // Saves various statistics computed in main.c to files in /stats directory
+// Arguments are variables defined in main.c
 void save_statistics(char * general_stats, char * nodes_stats, char * cluster_stats, char * precedence_stats, cluster * clus, queue ** q, mat_adj * graph, mat_adj * precedence_graph, int * degrees, int length, int * gp_array, int * degrees_GP);
 
 /////////////////////////////////////////////////////////////////////////////////
