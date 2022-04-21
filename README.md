@@ -2,54 +2,6 @@
 
 DAVAL Quentin - HUBINET Benjamin - ISMIN 1A - EI21
 
-
-
-
-## TO-DO - Requirements list :
-
-Comment il faut exécuter le programme et structuration du ReadMe.txt :
-
-- Différentes section du programme et leurs relations (brievement)
-
-- Qu'est-ce que l'on attend en output
-
-- Pourquoi favoriser un certain algorithme
-
-- Analyse complexité temporelle et en mémoire
-
-## Idées pour le rapport :
-
-- Avant-propos : Raisons/ finalité de ce projet
-
-- Choix des diverses structures : Raisons, structuration de celles-ci, complexité des opérations
-
-- Choix des algorithmes
-
-- Résultats fournis : Analyse, mise en forme des résultats : Dashboard
-
-- Divers problèmes et solutions apportées, structuration du projet
-
-- Conclusions : Possibles améliorations, captialiser sur le projet
-
-## Idées pour le README.txt/ README.md
-
-- Introduction
-
-- Compilation and running the project
-
-- Project structure/ Tree
-
-- Quick references
-
-> Par exemple : 
-
-| Header file |    Function header    | 	Description   |
-| ----------- |    ---------------    | 	-----------   |
-|  example.h  |   void function(void) | Function that ... |
-
-
-
-
 ## Introduction
 
 The incentive of this project was to lead
@@ -137,12 +89,6 @@ This project allows you to determine :
 
 
 
-## Statistics analysis
-
-* TO BE COMMENCÉ *
-
-
-
 
 ## 🎯 Faced issues
 
@@ -203,7 +149,8 @@ Projet2_1A_info
 ├── obj/
 │   └── object files
 ├── pdf/
-│   └── pdf files
+│   ├── Project_Report.pdf
+│   └── Project_Subject.pdf
 ├── stats/
 │   ├── General_stats.txt : General statistics on the ISMIN syllabus curriculum graph
 │   ├── Nodes_stats.txt   : Statistics on nodes of the syllabus and precedence graph
