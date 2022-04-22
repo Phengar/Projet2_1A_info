@@ -109,8 +109,8 @@ This project was the occasion to enhance both our programming and algorithmic sk
 
 The overall project was written using both Python 3 and C.
 Actually, the only part that requires Python is the `.csv`
-files formatting step. The rest of the of the implementation
-uses C only.
+files formatting step, as well as a visual representation of the
+whole graph. The rest of the of the implementation uses C only.
 
 #### :warning: Requirements
 
