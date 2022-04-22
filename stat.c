@@ -579,10 +579,10 @@ void save_statistics(char * general_stats, char * nodes_stats, char * cluster_st
         tmp = q[u];
         fprintf(pre_stats, "%s - (sem. %d) :\n   ", precedence_graph[u].name, 4+precedence_graph[u].x);
         while(tmp != NULL) {
-            fprintf(pre_stats, "%s (sem. %d), ", precedence_graph[tmp->key].name, 4+precedence_graph[tmp->key].x);
+            fprintf(pre_stats, "%s (sem. %d) <- ", precedence_graph[tmp->key].name, 4+precedence_graph[tmp->key].x);
             tmp = tmp->next;
         }
-        fprintf(pre_stats, "\n");
+        fprintf(pre_stats, "\n\n");
     }
     fclose(pre_stats);
 }

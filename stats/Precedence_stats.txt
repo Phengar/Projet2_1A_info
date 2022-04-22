@@ -4,456 +4,683 @@ NODE U :
 -------------------------------------------------------------------------------------
 
 Culture_de_l'Entreprise_et_Modes_Managériaux - (sem. 5) :
-   Culture_de_l'Entreprise_et_Modes_Managériaux (sem. 5), 
+   Culture_de_l'Entreprise_et_Modes_Managériaux (sem. 5) <- 
+
 Visions_et_Stratégie_d’Entreprise - (sem. 5) :
-   Discrete_Simulation_&_Optimisation (sem. 9), Gestion_de_Production_et_Logistique (sem. 7), Visions_et_Stratégie_d’Entreprise (sem. 5), 
+   Discrete_Simulation_&_Optimisation (sem. 9) <- Gestion_de_Production_et_Logistique (sem. 7) <- Visions_et_Stratégie_d’Entreprise (sem. 5) <- 
+
 COMPOSANTES_DE_L'ENTREPRISE - (sem. 5) :
-   Visa_Entrepreunariat (sem. 8), Communication (sem. 7), Retour_d'expérience (sem. 6), COMPOSANTES_DE_L'ENTREPRISE (sem. 5), 
+   Visa_Entrepreunariat (sem. 8) <- Communication (sem. 7) <- Retour_d'expérience (sem. 6) <- COMPOSANTES_DE_L'ENTREPRISE (sem. 5) <- 
+
 Electronique_Analogique - (sem. 5) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Capteurs_et_Actionneurs (sem. 7), Electronique_Analogique (sem. 6), Electronique_Analogique (sem. 5), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Capteurs_et_Actionneurs (sem. 7) <- Electronique_Analogique (sem. 6) <- Electronique_Analogique (sem. 5) <- 
+
 Electronique_Numérique - (sem. 5) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), Systèmes_à_Microcontrôleurs (sem. 7), Electronique_Numérique (sem. 5), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- Systèmes_à_Microcontrôleurs (sem. 7) <- Electronique_Numérique (sem. 5) <- 
+
 CONCEPTS_ET_OUTILS_DE_L’ELECTRONIQUE - (sem. 5) :
-   CONCEPTS_ET_OUTILS_DE_L’ELECTRONIQUE (sem. 5), 
+   CONCEPTS_ET_OUTILS_DE_L’ELECTRONIQUE (sem. 5) <- 
+
 Algorithmique_et_Programmation - (sem. 5) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), Systèmes_à_Microcontrôleurs (sem. 7), Algorithmique_et_Programmation (sem. 6), Algorithmique_et_Programmation (sem. 5), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- Systèmes_à_Microcontrôleurs (sem. 7) <- Algorithmique_et_Programmation (sem. 6) <- Algorithmique_et_Programmation (sem. 5) <- 
+
 Systèmes_à_Microcontrôleurs - (sem. 5) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), Projet_Robot (sem. 7), Interface_Design (sem. 6), Systèmes_à_Microcontrôleurs (sem. 5), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- Projet_Robot (sem. 7) <- Interface_Design (sem. 6) <- Systèmes_à_Microcontrôleurs (sem. 5) <- 
+
 CONCEPTS_ET_OUTILS_DE_L'INFORMATIQUE - (sem. 5) :
-   CONCEPTS_ET_OUTILS_DE_L'INFORMATIQUE (sem. 5), 
+   CONCEPTS_ET_OUTILS_DE_L'INFORMATIQUE (sem. 5) <- 
+
 Développement_Relationnel - (sem. 5) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), GESTION_DE_PROJETS (sem. 8), Gestion_de_Projet (sem. 7), Projet_ISA (sem. 6), Développement_Relationnel (sem. 5), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- GESTION_DE_PROJETS (sem. 8) <- Gestion_de_Projet (sem. 7) <- Projet_ISA (sem. 6) <- Développement_Relationnel (sem. 5) <- 
+
 Stage_Connaissance_de_l'Entreprise - (sem. 5) :
-   Stage_Connaissance_de_l'Entreprise (sem. 5), 
+   Stage_Connaissance_de_l'Entreprise (sem. 5) <- 
+
 DÉCOUVERTE_DE_L'ENTREPRISE - (sem. 5) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), Visa_Entrepreunariat (sem. 8), Communication (sem. 7), Retour_d'expérience (sem. 6), DÉCOUVERTE_DE_L'ENTREPRISE (sem. 5), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- Visa_Entrepreunariat (sem. 8) <- Communication (sem. 7) <- Retour_d'expérience (sem. 6) <- DÉCOUVERTE_DE_L'ENTREPRISE (sem. 5) <- 
+
 Anglais - (sem. 5) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), Anglais (sem. 8), Anglais (sem. 7), Anglais (sem. 6), Anglais (sem. 5), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- Anglais (sem. 8) <- Anglais (sem. 7) <- Anglais (sem. 6) <- Anglais (sem. 5) <- 
+
 Allemand - (sem. 5) :
-   Allemand (sem. 5), 
+   Allemand (sem. 5) <- 
+
 Chinois - (sem. 5) :
-   Chinois (sem. 5), 
+   Chinois (sem. 5) <- 
+
 Espagnol - (sem. 5) :
-   Espagnol (sem. 5), 
+   Espagnol (sem. 5) <- 
+
 Japonais - (sem. 5) :
-   Japonais (sem. 5), 
+   Japonais (sem. 5) <- 
+
 Portugais - (sem. 5) :
-   Portugais (sem. 5), 
+   Portugais (sem. 5) <- 
+
 LANGUES_S5 - (sem. 5) :
-   LANGUES_S5 (sem. 5), 
+   LANGUES_S5 (sem. 5) <- 
+
 Projet_Matlab_-_Introduction_à_la_Robotique - (sem. 5) :
-   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9), Introduction_à_la_Cryptographie (sem. 7), Projet_Matlab_-_Introduction_à_la_Robotique (sem. 5), 
+   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9) <- Introduction_à_la_Cryptographie (sem. 7) <- Projet_Matlab_-_Introduction_à_la_Robotique (sem. 5) <- 
+
 Mathématiques_et_Traitement_du_Signal - (sem. 5) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Capteurs_et_Actionneurs (sem. 7), Electronique_Analogique (sem. 6), Mathématiques_et_Traitement_du_Signal (sem. 5), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Capteurs_et_Actionneurs (sem. 7) <- Electronique_Analogique (sem. 6) <- Mathématiques_et_Traitement_du_Signal (sem. 5) <- 
+
 Probabilités - (sem. 5) :
-   Embedded_IA (sem. 9), Machine_Learning (sem. 7), Probabilités (sem. 5), 
+   Embedded_IA (sem. 9) <- Machine_Learning (sem. 7) <- Probabilités (sem. 5) <- 
+
 OUTILS_MATHÉMATIQUES_DE_L'INGÉNIEUR - (sem. 5) :
-   OUTILS_MATHÉMATIQUES_DE_L'INGÉNIEUR (sem. 5), 
+   OUTILS_MATHÉMATIQUES_DE_L'INGÉNIEUR (sem. 5) <- 
+
 Projet_Robot - (sem. 5) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), Projet_Robot (sem. 7), System_Design (sem. 6), Projet_Robot (sem. 5), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- Projet_Robot (sem. 7) <- System_Design (sem. 6) <- Projet_Robot (sem. 5) <- 
+
 Automatique_linéaire - (sem. 5) :
-   Automatique_et_asservissements (sem. 7), Automatique_linéaire (sem. 5), 
+   Automatique_et_asservissements (sem. 7) <- Automatique_linéaire (sem. 5) <- 
+
 PROJET_ROBOT_S5 - (sem. 5) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Capteurs_et_Actionneurs (sem. 7), Electronique_Analogique (sem. 6), PROJET_ROBOT_S5 (sem. 5), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Capteurs_et_Actionneurs (sem. 7) <- Electronique_Analogique (sem. 6) <- PROJET_ROBOT_S5 (sem. 5) <- 
+
 Découverte_des_Enjeux_Technologiques - (sem. 6) :
-   IoT_Platform_Design (sem. 9), Transmission_Sans_Fils (sem. 7), Découverte_des_Enjeux_Technologiques (sem. 6), 
+   IoT_Platform_Design (sem. 9) <- Transmission_Sans_Fils (sem. 7) <- Découverte_des_Enjeux_Technologiques (sem. 6) <- 
+
 DÉCOUVERTE_DES_ENJEUX_TECHNOLOGIQUES - (sem. 6) :
-   DÉCOUVERTE_DES_ENJEUX_TECHNOLOGIQUES (sem. 6), 
+   DÉCOUVERTE_DES_ENJEUX_TECHNOLOGIQUES (sem. 6) <- 
+
 Algorithmique_et_Programmation - (sem. 6) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), Systèmes_à_Microcontrôleurs (sem. 7), Algorithmique_et_Programmation (sem. 6), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- Systèmes_à_Microcontrôleurs (sem. 7) <- Algorithmique_et_Programmation (sem. 6) <- 
+
 Graphes_et_Optimisation - (sem. 6) :
-   Graphes_et_Optimisation (sem. 6), 
+   Graphes_et_Optimisation (sem. 6) <- 
+
 Programmation_Système - (sem. 6) :
-   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9), Introduction_à_la_Cryptographie (sem. 7), Programmation_Système (sem. 6), 
+   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9) <- Introduction_à_la_Cryptographie (sem. 7) <- Programmation_Système (sem. 6) <- 
+
 Challenge_Optimisation - (sem. 6) :
-   Challenge_Optimisation (sem. 6), 
+   Challenge_Optimisation (sem. 6) <- 
+
 Réseaux_TCP/IP - (sem. 6) :
-   Embedded_Linux (sem. 9), Réseaux_locaux_d'entreprise (sem. 7), Réseaux_TCP/IP (sem. 6), 
+   Embedded_Linux (sem. 9) <- Réseaux_locaux_d'entreprise (sem. 7) <- Réseaux_TCP/IP (sem. 6) <- 
+
 INFORMATIQUE - (sem. 6) :
-   INFORMATIQUE (sem. 6), 
+   INFORMATIQUE (sem. 6) <- 
+
 Projet_ISA - (sem. 6) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), GESTION_DE_PROJETS (sem. 8), Gestion_de_Projet (sem. 7), Projet_ISA (sem. 6), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- GESTION_DE_PROJETS (sem. 8) <- Gestion_de_Projet (sem. 7) <- Projet_ISA (sem. 6) <- 
+
 Retour_d'expérience - (sem. 6) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), Visa_Entrepreunariat (sem. 8), Communication (sem. 7), Retour_d'expérience (sem. 6), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- Visa_Entrepreunariat (sem. 8) <- Communication (sem. 7) <- Retour_d'expérience (sem. 6) <- 
+
 INTELLIGENCE_COLLECTIVE - (sem. 6) :
-   INTELLIGENCE_COLLECTIVE (sem. 6), 
+   INTELLIGENCE_COLLECTIVE (sem. 6) <- 
+
 Anglais - (sem. 6) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), Anglais (sem. 8), Anglais (sem. 7), Anglais (sem. 6), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- Anglais (sem. 8) <- Anglais (sem. 7) <- Anglais (sem. 6) <- 
+
 Allemand - (sem. 6) :
-   Allemand (sem. 6), 
+   Allemand (sem. 6) <- 
+
 Chinois - (sem. 6) :
-   Chinois (sem. 6), 
+   Chinois (sem. 6) <- 
+
 Espagnol - (sem. 6) :
-   Espagnol (sem. 6), 
+   Espagnol (sem. 6) <- 
+
 Japonais - (sem. 6) :
-   Japonais (sem. 6), 
+   Japonais (sem. 6) <- 
+
 Portugais - (sem. 6) :
-   Portugais (sem. 6), 
+   Portugais (sem. 6) <- 
+
 Divers_Langues - (sem. 6) :
-   Divers_Langues (sem. 6), 
+   Divers_Langues (sem. 6) <- 
+
 LV2 - (sem. 6) :
-   LV2 (sem. 6), 
+   LV2 (sem. 6) <- 
+
 LANGUES_S6 - (sem. 6) :
-   LANGUES_S6 (sem. 6), 
+   LANGUES_S6 (sem. 6) <- 
+
 International - (sem. 6) :
-   International (sem. 6), 
+   International (sem. 6) <- 
+
 Métiers - (sem. 6) :
-   Métiers (sem. 6), 
+   Métiers (sem. 6) <- 
+
 Secteurs - (sem. 6) :
-   Secteurs (sem. 6), 
+   Secteurs (sem. 6) <- 
+
 MÉTIERS_DE_L'INGÉNIEUR - (sem. 6) :
-   MÉTIERS_DE_L'INGÉNIEUR (sem. 6), 
+   MÉTIERS_DE_L'INGÉNIEUR (sem. 6) <- 
+
 Interface_Design - (sem. 6) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), Projet_Robot (sem. 7), Interface_Design (sem. 6), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- Projet_Robot (sem. 7) <- Interface_Design (sem. 6) <- 
+
 System_Design - (sem. 6) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), Projet_Robot (sem. 7), System_Design (sem. 6), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- Projet_Robot (sem. 7) <- System_Design (sem. 6) <- 
+
 PROJET_ROBOT_S6 - (sem. 6) :
-   PROJET_ROBOT_S6 (sem. 6), 
+   PROJET_ROBOT_S6 (sem. 6) <- 
+
 Expérimentations_en_Labo - (sem. 6) :
-   Expérimentations_en_Labo (sem. 6), 
+   Expérimentations_en_Labo (sem. 6) <- 
+
 Physique_Appliquée - (sem. 6) :
-   Semiconductor_Physics (sem. 9), Physique_Appliquée (sem. 6), 
+   Semiconductor_Physics (sem. 9) <- Physique_Appliquée (sem. 6) <- 
+
 Propriétés_des_Matériaux - (sem. 6) :
-   Propriétés_des_Matériaux (sem. 6), 
+   Propriétés_des_Matériaux (sem. 6) <- 
+
 Sciences_du_Vivant - (sem. 6) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), Sciences_du_Vivant (sem. 6), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- Sciences_du_Vivant (sem. 6) <- 
+
 SCIENCES_DES_MATÉRIAUX_ET_DU_VIVANT - (sem. 6) :
-   SCIENCES_DES_MATÉRIAUX_ET_DU_VIVANT (sem. 6), 
+   SCIENCES_DES_MATÉRIAUX_ET_DU_VIVANT (sem. 6) <- 
+
 Electronique_Analogique - (sem. 6) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Capteurs_et_Actionneurs (sem. 7), Electronique_Analogique (sem. 6), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Capteurs_et_Actionneurs (sem. 7) <- Electronique_Analogique (sem. 6) <- 
+
 Electronique_Fondamentale - (sem. 6) :
-   Semiconductor_Physics (sem. 9), Electronique_Fondamentale (sem. 6), 
+   Semiconductor_Physics (sem. 9) <- Electronique_Fondamentale (sem. 6) <- 
+
 SYSTÈMES_ELECTRONIQUES_S6 - (sem. 6) :
-   SYSTÈMES_ELECTRONIQUES_S6 (sem. 6), 
+   SYSTÈMES_ELECTRONIQUES_S6 (sem. 6) <- 
+
 Anglais - (sem. 7) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), Anglais (sem. 8), Anglais (sem. 7), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- Anglais (sem. 8) <- Anglais (sem. 7) <- 
+
 Allemand - (sem. 7) :
-   Allemand (sem. 7), 
+   Allemand (sem. 7) <- 
+
 Chinois - (sem. 7) :
-   Chinois (sem. 7), 
+   Chinois (sem. 7) <- 
+
 Espagnol - (sem. 7) :
-   Espagnol (sem. 7), 
+   Espagnol (sem. 7) <- 
+
 Français - (sem. 7) :
-   Français (sem. 7), 
+   Français (sem. 7) <- 
+
 Japonais - (sem. 7) :
-   Japonais (sem. 7), 
+   Japonais (sem. 7) <- 
+
 Portugais - (sem. 7) :
-   Portugais (sem. 7), 
+   Portugais (sem. 7) <- 
+
 LANGUES_S7 - (sem. 7) :
-   LANGUES_S7 (sem. 7), 
+   LANGUES_S7 (sem. 7) <- 
+
 Gestion_de_Production_et_Logistique - (sem. 7) :
-   Discrete_Simulation_&_Optimisation (sem. 9), Gestion_de_Production_et_Logistique (sem. 7), 
+   Discrete_Simulation_&_Optimisation (sem. 9) <- Gestion_de_Production_et_Logistique (sem. 7) <- 
+
 Finance_et_Stratégie - (sem. 7) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Finance_et_Stratégie (sem. 7), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Finance_et_Stratégie (sem. 7) <- 
+
 Gestion_de_Projet - (sem. 7) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), GESTION_DE_PROJETS (sem. 8), Gestion_de_Projet (sem. 7), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- GESTION_DE_PROJETS (sem. 8) <- Gestion_de_Projet (sem. 7) <- 
+
 MANAGEMENT_DE_L'ACTIVITÉ_DE_L'ENTREPRISE - (sem. 7) :
-   Enterprise_Information_Systems (sem. 9), MANAGEMENT_DE_L'ACTIVITÉ_DE_L'ENTREPRISE (sem. 7), 
+   Enterprise_Information_Systems (sem. 9) <- MANAGEMENT_DE_L'ACTIVITÉ_DE_L'ENTREPRISE (sem. 7) <- 
+
 Recherche_d'Information_et_de_Documentation - (sem. 7) :
-   Recherche_d'Information_et_de_Documentation (sem. 7), 
+   Recherche_d'Information_et_de_Documentation (sem. 7) <- 
+
 Communication - (sem. 7) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), Visa_Entrepreunariat (sem. 8), Communication (sem. 7), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- Visa_Entrepreunariat (sem. 8) <- Communication (sem. 7) <- 
+
 Contrat_de_prestations - (sem. 7) :
-   Contrat_de_prestations (sem. 7), 
+   Contrat_de_prestations (sem. 7) <- 
+
 Propriété_intellectuelle - (sem. 7) :
-   Droit_sur_la_sécurité_/_Certification (sem. 9), Propriété_intellectuelle (sem. 7), 
+   Droit_sur_la_sécurité_/_Certification (sem. 9) <- Propriété_intellectuelle (sem. 7) <- 
+
 PROJET_INDUSTRIEL_-_AVANT_PROJET - (sem. 7) :
-   PROJET_INDUSTRIEL_-_AVANT_PROJET (sem. 7), 
+   PROJET_INDUSTRIEL_-_AVANT_PROJET (sem. 7) <- 
+
 Systèmes_à_Microcontrôleurs - (sem. 7) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), Systèmes_à_Microcontrôleurs (sem. 7), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- Systèmes_à_Microcontrôleurs (sem. 7) <- 
+
 Méthode_MCSE - (sem. 7) :
-   Embedded_RTOS_Applications (sem. 9), Méthode_MCSE (sem. 7), 
+   Embedded_RTOS_Applications (sem. 9) <- Méthode_MCSE (sem. 7) <- 
+
 Automatique_et_asservissements - (sem. 7) :
-   Automatique_et_asservissements (sem. 7), 
+   Automatique_et_asservissements (sem. 7) <- 
+
 Projet_Robot - (sem. 7) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), Projet_Robot (sem. 7), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- Projet_Robot (sem. 7) <- 
+
 PROJET_ROBOT_S7 - (sem. 7) :
-   PROJET_ROBOT_S7 (sem. 7), 
+   PROJET_ROBOT_S7 (sem. 7) <- 
+
 Architecture_des_Processeurs - (sem. 7) :
-   Architecture_des_Processeurs (sem. 7), 
+   Architecture_des_Processeurs (sem. 7) <- 
+
 Conception_d'un_Système_Numérique - (sem. 7) :
-   VHDL_Modeling_and_Synthesis (sem. 9), Conception_d'un_Système_Numérique (sem. 7), 
+   VHDL_Modeling_and_Synthesis (sem. 9) <- Conception_d'un_Système_Numérique (sem. 7) <- 
+
 Introduction_à_la_Cryptographie - (sem. 7) :
-   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9), Introduction_à_la_Cryptographie (sem. 7), 
+   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9) <- Introduction_à_la_Cryptographie (sem. 7) <- 
+
 SYSTÈMES_ELECTRONIQUES_S7 - (sem. 7) :
-   SYSTÈMES_ELECTRONIQUES_S7 (sem. 7), 
+   SYSTÈMES_ELECTRONIQUES_S7 (sem. 7) <- 
+
 Programmation_Orientée_Objet - (sem. 7) :
-   Enterprise_Information_Systems (sem. 9), Programmation_Orientée_Objet (sem. 7), 
+   Enterprise_Information_Systems (sem. 9) <- Programmation_Orientée_Objet (sem. 7) <- 
+
 Bases_de_Données - (sem. 7) :
-   Database_Applications (sem. 9), Bases_de_Données (sem. 7), 
+   Database_Applications (sem. 9) <- Bases_de_Données (sem. 7) <- 
+
 Machine_Learning - (sem. 7) :
-   Embedded_IA (sem. 9), Machine_Learning (sem. 7), 
+   Embedded_IA (sem. 9) <- Machine_Learning (sem. 7) <- 
+
 Réseaux_locaux_d'entreprise - (sem. 7) :
-   Embedded_Linux (sem. 9), Réseaux_locaux_d'entreprise (sem. 7), 
+   Embedded_Linux (sem. 9) <- Réseaux_locaux_d'entreprise (sem. 7) <- 
+
 Modélisation_UML - (sem. 7) :
-   Modélisation_UML (sem. 7), 
+   Modélisation_UML (sem. 7) <- 
+
 SYSTÈMES_INFORMATIQUES - (sem. 7) :
-   SYSTÈMES_INFORMATIQUES (sem. 7), 
+   SYSTÈMES_INFORMATIQUES (sem. 7) <- 
+
 Transmission_Electromagnétique - (sem. 7) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), Transmission_Electromagnétique (sem. 7), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- Transmission_Electromagnétique (sem. 7) <- 
+
 Gestion_d'Energie - (sem. 7) :
-   Gestion_d'Energie (sem. 7), 
+   Gestion_d'Energie (sem. 7) <- 
+
 Capteurs_et_Actionneurs - (sem. 7) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), Capteurs_et_Actionneurs (sem. 7), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- Capteurs_et_Actionneurs (sem. 7) <- 
+
 Transmission_Sans_Fils - (sem. 7) :
-   IoT_Platform_Design (sem. 9), Transmission_Sans_Fils (sem. 7), 
+   IoT_Platform_Design (sem. 9) <- Transmission_Sans_Fils (sem. 7) <- 
+
 TRANSMISSION_CAPTEURS_ENERGIE - (sem. 7) :
-   TRANSMISSION_CAPTEURS_ENERGIE (sem. 7), 
+   TRANSMISSION_CAPTEURS_ENERGIE (sem. 7) <- 
+
 Droit_Industriel - (sem. 8) :
-   Droit_sur_la_sécurité_/_Certification (sem. 9), Droit_Industriel (sem. 8), 
+   Droit_sur_la_sécurité_/_Certification (sem. 9) <- Droit_Industriel (sem. 8) <- 
+
 Gestion_de_Projet - (sem. 8) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), Gestion_de_Projet (sem. 8), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- Gestion_de_Projet (sem. 8) <- 
+
 Gestion_d'Equipe - (sem. 8) :
-   Gestion_d'Equipe (sem. 8), 
+   Gestion_d'Equipe (sem. 8) <- 
+
 GESTION_DE_PROJETS - (sem. 8) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), GESTION_DE_PROJETS (sem. 8), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- GESTION_DE_PROJETS (sem. 8) <- 
+
 Anglais - (sem. 8) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), Anglais (sem. 8), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- Anglais (sem. 8) <- 
+
 Allemand - (sem. 8) :
-   Allemand (sem. 8), 
+   Allemand (sem. 8) <- 
+
 Chinois - (sem. 8) :
-   Chinois (sem. 8), 
+   Chinois (sem. 8) <- 
+
 Espagnol - (sem. 8) :
-   Espagnol (sem. 8), 
+   Espagnol (sem. 8) <- 
+
 Français - (sem. 8) :
-   Français (sem. 8), 
+   Français (sem. 8) <- 
+
 Japonais - (sem. 8) :
-   Japonais (sem. 8), 
+   Japonais (sem. 8) <- 
+
 Portugais - (sem. 8) :
-   Portugais (sem. 8), 
+   Portugais (sem. 8) <- 
+
 Divers_Langues - (sem. 8) :
-   Divers_Langues (sem. 8), 
+   Divers_Langues (sem. 8) <- 
+
 LV2 - (sem. 8) :
-   LV2 (sem. 8), 
+   LV2 (sem. 8) <- 
+
 LANGUES_S8 - (sem. 8) :
-   LANGUES_S8 (sem. 8), 
+   LANGUES_S8 (sem. 8) <- 
+
 Conception_détaillée - (sem. 8) :
-   Electronics_and_Energy_-_Project (sem. 10), Antennes_et_Communications_Basse_Consommation (sem. 9), Conception_détaillée (sem. 8), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Antennes_et_Communications_Basse_Consommation (sem. 9) <- Conception_détaillée (sem. 8) <- 
+
 PROJET_INDUSTRIEL_-_CONCEPTION_DÉTAILLÉE - (sem. 8) :
-   PROJET_INDUSTRIEL_-_CONCEPTION_DÉTAILLÉE (sem. 8), 
+   PROJET_INDUSTRIEL_-_CONCEPTION_DÉTAILLÉE (sem. 8) <- 
+
 Conception_détaillée - (sem. 8) :
-   Conception_détaillée (sem. 8), 
+   Conception_détaillée (sem. 8) <- 
+
 Projet_Industriel - (sem. 8) :
-   Projet_Industriel (sem. 8), 
+   Projet_Industriel (sem. 8) <- 
+
 Rapport - (sem. 8) :
-   Rapport (sem. 8), 
+   Rapport (sem. 8) <- 
+
 Recette - (sem. 8) :
-   Recette (sem. 8), 
+   Recette (sem. 8) <- 
+
 Soutenance - (sem. 8) :
-   Soutenance (sem. 8), 
+   Soutenance (sem. 8) <- 
+
 Suivi_Technique - (sem. 8) :
-   Suivi_Technique (sem. 8), 
+   Suivi_Technique (sem. 8) <- 
+
 PROJET_INDUSTRIEL_-_RÉALISATION - (sem. 8) :
-   PROJET_INDUSTRIEL_-_RÉALISATION (sem. 8), 
+   PROJET_INDUSTRIEL_-_RÉALISATION (sem. 8) <- 
+
 Eléments_Finis - (sem. 8) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), Eléments_Finis (sem. 8), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- Eléments_Finis (sem. 8) <- 
+
 Projet_Prototypage - (sem. 8) :
-   IoT_Platform_Design (sem. 9), Projet_Prototypage (sem. 8), 
+   IoT_Platform_Design (sem. 9) <- Projet_Prototypage (sem. 8) <- 
+
 SIMULATION_EXPÉRIMENTATION_PROTOTYPAGE - (sem. 8) :
-   SIMULATION_EXPÉRIMENTATION_PROTOTYPAGE (sem. 8), 
+   SIMULATION_EXPÉRIMENTATION_PROTOTYPAGE (sem. 8) <- 
+
 Stage - (sem. 8) :
-   Stage (sem. 8), 
+   Stage (sem. 8) <- 
+
 Fiche_Synthétique - (sem. 8) :
-   Professions_overview (sem. 9), Fiche_Synthétique (sem. 8), 
+   Professions_overview (sem. 9) <- Fiche_Synthétique (sem. 8) <- 
+
 STAGE_INTERNATIONAL - (sem. 8) :
-   Recruitment_Workshop (sem. 9), STAGE_INTERNATIONAL (sem. 8), 
+   Recruitment_Workshop (sem. 9) <- STAGE_INTERNATIONAL (sem. 8) <- 
+
 Visa_Entrepreunariat - (sem. 8) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), Visa_Entrepreunariat (sem. 8), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- Visa_Entrepreunariat (sem. 8) <- 
+
 VISA_ENTREPREUNARIAT - (sem. 8) :
-   VISA_ENTREPREUNARIAT (sem. 8), 
+   VISA_ENTREPREUNARIAT (sem. 8) <- 
+
 Enterprise_Information_Systems - (sem. 9) :
-   Enterprise_Information_Systems (sem. 9), 
+   Enterprise_Information_Systems (sem. 9) <- 
+
 Mobile_Telecom - (sem. 9) :
-   Mobile_Telecom (sem. 9), 
+   Mobile_Telecom (sem. 9) <- 
+
 Discrete_Simulation_&_Optimisation - (sem. 9) :
-   Discrete_Simulation_&_Optimisation (sem. 9), 
+   Discrete_Simulation_&_Optimisation (sem. 9) <- 
+
 Advanced_Java - (sem. 9) :
-   Advanced_Java (sem. 9), 
+   Advanced_Java (sem. 9) <- 
+
 Database_Applications - (sem. 9) :
-   Database_Applications (sem. 9), 
+   Database_Applications (sem. 9) <- 
+
 Database_Design - (sem. 9) :
-   Database_Design (sem. 9), 
+   Database_Design (sem. 9) <- 
+
 Design_of_Mobile_Applications - (sem. 9) :
-   Design_of_Mobile_Applications (sem. 9), 
+   Design_of_Mobile_Applications (sem. 9) <- 
+
 COMPUTER_SCIENCE - (sem. 9) :
-   COMPUTER_SCIENCE (sem. 9), 
+   COMPUTER_SCIENCE (sem. 9) <- 
+
 Embedded_RTOS_Applications - (sem. 9) :
-   Embedded_RTOS_Applications (sem. 9), 
+   Embedded_RTOS_Applications (sem. 9) <- 
+
 Embedded_Linux - (sem. 9) :
-   Embedded_Linux (sem. 9), 
+   Embedded_Linux (sem. 9) <- 
+
 Multiplexing_Bus_Standards_&_Practice - (sem. 9) :
-   Multiplexing_Bus_Standards_&_Practice (sem. 9), 
+   Multiplexing_Bus_Standards_&_Practice (sem. 9) <- 
+
 IoT_Platform_Design - (sem. 9) :
-   IoT_Platform_Design (sem. 9), 
+   IoT_Platform_Design (sem. 9) <- 
+
 Embedded_IA - (sem. 9) :
-   Embedded_IA (sem. 9), 
+   Embedded_IA (sem. 9) <- 
+
 FPGA_Codesign_Prototyping - (sem. 9) :
-   FPGA_Codesign_Prototyping (sem. 9), 
+   FPGA_Codesign_Prototyping (sem. 9) <- 
+
 VHDL_Modeling_and_Synthesis - (sem. 9) :
-   VHDL_Modeling_and_Synthesis (sem. 9), 
+   VHDL_Modeling_and_Synthesis (sem. 9) <- 
+
 EMBEDDED_SYSTEMS - (sem. 9) :
-   EMBEDDED_SYSTEMS (sem. 9), 
+   EMBEDDED_SYSTEMS (sem. 9) <- 
+
 Advanced_Analog_Circuit_Design - (sem. 9) :
-   Advanced_Analog_Circuit_Design (sem. 9), 
+   Advanced_Analog_Circuit_Design (sem. 9) <- 
+
 Application_Specific_Circuit_Design - (sem. 9) :
-   Application_Specific_Circuit_Design (sem. 9), 
+   Application_Specific_Circuit_Design (sem. 9) <- 
+
 Co-Design_&_Prototyping - (sem. 9) :
-   Co-Design_&_Prototyping (sem. 9), 
+   Co-Design_&_Prototyping (sem. 9) <- 
+
 Processor_Architecture - (sem. 9) :
-   Processor_Architecture (sem. 9), 
+   Processor_Architecture (sem. 9) <- 
+
 VHDL_Modeling_&_Synthesis - (sem. 9) :
-   VHDL_Modeling_&_Synthesis (sem. 9), 
+   VHDL_Modeling_&_Synthesis (sem. 9) <- 
+
 Analog_Circuit_Design_Introduction - (sem. 9) :
-   Analog_Circuit_Design_Introduction (sem. 9), 
+   Analog_Circuit_Design_Introduction (sem. 9) <- 
+
 Digital_Circuit_Design - (sem. 9) :
-   Digital_Circuit_Design (sem. 9), 
+   Digital_Circuit_Design (sem. 9) <- 
+
 Manufacturing_Processes_&_Characterisation_Methods - (sem. 9) :
-   Manufacturing_Processes_&_Characterisation_Methods (sem. 9), 
+   Manufacturing_Processes_&_Characterisation_Methods (sem. 9) <- 
+
 Modeling_&_Characterization_for_Semiconductor_Devices - (sem. 9) :
-   Modeling_&_Characterization_for_Semiconductor_Devices (sem. 9), 
+   Modeling_&_Characterization_for_Semiconductor_Devices (sem. 9) <- 
+
 Semiconductor_Devices - (sem. 9) :
-   Semiconductor_Devices (sem. 9), 
+   Semiconductor_Devices (sem. 9) <- 
+
 Semiconductor_Physics - (sem. 9) :
-   Semiconductor_Physics (sem. 9), 
+   Semiconductor_Physics (sem. 9) <- 
+
 MICROELECTRONICS_DESIGN - (sem. 9) :
-   MICROELECTRONICS_DESIGN (sem. 9), 
+   MICROELECTRONICS_DESIGN (sem. 9) <- 
+
 Business_Forum - (sem. 9) :
-   Business_Forum (sem. 9), 
+   Business_Forum (sem. 9) <- 
+
 e-Recruitment - (sem. 9) :
-   e-Recruitment (sem. 9), 
+   e-Recruitment (sem. 9) <- 
+
 Human_Capital - (sem. 9) :
-   Human_Capital (sem. 9), 
+   Human_Capital (sem. 9) <- 
+
 Practice_of_Employment_Contract - (sem. 9) :
-   Practice_of_Employment_Contract (sem. 9), 
+   Practice_of_Employment_Contract (sem. 9) <- 
+
 Recruitment_Workshop - (sem. 9) :
-   Recruitment_Workshop (sem. 9), 
+   Recruitment_Workshop (sem. 9) <- 
+
 Negotiation - (sem. 9) :
-   Negotiation (sem. 9), 
+   Negotiation (sem. 9) <- 
+
 Professions_overview - (sem. 9) :
-   Professions_overview (sem. 9), 
+   Professions_overview (sem. 9) <- 
+
 Méthodologie_de_l'Intervention_en_Entreprise - (sem. 9) :
-   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9), 
+   Méthodologie_de_l'Intervention_en_Entreprise (sem. 9) <- 
+
 ENGINEERING_METHODS - (sem. 9) :
-   Innov'Action (sem. 10), ENGINEERING_METHODS (sem. 9), 
+   Innov'Action (sem. 10) <- ENGINEERING_METHODS (sem. 9) <- 
+
 English - (sem. 9) :
-   English (sem. 9), 
+   English (sem. 9) <- 
+
 Chinese - (sem. 9) :
-   Chinese (sem. 9), 
+   Chinese (sem. 9) <- 
+
 French - (sem. 9) :
-   French (sem. 9), 
+   French (sem. 9) <- 
+
 German - (sem. 9) :
-   German (sem. 9), 
+   German (sem. 9) <- 
+
 Japanese - (sem. 9) :
-   Japanese (sem. 9), 
+   Japanese (sem. 9) <- 
+
 Portuguese - (sem. 9) :
-   Portuguese (sem. 9), 
+   Portuguese (sem. 9) <- 
+
 Spanish - (sem. 9) :
-   Spanish (sem. 9), 
+   Spanish (sem. 9) <- 
+
 LANGUAGES - (sem. 9) :
-   LANGUAGES (sem. 9), 
+   LANGUAGES (sem. 9) <- 
+
 Applications_des_Neurosciences - (sem. 9) :
-   Applications_des_Neurosciences (sem. 9), 
+   Applications_des_Neurosciences (sem. 9) <- 
+
 Bio_Diagnostic - (sem. 9) :
-   Bio_Diagnostic (sem. 9), 
+   Bio_Diagnostic (sem. 9) <- 
+
 Biomécanique - (sem. 9) :
-   Biomécanique (sem. 9), 
+   Biomécanique (sem. 9) <- 
+
 Cadre_juridique_des_dispositifs_médicaux - (sem. 9) :
-   Cadre_juridique_des_dispositifs_médicaux (sem. 9), 
+   Cadre_juridique_des_dispositifs_médicaux (sem. 9) <- 
+
 Conception_de_dispositifs_médicaux_électroniques - (sem. 9) :
-   Conception_de_dispositifs_médicaux_électroniques (sem. 9), 
+   Conception_de_dispositifs_médicaux_électroniques (sem. 9) <- 
+
 Imagerie_Médicale - (sem. 9) :
-   Imagerie_Médicale (sem. 9), 
+   Imagerie_Médicale (sem. 9) <- 
+
 Introduction_à_la_Biologie - (sem. 9) :
-   Introduction_à_la_Biologie (sem. 9), 
+   Introduction_à_la_Biologie (sem. 9) <- 
+
 Le_marché_du_diagnostic_médical - (sem. 9) :
-   Le_marché_du_diagnostic_médical (sem. 9), 
+   Le_marché_du_diagnostic_médical (sem. 9) <- 
+
 Recherche_en_Bioélectronique - (sem. 9) :
-   Recherche_en_Bioélectronique (sem. 9), 
+   Recherche_en_Bioélectronique (sem. 9) <- 
+
 Rencontre_avec_les_entreprises - (sem. 9) :
-   Rencontre_avec_les_entreprises (sem. 9), 
+   Rencontre_avec_les_entreprises (sem. 9) <- 
+
 BIO-MEDICAL_DEVICES_(BMD) - (sem. 9) :
-   BIO-MEDICAL_DEVICES_(BMD) (sem. 9), 
+   BIO-MEDICAL_DEVICES_(BMD) (sem. 9) <- 
+
 Récoltes_d'Energie_et_Sources_Continues - (sem. 9) :
-   Electronics_and_Energy_-_Project (sem. 10), Récoltes_d'Energie_et_Sources_Continues (sem. 9), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Récoltes_d'Energie_et_Sources_Continues (sem. 9) <- 
+
 Alimentation_d'Objets_Autonomes - (sem. 9) :
-   Alimentation_d'Objets_Autonomes (sem. 9), 
+   Alimentation_d'Objets_Autonomes (sem. 9) <- 
+
 Energies_Renouvelables - (sem. 9) :
-   Electronics_and_Energy_-_Project (sem. 10), Energies_Renouvelables (sem. 9), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Energies_Renouvelables (sem. 9) <- 
+
 Antennes_et_Communications_Basse_Consommation - (sem. 9) :
-   Electronics_and_Energy_-_Project (sem. 10), Antennes_et_Communications_Basse_Consommation (sem. 9), 
+   Electronics_and_Energy_-_Project (sem. 10) <- Antennes_et_Communications_Basse_Consommation (sem. 9) <- 
+
 Visites_et_séminaires - (sem. 9) :
-   Visites_et_séminaires (sem. 9), 
+   Visites_et_séminaires (sem. 9) <- 
+
 ELECTRONICS_AND_ENERGY_(E&E) - (sem. 9) :
-   ELECTRONICS_AND_ENERGY_(E&E) (sem. 9), 
+   ELECTRONICS_AND_ENERGY_(E&E) (sem. 9) <- 
+
 Optimisation_pour_l'aide_à_la_Décision - (sem. 9) :
-   Optimisation_pour_l'aide_à_la_Décision (sem. 9), 
+   Optimisation_pour_l'aide_à_la_Décision (sem. 9) <- 
+
 e-Business_et_Bases_de_Données - (sem. 9) :
-   e-Business_et_Bases_de_Données (sem. 9), 
+   e-Business_et_Bases_de_Données (sem. 9) <- 
+
 Planification_de_la_Supply_Chain - (sem. 9) :
-   Planification_de_la_Supply_Chain (sem. 9), 
+   Planification_de_la_Supply_Chain (sem. 9) <- 
+
 Communication_à_courte_portée - (sem. 9) :
-   Communication_à_courte_portée (sem. 9), 
+   Communication_à_courte_portée (sem. 9) <- 
+
 Management_de_la_Supply_Chain - (sem. 9) :
-   Management_de_la_Supply_Chain (sem. 9), 
+   Management_de_la_Supply_Chain (sem. 9) <- 
+
 Visites_et_Séminaires - (sem. 9) :
-   Visites_et_Séminaires (sem. 9), 
+   Visites_et_Séminaires (sem. 9) <- 
+
 INFORMATION_TECHNOLOGIES_AND_SUPPLY_CHAIN_(ITS) - (sem. 9) :
-   INFORMATION_TECHNOLOGIES_AND_SUPPLY_CHAIN_(ITS) (sem. 9), 
+   INFORMATION_TECHNOLOGIES_AND_SUPPLY_CHAIN_(ITS) (sem. 9) <- 
+
 Attaques_par_injection_de_fautes_des_circuits_sécurisés - (sem. 9) :
-   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9), 
+   Attaques_par_injection_de_fautes_des_circuits_sécurisés (sem. 9) <- 
+
 Biométrie - (sem. 9) :
-   Biométrie (sem. 9), 
+   Biométrie (sem. 9) <- 
+
 Cryptographie - (sem. 9) :
-   Cryptographie (sem. 9), 
+   Cryptographie (sem. 9) <- 
+
 Sécurité_logicielle - (sem. 9) :
-   Sécurité_logicielle (sem. 9), 
+   Sécurité_logicielle (sem. 9) <- 
+
 Sécurité_matérielle_appliquée_aux_algos_PK - (sem. 9) :
-   Sécurité_matérielle_appliquée_aux_algos_PK (sem. 9), 
+   Sécurité_matérielle_appliquée_aux_algos_PK (sem. 9) <- 
+
 Tags_RFID - (sem. 9) :
-   Tags_RFID (sem. 9), 
+   Tags_RFID (sem. 9) <- 
+
 Sécurité_Web_et_Réseaux - (sem. 9) :
-   Sécurité_Web_et_Réseaux (sem. 9), 
+   Sécurité_Web_et_Réseaux (sem. 9) <- 
+
 Algorithmie_pour_la_Cryptographie - (sem. 9) :
-   Algorithmie_pour_la_Cryptographie (sem. 9), 
+   Algorithmie_pour_la_Cryptographie (sem. 9) <- 
+
 Cybersécurité_de_Windows - (sem. 9) :
-   Cybersécurité_de_Windows (sem. 9), 
+   Cybersécurité_de_Windows (sem. 9) <- 
+
 Réseaux - (sem. 9) :
-   Réseaux (sem. 9), 
+   Réseaux (sem. 9) <- 
+
 Attaques_matérielles_contre_un_AES - (sem. 9) :
-   Attaques_matérielles_contre_un_AES (sem. 9), 
+   Attaques_matérielles_contre_un_AES (sem. 9) <- 
+
 Droit_sur_la_sécurité_/_Certification - (sem. 9) :
-   Droit_sur_la_sécurité_/_Certification (sem. 9), 
+   Droit_sur_la_sécurité_/_Certification (sem. 9) <- 
+
 MOBILITY_AND_SECURITY_(M&S) - (sem. 9) :
-   MOBILITY_AND_SECURITY_(M&S) (sem. 9), 
+   MOBILITY_AND_SECURITY_(M&S) (sem. 9) <- 
+
 Electronics_and_Energy_-_Project - (sem. 10) :
-   Electronics_and_Energy_-_Project (sem. 10), 
+   Electronics_and_Energy_-_Project (sem. 10) <- 
+
 Bio-Medical_Devices_-_Project - (sem. 10) :
-   Bio-Medical_Devices_-_Project (sem. 10), 
+   Bio-Medical_Devices_-_Project (sem. 10) <- 
+
 Information_Technologies_and_Supply_Chain_-_Project - (sem. 10) :
-   Information_Technologies_and_Supply_Chain_-_Project (sem. 10), 
+   Information_Technologies_and_Supply_Chain_-_Project (sem. 10) <- 
+
 Mobility_and_Security_-_Project - (sem. 10) :
-   Mobility_and_Security_-_Project (sem. 10), 
+   Mobility_and_Security_-_Project (sem. 10) <- 
+
 PROJECT - (sem. 10) :
-   PROJECT (sem. 10), 
+   PROJECT (sem. 10) <- 
+
 Innov'Action - (sem. 10) :
-   Innov'Action (sem. 10), 
+   Innov'Action (sem. 10) <- 
+
 INNOV'ACTION - (sem. 10) :
-   INNOV'ACTION (sem. 10), 
+   INNOV'ACTION (sem. 10) <- 
+
 Workshop:_Analog_ST - (sem. 10) :
-   Workshop:_Analog_ST (sem. 10), 
+   Workshop:_Analog_ST (sem. 10) <- 
+
 Workshop:_Cryptomonnaies_et_Blockchain - (sem. 10) :
-   Workshop:_Cryptomonnaies_et_Blockchain (sem. 10), 
+   Workshop:_Cryptomonnaies_et_Blockchain (sem. 10) <- 
+
 Workshop:_Deep_learning_for_people_in_a_hurry - (sem. 10) :
-   Workshop:_Deep_learning_for_people_in_a_hurry (sem. 10), 
+   Workshop:_Deep_learning_for_people_in_a_hurry (sem. 10) <- 
+
 Workshop:_Etude_de_TLS_1.3 - (sem. 10) :
-   Workshop:_Etude_de_TLS_1.3 (sem. 10), 
+   Workshop:_Etude_de_TLS_1.3 (sem. 10) <- 
+
 Workshop:_Le_design_au_service_de_la_conception_des_services_numériques - (sem. 10) :
-   Workshop:_Le_design_au_service_de_la_conception_des_services_numériques (sem. 10), 
+   Workshop:_Le_design_au_service_de_la_conception_des_services_numériques (sem. 10) <- 
+
 Workshop:_Tools_for_dectection_and_treatment_of_cancer - (sem. 10) :
-   Workshop:_Tools_for_dectection_and_treatment_of_cancer (sem. 10), 
+   Workshop:_Tools_for_dectection_and_treatment_of_cancer (sem. 10) <- 
+
 WORKSHOP - (sem. 10) :
-   WORKSHOP (sem. 10), 
+   WORKSHOP (sem. 10) <- 
+
 End_of_Program_Internship - (sem. 10) :
-   End_of_Program_Internship (sem. 10), 
+   End_of_Program_Internship (sem. 10) <- 
+
 END_OF_PROGRAM_INTERNSHIP - (sem. 10) :
-   END_OF_PROGRAM_INTERNSHIP (sem. 10), 
+   END_OF_PROGRAM_INTERNSHIP (sem. 10) <- 
+
