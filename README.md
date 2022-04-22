@@ -97,13 +97,6 @@ While attempting to read *.csv* files, we ran into issues. Namely, each row of *
 
 
 
-## Limitations
-
-The main limitation of this project is that the statistics retrieved specific and serve a precise incentive, that is the analysis of the ISMIN curriculum. Despite trying to be modular (splitting the whole project in various functions and files), the statistics printed in either the file or the Terminal console are very specific.
-
-
-
-
 ## Conclusion
 
 This project was the occasion to enhance both our programming and algorithmic skills by putting into practice algorithmic concepts, precisely graph theory concepts we studied in class. Furthermore, this project was the opportunity to get an in-depth overview of the ISMIN syllabus, namely the relations between school subjects (either GP or UP).
@@ -125,7 +118,11 @@ As long as you have GCC compiler and GNU Make tool installed,
 the code should run flawlessly on Linux systems. Having the
 Python 3 interpreter is not mandatory as `.csv` files are
 yet formatted. Nonetheless you can still try this script out
-on un-formatted data stored in `./*.csv.bak` files.
+on un-formatted data stored in `./*.csv.bak` files. Furthermore,
+if you would like to try the Python script used to render the
+whole graph vizualisation, make sure to have *numpy*, *matplotlib*,
+*scipy*, *networkx* and *pandas* modules installed. Please note that
+a vizualisation is already enclosed in ./stats directory.
 
 + 🛠️ **Compiling** :
       `make`
@@ -136,9 +133,22 @@ on un-formatted data stored in `./*.csv.bak` files.
       ./main
       ```
 
+
   - *Running the Python csv formater script* ***(Not mandatory)***
       ```bash
       python3 formater.py
+      ```
+
+
+- *Running the Python graph renderer script* ***(Not mandatory)***
+      ```bash
+      python3 graphe.py
+      ```
+
+
+- *Installing graphe.py dependencies* ***(Not mandatory)***
+      ```bash
+      python3 pip -m install MODULE_NAME
       ```
       
       
@@ -155,7 +165,8 @@ Projet2_1A_info
 │   ├── General_stats.txt : General statistics on the ISMIN syllabus curriculum graph
 │   ├── Nodes_stats.txt   : Statistics on nodes of the syllabus and precedence graph
 │   ├── Cluster_stats.txt : Statistics on clusters in the syllabus graph
-│   └── Precedence.txt    : Statistics on the longest path within the precedence graph
+│   ├── Precedence.txt    : Statistics on the longest path within the precedence graph
+│   └── whole_graph.png   : Vizualisation of the whole ISMIN syllabus graph
 ├── source files : *.c, *.h and *.py
 ├── Makefile
 └── README.md
