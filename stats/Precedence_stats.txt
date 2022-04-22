@@ -1,3 +1,8 @@
+Quick reading manual :
+NODE U :
+ LONGEST PATH IN PRECEDENCE GRAPH (REVERSED) WHERE U IS THE STARTING POINT.
+-------------------------------------------------------------------------------------
+
 Culture_de_l'Entreprise_et_Modes_Managériaux - (sem. 5) :
    Culture_de_l'Entreprise_et_Modes_Managériaux (sem. 5), 
 Visions_et_Stratégie_d’Entreprise - (sem. 5) :

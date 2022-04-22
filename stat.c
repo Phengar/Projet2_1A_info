@@ -571,6 +571,9 @@ void save_statistics(char * general_stats, char * nodes_stats, char * cluster_st
         i++;
     }
     fclose(clu_stats);
+    fprintf(pre_stats, "Quick reading manual :\n");
+    fprintf(pre_stats, "NODE U :\n LONGEST PATH IN PRECEDENCE GRAPH (REVERSED) WHERE U IS THE STARTING POINT.\n");
+    fprintf(pre_stats, "-------------------------------------------------------------------------------------\n\n");
     queue * tmp = NULL;
     for(int u = 0; u < get_nodes(precedence_graph); u++) {
         tmp = q[u];
